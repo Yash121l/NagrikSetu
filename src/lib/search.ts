@@ -1,4 +1,4 @@
-import { seedRecords } from "./seed-data";
+import { getAllRecords } from "@/data/repository";
 import type { EntityKind, NagrikRecord, SearchMatch, SearchResponse } from "./types";
 
 const queryWeights: Record<string, number> = {
@@ -39,7 +39,7 @@ function fieldScore(fieldValue: string | string[] | undefined, tokens: string[],
   return { score, reason: `${matched.join(", ")} matched ${weight >= 7 ? "primary" : "supporting"} field` };
 }
 
-export function searchRecords(query: string, kind: EntityKind | "all" = "all", records: NagrikRecord[] = seedRecords) {
+export function searchRecords(query: string, kind: EntityKind | "all" = "all", records: NagrikRecord[] = getAllRecords()) {
   const tokens = tokenize(query);
   if (tokens.length === 0) return [];
 
@@ -70,7 +70,7 @@ export function buildSearchResponse(query: string, kind: EntityKind | "all" = "a
     generatedAt: new Date().toISOString(),
     matches,
     caveats: [
-      "This MVP uses curated seed records while ingestion connectors are built.",
+      "This MVP uses deterministic fixture-backed records while live ingestion connectors are built.",
       "Each result shows source and confidence; low-confidence matches should be verified before action.",
       "NagrikSetu routes users to official portals and does not submit complaints on their behalf."
     ]

@@ -1,14 +1,17 @@
 # Architecture
 
-## Draft 1
+## Draft 2
 
-Draft 1 is a Next.js full-stack app:
+Draft 2 is a Next.js full-stack app with a deterministic local data backbone:
 
 - `src/app/page.tsx` renders the primary search workspace.
 - `src/app/api/search/route.ts` serves typed search results.
-- `src/app/api/sources/route.ts` returns the seed source inventory.
+- `src/app/api/sources/route.ts` returns source catalog and health.
+- `src/app/api/ingestion/route.ts` returns ingestion report metadata.
 - `src/app/api/feedback/route.ts` accepts correction feedback as a stub.
-- `src/lib/seed-data.ts` stores curated records until ingestion exists.
+- `src/lib/seed-data.ts` stores deterministic base records that the Draft 2 ingestion demo normalizes with generated source records.
+- `src/ingestion` defines source catalog, adapter contracts, validation, and source-health checks.
+- `src/data/repository.ts` gives the app one read path for records and ingestion state.
 - `src/lib/search.ts` provides deterministic local ranking.
 
 ## Target System

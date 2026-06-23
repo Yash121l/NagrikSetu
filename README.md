@@ -9,7 +9,7 @@ NagrikSetu is a citizen-first search and navigation layer for public information
 
 ## Draft Status
 
-This repository contains Draft 1: a working Next.js MVP with typed seed data, a search API, a map/list UI, provenance labels, confidence labels, source inventory, and documentation for future ingestion agents.
+This repository contains Draft 2: a working Next.js MVP plus a deterministic data backbone with typed source catalog, fixture ingestion adapters, validation, source-health reporting, generated normalized artifacts, and documentation for future ingestion agents.
 
 ## Quick Start
 
@@ -27,6 +27,8 @@ pnpm run lint
 pnpm run typecheck
 pnpm run test
 pnpm run build
+pnpm run ingest:demo
+pnpm run validate:data
 pnpm run audit:local
 ```
 
@@ -34,11 +36,15 @@ pnpm run audit:local
 
 - `src/app` - Next.js app routes and API endpoints.
 - `src/components` - Search, result, evidence, and map UI components.
-- `src/lib` - Typed civic records, seed data, search logic, and quality helpers.
+- `src/lib` - Typed civic records, deterministic base records, search logic, and quality helpers.
+- `src/ingestion` - Source catalog, adapter contracts, validation, and deterministic ingestion report.
+- `src/data` - Repository facade used by the app and APIs.
+- `scripts` - Executable agent utilities such as the demo ingestion generator.
+- `data/normalized` - Generated Draft 2 normalized records and source-health snapshots.
 - `tests` - Unit tests for search behavior.
 - `docs` - Product, architecture, data model, ingestion, security, accessibility, roadmap, and audit notes.
 - `AGENTS.md`, `agent.md`, `cloud.md`, `CODEX.md` - Agent operating files.
 
 ## Current Caveat
 
-Draft 1 uses curated seed records. It does not yet run live crawlers, store data in PostGIS, submit grievances, or claim official completeness.
+Draft 2 uses deterministic fixture adapters. It does not yet run live crawlers, store data in PostGIS, submit grievances, or claim official completeness.

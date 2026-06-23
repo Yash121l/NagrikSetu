@@ -13,7 +13,7 @@
 - Source record
 - Source update event
 
-## Draft 1 Types
+## Runtime Types
 
 The MVP uses `NagrikRecord` in `src/lib/types.ts`. Every record carries:
 
@@ -30,6 +30,20 @@ The MVP uses `NagrikRecord` in `src/lib/types.ts`. Every record carries:
 - `confidence`
 - `updatedAt`
 - `provenance`
+
+## Draft 2 Runtime Validation
+
+Draft 2 adds zod schemas in `src/ingestion/record-schema.ts` and batch validation in `src/ingestion/validator.ts`.
+
+The validation gate checks:
+
+- required provenance and valid source URLs
+- unique record ids
+- bounded India-focused coordinates
+- kind-specific fields such as tender document URLs and complaint portal URLs
+- visible warnings for low-confidence records
+
+Generated normalized artifacts are written to `data/normalized/nagrik-records.json` and `data/normalized/source-health.json`.
 
 ## Provenance Rules
 

@@ -1,9 +1,11 @@
 import { NextResponse } from "next/server";
-import { sourceInventory } from "@/lib/seed-data";
+import { sourceCatalog } from "@/ingestion/source-catalog";
+import { getSourceHealth } from "@/data/repository";
 
 export function GET() {
   return NextResponse.json({
     generatedAt: new Date().toISOString(),
-    sources: sourceInventory
+    sources: sourceCatalog,
+    health: getSourceHealth()
   });
 }

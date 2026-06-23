@@ -1,6 +1,6 @@
 import { SearchShell } from "@/components/SearchShell";
-import { seedRecords } from "@/lib/seed-data";
+import { getAllRecords, getRecordStats, getSourceHealth } from "@/data/repository";
 
 export default function Home() {
-  return <SearchShell initialRecords={seedRecords} />;
+  return <SearchShell initialRecords={getAllRecords()} stats={getRecordStats()} sourceHealth={getSourceHealth()} />;
 }

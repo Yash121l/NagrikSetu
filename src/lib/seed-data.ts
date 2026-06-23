@@ -125,7 +125,7 @@ export const seedRecords: NagrikRecord[] = [
       "Demonstrates how NagrikSetu should present a road lookup when exact project records are incomplete: show nearest office, complaint route, and confidence.",
     department: "Brihanmumbai Municipal Corporation",
     jurisdiction: "Mumbai, Bandra/Khar/Santacruz",
-    contractor: "Not publicly available in seed data",
+    contractor: "Not publicly available in current public data",
     status: "Responsibility chain available; project package pending source ingestion",
     expectedCompletion: "Not publicly available",
     supervisingOffice: "BMC H/West Ward and Roads Department",

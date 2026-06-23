@@ -5,7 +5,7 @@ export function getRecordWarnings(record: NagrikRecord) {
   if (record.confidence !== "high") warnings.push(`${record.confidence} confidence: verify against source before action.`);
   if (!record.location) warnings.push("No coordinates available yet.");
   if (record.summary.toLowerCase().includes("not publicly available")) {
-    warnings.push("Some fields are missing from public seed data.");
+    warnings.push("Some fields are missing from currently available public data.");
   }
   return warnings;
 }

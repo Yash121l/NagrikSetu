@@ -11,7 +11,9 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "audit:local": "pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build"
+    "ingest:demo": "node --import tsx scripts/ingest-demo.ts",
+    "validate:data": "node --import tsx scripts/ingest-demo.ts --check",
+    "audit:local": "pnpm run validate:data && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
@@ -19,7 +21,8 @@
     "next": "^16.2.9",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-leaflet": "^5.0.0"
+    "react-leaflet": "^5.0.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.21",
@@ -28,6 +31,7 @@
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.2.9",
+    "tsx": "^4.22.4",
     "typescript": "^6.0.3",
     "vitest": "^4.0.16"
   },

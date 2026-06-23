@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
   return NextResponse.json(
     {
       status: "accepted",
-      note: "Feedback capture is stubbed in Draft 1. Wire this endpoint to a moderation queue before public launch."
+      note: "Feedback capture is stubbed in Draft 2. Wire this endpoint to a moderation queue before public launch."
     },
     { status: 202 }
   );

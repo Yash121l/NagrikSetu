@@ -1,0 +1,111 @@
+{
+  "generatedAt": "2026-06-23",
+  "health": [
+    {
+      "sourceId": "data-gov-in",
+      "sourceName": "Open Government Data Platform India",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 14,
+      "recordCount": 1,
+      "warnings": []
+    },
+    {
+      "sourceId": "cppp-eprocure",
+      "sourceName": "Central Public Procurement Portal",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 2,
+      "recordCount": 2,
+      "warnings": []
+    },
+    {
+      "sourceId": "cpgrams-pgportal",
+      "sourceName": "CPGRAMS / PG Portal",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 45,
+      "recordCount": 2,
+      "warnings": []
+    },
+    {
+      "sourceId": "bmc-citizen-portal",
+      "sourceName": "Brihanmumbai Municipal Corporation citizen portal",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 14,
+      "recordCount": 3,
+      "warnings": []
+    },
+    {
+      "sourceId": "openstreetmap",
+      "sourceName": "OpenStreetMap",
+      "status": "watch",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 45,
+      "recordCount": 2,
+      "warnings": [
+        "Adapter reported 1 warning(s)."
+      ]
+    }
+  ],
+  "events": [
+    {
+      "sourceId": "data-gov-in",
+      "adapterName": "data-gov-in-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 1,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
+      "sourceId": "cppp-eprocure",
+      "adapterName": "cppp-eprocure-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 2,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
+      "sourceId": "cpgrams-pgportal",
+      "adapterName": "cpgrams-pgportal-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 2,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
+      "sourceId": "bmc-citizen-portal",
+      "adapterName": "bmc-citizen-portal-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 3,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
+      "sourceId": "openstreetmap",
+      "adapterName": "openstreetmap-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 2,
+      "warningCount": 1,
+      "status": "watch"
+    }
+  ],
+  "issues": [
+    {
+      "recordId": "road-demo-linking-road",
+      "severity": "warning",
+      "message": "Low-confidence record must stay visibly labeled."
+    },
+    {
+      "recordId": "openstreetmap",
+      "severity": "warning",
+      "message": "One or more records are low confidence and need source-backed enrichment."
+    }
+  ]
+}

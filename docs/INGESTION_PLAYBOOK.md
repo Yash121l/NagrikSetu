@@ -27,10 +27,18 @@ Each adapter should return:
 - Dates parse and preserve source timezone when known.
 - Low-confidence entity matches remain labeled.
 
-## Draft 2 Implementation Plan
+## Draft 2 Implementation
 
-- Add `packages/ingestion` or `src/ingestion`.
-- Add source adapters for data.gov.in, CPPP, CPGRAMS route metadata, and one city portal.
+- Source catalog lives in `src/ingestion/source-catalog.ts`.
+- Adapter contracts live in `src/ingestion/types.ts`.
+- Deterministic fixture adapter lives in `src/ingestion/fixture-adapter.ts`.
+- Runtime schema validation lives in `src/ingestion/record-schema.ts` and `src/ingestion/validator.ts`.
+- The local repository facade lives in `src/data/repository.ts`.
+- Generated artifacts are written by `pnpm run ingest:demo` to `data/normalized`.
+
+## Draft 3 Implementation Plan
+
+- Add live adapters for data.gov.in, CPPP, CPGRAMS route metadata, and one city portal.
 - Store raw snapshots in object storage or `data/raw` for local development.
 - Store normalized records in PostgreSQL/PostGIS.
-- Add source freshness and broken-link checks.
+- Add source freshness and broken-link checks against live URLs.

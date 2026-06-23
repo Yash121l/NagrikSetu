@@ -6,10 +6,12 @@ Build NagrikSetu as a public-interest, source-first, multilingual civic search p
 
 ## Current Draft
 
-Draft 1 is a working MVP with:
+Draft 2 is a working MVP with:
 
 - Next.js app shell and API routes.
-- Typed seed records in `src/lib/seed-data.ts`.
+- Typed base records and deterministic generated source records.
+- Source catalog and ingestion contracts in `src/ingestion`.
+- Repository facade in `src/data/repository.ts`.
 - Local search/ranking in `src/lib/search.ts`.
 - Map/list/evidence frontend in `src/components`.
 - Documentation pack in `docs`.
@@ -28,10 +30,11 @@ Draft 1 is a working MVP with:
 1. Read `README.md`.
 2. Read the relevant file in `docs`.
 3. Run `pnpm run typecheck` if changing data or API contracts.
-4. Run `pnpm run audit:local` before a release commit when possible.
+4. Run `pnpm run ingest:demo` after changing source catalog, base records, or ingestion logic.
+5. Run `pnpm run audit:local` before a release commit when possible.
 
 ## Draft Roadmap
 
 - Draft 1: working MVP, seed data, search, map/list, source inventory.
-- Draft 2: normalized persistence, ingestion jobs, source health checks.
+- Draft 2: normalized local data backbone, ingestion contracts, generated artifacts, source health checks.
 - Draft 3: multilingual UX, voice-readout, broader state/city coverage, correction workflow.

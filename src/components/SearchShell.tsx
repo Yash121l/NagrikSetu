@@ -7,6 +7,7 @@ import { EvidencePanel } from "@/components/EvidencePanel";
 import { ResultCard } from "@/components/ResultCard";
 import { buildSearchResponse } from "@/lib/search";
 import type { EntityKind, NagrikRecord, SearchMatch } from "@/lib/types";
+import type { SourceHealth } from "@/ingestion/types";
 
 const NagrikMap = dynamic(() => import("@/components/NagrikMap").then((module) => module.NagrikMap), {
   ssr: false,
@@ -21,7 +22,17 @@ const filters: Array<{ label: string; value: EntityKind | "all" }> = [
   { label: "Complaints", value: "complaint" }
 ];
 
-export function SearchShell({ initialRecords }: { initialRecords: NagrikRecord[] }) {
+interface SearchShellProps {
+  initialRecords: NagrikRecord[];
+  stats: {
+    totalRecords: number;
+    officialSourceRecords: number;
+    lowConfidenceRecords: number;
+  };
+  sourceHealth: SourceHealth[];
+}
+
+export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShellProps) {
   const [query, setQuery] = useState("road complaint Bandra");
   const [filter, setFilter] = useState<EntityKind | "all">("all");
   const [matches, setMatches] = useState<SearchMatch[]>(() => buildSearchResponse("road complaint Bandra").matches);
@@ -141,16 +152,21 @@ export function SearchShell({ initialRecords }: { initialRecords: NagrikRecord[]
         </div>
 
         <aside className="metrics">
-          <h2>Draft 1 coverage</h2>
+          <h2>Draft 2 coverage</h2>
           <div className="metric">
             <Building2 aria-hidden="true" />
-            <span>6</span>
-            <p>typed seed records across offices, complaints, roads, tenders, and sources</p>
+            <span>{stats.totalRecords}</span>
+            <p>normalized records across offices, complaints, roads, tenders, and tracked sources</p>
           </div>
           <div className="metric">
             <FileSearch aria-hidden="true" />
-            <span>3</span>
-            <p>API routes: search, source inventory, and correction feedback stub</p>
+            <span>{sourceHealth.filter((source) => source.status === "healthy").length}</span>
+            <p>healthy source adapter runs in the deterministic Draft 2 ingestion report</p>
+          </div>
+          <div className="metric">
+            <Globe2 aria-hidden="true" />
+            <span>{stats.officialSourceRecords}</span>
+            <p>records backed by official-source provenance, with low-confidence records kept labeled</p>
           </div>
         </aside>
       </section>

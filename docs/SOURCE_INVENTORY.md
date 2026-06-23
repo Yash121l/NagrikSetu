@@ -1,13 +1,13 @@
 # Source Inventory
 
-This is the starting source inventory for Draft 1. Expand it before building ingestion.
+This is the Draft 2 source inventory used by the deterministic ingestion backbone. Expand each row into a live connector before production launch.
 
 | Source | URL | Priority | Use | Access Method | Notes |
 | --- | --- | --- | --- | --- | --- |
 | Open Government Data Platform India | https://data.gov.in/ | Open government | Dataset/API discovery | API, catalog, downloads | Check dataset-level licenses and update dates. |
 | Central Public Procurement Portal | https://eprocure.gov.in/eprocure/app | Official | Tender discovery | Portal search, public notices | Preserve source links and closing dates. |
 | CPGRAMS / PG Portal | https://pgportal.gov.in/ | Official | Grievance route | Official portal links | Route users to portal; do not proxy private grievance submissions. |
-| BMC citizen portal | https://portal.mcgm.gov.in/ | Official | Mumbai municipal complaints and ward routing | Public pages, complaint links | Draft 1 seed for road complaint flow. |
+| BMC citizen portal | https://portal.mcgm.gov.in/ | Official | Mumbai municipal complaints and ward routing | Public pages, complaint links | City-pilot source for road complaint flow. |
 | OpenStreetMap | https://www.openstreetmap.org/ | Permissive third-party | Base map, road/place references | Tiles and OSM-derived data | Attribute OSM and comply with ODbL. |
 
 ## Source Intake Checklist
