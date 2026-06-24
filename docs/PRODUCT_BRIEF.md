@@ -8,6 +8,8 @@ NagrikSetu is an India public information navigator. It helps citizens, journali
 - Find who built or maintains a road or public work.
 - Browse tenders by district, department, and work type.
 - Raise or route a complaint through the correct official channel.
+- Read the full civic record, responsibility chain, evidence, and related records without leaving NagrikSetu.
+- Browse public information by country, state, district, and local area.
 
 ## MVP Scope
 
@@ -17,6 +19,8 @@ NagrikSetu is an India public information navigator. It helps citizens, journali
 - Complaint and escalation path.
 - Map plus list view.
 - Source label, last checked date, and confidence label on every record.
+- First-party detail pages for every normalized record.
+- Geographic place pages and human-readable directory.
 
 ## Non-Goals
 

@@ -10,3 +10,4 @@ out/
 .DS_Store
 playwright-report/
 test-results/
+data/corrections/*.json

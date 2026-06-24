@@ -9,7 +9,7 @@ NagrikSetu is a citizen-first search and navigation layer for public information
 
 ## Draft Status
 
-This repository contains Draft 2: a working Next.js MVP plus a deterministic data backbone with typed source catalog, fixture ingestion adapters, validation, source-health reporting, generated normalized artifacts, and documentation for future ingestion agents.
+This repository contains Draft 3 checkpoint 3 (`0.3.0`): a working Next.js civic information product with deterministic data backbone, first-party record detail pages, all 28 state and 8 UT pages, sourced state administration and economic profiles, extensible administrative/rural/urban local-government navigation, typed source catalog, validation, source-health reporting, Hindi/English pilot UI, privacy-limited correction queue, PWA metadata, generated normalized artifacts, and documentation for future agents.
 
 ## Quick Start
 
@@ -39,12 +39,18 @@ pnpm run audit:local
 - `src/lib` - Typed civic records, deterministic base records, search logic, and quality helpers.
 - `src/ingestion` - Source catalog, adapter contracts, validation, and deterministic ingestion report.
 - `src/data` - Repository facade used by the app and APIs.
+- `src/data/geography.ts` - All 28 states, 8 UTs, national counts, and extensible administrative/rural/urban local-government hierarchy.
+- `src/data/state-profiles.ts` - Sourced capitals, government identifiers, current administration, and per-capita NSDP snapshots for all 36 top-level jurisdictions.
 - `scripts` - Executable agent utilities such as the demo ingestion generator.
 - `data/normalized` - Generated Draft 2 normalized records and source-health snapshots.
 - `tests` - Unit tests for search behavior.
 - `docs` - Product, architecture, data model, ingestion, security, accessibility, roadmap, and audit notes.
 - `AGENTS.md`, `agent.md`, `cloud.md`, `CODEX.md` - Agent operating files.
+- `public` - PWA icon, service worker, and offline fallback.
+- `docs/SITE_MAP.md` - Public route and geography information architecture.
+- `docs/GEOGRAPHY_MODEL.md` - India administrative and local-government hierarchy contract.
+- `docs/STATE_PROFILE_MODEL.md` - State/UT profile provenance, economic definitions, and refresh procedure.
 
 ## Current Caveat
 
-Draft 2 uses deterministic fixture adapters. It does not yet run live crawlers, store data in PostGIS, submit grievances, or claim official completeness.
+Draft 3 checkpoint 3 uses deterministic fixture adapters, a dated state-profile snapshot, and a local file-backed correction queue. It keeps record context on NagrikSetu but does not yet run live crawlers, store data in PostGIS, submit grievances, or claim official completeness.

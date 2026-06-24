@@ -17,3 +17,4 @@ Use this file as the short agent entrypoint.
 3. Add ingestion adapters behind a queue.
 4. Add correction moderation and audit logs.
 5. Add Hindi and state-language copy workflows.
+6. Automate reviewed refreshes for state/UT administration and RBI economic snapshots without erasing reporting periods.

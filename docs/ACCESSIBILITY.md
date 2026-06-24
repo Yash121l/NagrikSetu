@@ -1,6 +1,6 @@
 # Accessibility
 
-## Draft 1 Requirements
+## Implemented Baseline
 
 - Mobile-first layout.
 - Large touch targets for search and filters.
@@ -8,6 +8,8 @@
 - Keyboard-focusable controls.
 - Map plus list, never map-only.
 - Plain language summaries before source details.
+- English/Hindi pilot switch without changing route structure.
+- Offline fallback page for installed/PWA contexts.
 
 ## Future Work
 

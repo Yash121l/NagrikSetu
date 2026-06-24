@@ -1,4 +1,5 @@
-import { AlertTriangle, ExternalLink, MapPin, Phone, ShieldCheck } from "lucide-react";
+import Link from "next/link";
+import { AlertTriangle, ArrowRight, ExternalLink, MapPin, Phone, ShieldCheck } from "lucide-react";
 import { getRecordWarnings } from "@/lib/quality";
 import type { SearchMatch } from "@/lib/types";
 
@@ -6,6 +7,12 @@ export function ResultCard({ match, active, onSelect }: { match: SearchMatch; ac
   const { record } = match;
   const warnings = getRecordWarnings(record);
   const sourceHref = record.website ?? record.provenance.sourceUrl;
+  const sourceLabel =
+    record.provenance.priority === "official"
+      ? "Official evidence"
+      : record.provenance.priority === "open-government"
+        ? "Open-government source"
+        : "Third-party source";
 
   return (
     <article className={`result-card ${active ? "result-card--active" : ""}`}>
@@ -37,9 +44,14 @@ export function ResultCard({ match, active, onSelect }: { match: SearchMatch; ac
           <span>{warnings.join(" ")}</span>
         </div>
       ) : null}
-      <a className="source-link" href={sourceHref} target="_blank" rel="noreferrer">
-        Open source record <ExternalLink aria-hidden="true" size={15} />
-      </a>
+      <div className="card-actions">
+        <Link className="detail-link" href={`/records/${record.id}`}>
+          View NagrikSetu record <ArrowRight aria-hidden="true" size={15} />
+        </Link>
+        <a className="source-link" href={sourceHref} target="_blank" rel="noreferrer">
+          {sourceLabel} <ExternalLink aria-hidden="true" size={15} />
+        </a>
+      </div>
     </article>
   );
 }

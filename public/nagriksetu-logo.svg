@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 72" role="img" aria-labelledby="title description">
+  <title id="title">NagrikSetu</title>
+  <desc id="description">A civic bridge symbol beside the NagrikSetu wordmark</desc>
+  <g transform="translate(4 4)">
+    <rect width="64" height="64" rx="12" fill="#0f766e" />
+    <path d="M13 41c6-12 12-18 19-18s13 6 19 18" fill="none" stroke="#f8fffc" stroke-width="6" stroke-linecap="round" />
+    <path d="M12 42h40" fill="none" stroke="#f97316" stroke-width="6" stroke-linecap="round" />
+    <circle cx="32" cy="17" r="6" fill="#f8fffc" />
+    <path d="M20 51h24" fill="none" stroke="#f8fffc" stroke-width="5" stroke-linecap="round" />
+  </g>
+  <text x="82" y="35" fill="#10201d" font-family="Inter, system-ui, sans-serif" font-size="29" font-weight="800">NagrikSetu</text>
+  <text x="83" y="56" fill="#5c6f69" font-family="Noto Sans Devanagari, system-ui, sans-serif" font-size="15" font-weight="600">नागरिक सेतु</text>
+  <path d="M252 52h56" stroke="#f97316" stroke-width="4" stroke-linecap="round" />
+</svg>

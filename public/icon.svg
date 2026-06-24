@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">NagrikSetu app icon</title>
+  <rect width="512" height="512" rx="96" fill="#0f766e" />
+  <path d="M112 318c42-74 88-111 138-111s96 37 138 111" fill="none" stroke="#f8fffc" stroke-width="42" stroke-linecap="round" />
+  <path d="M155 318h202" stroke="#f97316" stroke-width="42" stroke-linecap="round" />
+  <circle cx="256" cy="166" r="48" fill="#f8fffc" />
+  <path d="M192 382h128" stroke="#f8fffc" stroke-width="34" stroke-linecap="round" />
+</svg>

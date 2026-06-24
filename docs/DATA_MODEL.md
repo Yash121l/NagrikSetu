@@ -12,6 +12,10 @@
 - Jurisdiction or boundary
 - Source record
 - Source update event
+- Correction submission
+- Geographic region
+- Administrative relationship
+- Rural or urban local-government relationship
 
 ## Runtime Types
 
@@ -44,6 +48,42 @@ The validation gate checks:
 - visible warnings for low-confidence records
 
 Generated normalized artifacts are written to `data/normalized/nagrik-records.json` and `data/normalized/source-health.json`.
+
+## Draft 3 Correction Queue
+
+Draft 3 checkpoint 2 adds `CorrectionSubmission` in `src/lib/corrections.ts`.
+
+Each correction carries:
+
+- `id`
+- `status`
+- `recordId`
+- `message`
+- `language`
+- `submittedAt`
+
+Local development queue artifacts are written to `data/corrections/*.json` and ignored by Git. Production should replace this with an authenticated moderation store.
+
+## Draft 3 Geography Directory
+
+`src/data/geography.ts` models country, state, Union Territory, division, district, sub-district, development block, village, town, city, rural local body, urban local body, ward, and locality entities.
+
+Every geographic entry carries:
+
+- stable `id` and nested `slug`
+- `kind`
+- primary `parentId`
+- optional non-tree `relatedRegionIds`
+- administrative, rural, or urban `governanceBranch`
+- `dataStatus`
+- optional local-body type and coordinates
+- source-backed record assignments
+
+## Draft 3 State And UT Profiles
+
+`src/data/state-profiles.ts` stores a `StateProfile` for each of the 36 top-level jurisdictions. Stable directory facts and volatile administration/economic fields have separate source metadata so agents do not imply that a current office holder and an LGD code share the same update cycle.
+
+Economic values use per-capita NSDP at current prices, preserve the RBI reporting period, and remain `null` when the comparable table does not report a jurisdiction. See `docs/STATE_PROFILE_MODEL.md` for the field contract and refresh procedure.
 
 ## Provenance Rules
 

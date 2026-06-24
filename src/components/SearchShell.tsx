@@ -2,9 +2,13 @@
 
 import dynamic from "next/dynamic";
 import { FormEvent, useMemo, useState } from "react";
-import { Building2, FileSearch, Filter, Globe2, MapPinned, Search } from "lucide-react";
+import Link from "next/link";
+import { Building2, FileSearch, Filter, Globe2, Languages, MapPinned, Search } from "lucide-react";
+import { Brand } from "@/components/Brand";
+import { CorrectionForm } from "@/components/CorrectionForm";
 import { EvidencePanel } from "@/components/EvidencePanel";
 import { ResultCard } from "@/components/ResultCard";
+import { copy, type Locale } from "@/lib/i18n";
 import { buildSearchResponse } from "@/lib/search";
 import type { EntityKind, NagrikRecord, SearchMatch } from "@/lib/types";
 import type { SourceHealth } from "@/ingestion/types";
@@ -33,10 +37,12 @@ interface SearchShellProps {
 }
 
 export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShellProps) {
+  const [locale, setLocale] = useState<Locale>("en");
   const [query, setQuery] = useState("road complaint Bandra");
   const [filter, setFilter] = useState<EntityKind | "all">("all");
   const [matches, setMatches] = useState<SearchMatch[]>(() => buildSearchResponse("road complaint Bandra").matches);
   const [activeId, setActiveId] = useState(matches[0]?.record.id);
+  const t = copy[locale];
 
   const activeRecord = useMemo(
     () => matches.find((match) => match.record.id === activeId)?.record ?? matches[0]?.record,
@@ -56,39 +62,48 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
     <main>
       <section className="hero">
         <nav className="topbar" aria-label="Primary">
-          <div className="brand">
-            <span className="brand-mark" aria-hidden="true">
-              NS
-            </span>
-            <span>NagrikSetu</span>
+          <Brand inverse />
+          <div className="topbar__links">
+            <Link href="/places/india">Explore places</Link>
+            <Link href="/directory">Directory</Link>
           </div>
           <div className="topbar__status">
             <Globe2 aria-hidden="true" size={17} />
-            India public information navigator
+            {t.status}
+          </div>
+          <div className="language-switch" aria-label="Language">
+            <Languages aria-hidden="true" size={17} />
+            {(["en", "hi"] as Locale[]).map((item) => (
+              <button
+                className={locale === item ? "language-switch__button language-switch__button--active" : "language-switch__button"}
+                key={item}
+                onClick={() => setLocale(item)}
+                type="button"
+              >
+                {item.toUpperCase()}
+              </button>
+            ))}
           </div>
         </nav>
 
         <div className="hero__content">
           <div className="hero__copy">
-            <span className="eyebrow">Source-first civic search</span>
-            <h1>Find who is responsible, where to complain, and which public record proves it.</h1>
-            <p>
-              Search offices, roads, tenders, and grievance paths with confidence labels, source links, and a map-first
-              view built for mobile India.
-            </p>
+            <span className="eyebrow">{t.eyebrow}</span>
+            <h1>{t.headline}</h1>
+            <p>{t.subhead}</p>
           </div>
 
           <form className="search-panel" onSubmit={runSearch}>
-            <label htmlFor="search">Search public information</label>
+            <label htmlFor="search">{t.searchLabel}</label>
             <div className="search-row">
               <Search aria-hidden="true" size={21} />
               <input
                 id="search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Try road complaint Bandra, tender, CPGRAMS"
+                placeholder={t.searchPlaceholder}
               />
-              <button type="submit">Search</button>
+              <button type="submit">{t.searchButton}</button>
             </div>
             <div className="filters" aria-label="Search filters">
               <Filter aria-hidden="true" size={17} />
@@ -104,7 +119,7 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
                   }}
                   type="button"
                 >
-                  {item.label}
+                  {t.filters[item.value] ?? item.label}
                 </button>
               ))}
             </div>
@@ -116,10 +131,12 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
         <div className="workspace__main">
           <div className="section-heading">
             <div>
-              <span className="eyebrow">Live draft</span>
-              <h2>Results and responsibility chain</h2>
+              <span className="eyebrow">{t.resultsEyebrow}</span>
+              <h2>{t.resultsHeading}</h2>
             </div>
-            <span>{matches.length} matches</span>
+            <span>
+              {matches.length} {t.matchesLabel}
+            </span>
           </div>
           <div className="results-grid">
             <div className="results-list">
@@ -135,38 +152,39 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
               ) : (
                 <div className="empty-state">
                   <FileSearch aria-hidden="true" />
-                  <strong>No seed record matched that query.</strong>
-                  <span>Try road, complaint, tender, Bandra, Mumbai, or CPGRAMS.</span>
+                  <strong>{t.noResultsTitle}</strong>
+                  <span>{t.noResultsHint}</span>
                 </div>
               )}
             </div>
             <div className="map-panel">
               <div className="map-panel__heading">
                 <MapPinned aria-hidden="true" size={19} />
-                Map and source context
+                {t.mapHeading}
               </div>
               <NagrikMap activeId={activeRecord?.id} records={visibleRecords} onSelect={setActiveId} />
               <EvidencePanel record={activeRecord} />
+              <CorrectionForm locale={locale} recordId={activeRecord?.id} recordLabel={activeRecord?.title} />
             </div>
           </div>
         </div>
 
         <aside className="metrics">
-          <h2>Draft 2 coverage</h2>
+          <h2>{t.coverageHeading}</h2>
           <div className="metric">
             <Building2 aria-hidden="true" />
             <span>{stats.totalRecords}</span>
-            <p>normalized records across offices, complaints, roads, tenders, and tracked sources</p>
+            <p>{t.totalRecordsMetric}</p>
           </div>
           <div className="metric">
             <FileSearch aria-hidden="true" />
             <span>{sourceHealth.filter((source) => source.status === "healthy").length}</span>
-            <p>healthy source adapter runs in the deterministic Draft 2 ingestion report</p>
+            <p>{t.healthySourcesMetric}</p>
           </div>
           <div className="metric">
             <Globe2 aria-hidden="true" />
             <span>{stats.officialSourceRecords}</span>
-            <p>records backed by official-source provenance, with low-confidence records kept labeled</p>
+            <p>{t.officialRecordsMetric}</p>
           </div>
         </aside>
       </section>
