@@ -1,6 +1,13 @@
 import type { EntityKind, NagrikRecord, SourcePriority } from "@/lib/types";
 
-export type AccessMethod = "api" | "bulk-download" | "html-public-page" | "document-parse" | "manual-seed";
+export type AccessMethod =
+  | "api"
+  | "bulk-download"
+  | "geospatial-service"
+  | "html-public-page"
+  | "document-parse"
+  | "sitemap"
+  | "manual-seed";
 export type AutomationMode = "official-first" | "controlled-browser" | "manual-review-required";
 export type SourceHealthStatus = "healthy" | "watch" | "stale" | "not-run";
 

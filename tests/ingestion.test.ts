@@ -19,6 +19,16 @@ describe("Draft 2 ingestion backbone", () => {
     expect(report.health.every((source) => source.recordCount > 0)).toBe(true);
   });
 
+  it("covers the next national source expansion backlog", () => {
+    const sourceIds = new Set(sourceCatalog.map((source) => source.id));
+
+    expect(sourceCatalog.length).toBeGreaterThanOrEqual(16);
+    expect(sourceIds).toContain("lgd-india");
+    expect(sourceIds).toContain("pmgsy");
+    expect(sourceIds).toContain("mcd-311");
+    expect(sourceCatalog.every((source) => source.legal.licenseNote.length > 12)).toBe(true);
+  });
+
   it("keeps official-source provenance measurable", () => {
     const stats = getRecordStats();
 

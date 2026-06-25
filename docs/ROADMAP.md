@@ -26,13 +26,13 @@
 - First-party detail pages for every normalized record.
 - Country, state, district, and locality navigation.
 - Directory pages for all 28 states and 8 Union Territories.
-- Schema capacity for districts, sub-districts, rural bodies, 5,045 urban local bodies, wards, and localities.
+- Schema capacity for districts, sub-districts, rural bodies, 5,052 urban local bodies, wards, and localities.
 - Human directory and machine-readable sitemap.
 - Sourced civic profiles for all 28 states and 8 Union Territories, including current administration, official portals, government/LGD codes, and latest available RBI per-capita NSDP.
 
 ### Remaining Platform Work
 
-- One city, one state, and one central tender source with live ingestion.
+- One city, one state, one national geography source, one road/project source, and one central tender source with live ingestion.
 - LGD-backed import for all districts, sub-districts, villages, panchayats, and urban local bodies.
 - PostgreSQL/PostGIS persistence and migration path.
 - Source inventory admin workflow.
@@ -40,6 +40,12 @@
 - Automated refresh and change review for state administration and economy snapshots.
 - Voice/readout experiments.
 - Deployment hardening and observability.
+
+### Checkpoint 4 Start
+
+- Expanded the tracked source registry from the initial pilot set into a national expansion inventory covering LGD, National Portal, RBI, PMGSY, MoRTH, NHAI, Rail Madad, UMANG, eGramSwaraj, Bhuvan, BMC, MCD, CPPP, CPGRAMS, data.gov.in, and OSM.
+- Added first-pass national complaint/project records for NHAI, Rail Madad, UMANG, PMGSY, and MCD.
+- Added feasibility and automated-ingestion planning docs for connector development, raw snapshot storage, source-health monitoring, and future PostgreSQL/PostGIS migration.
 
 ## Draft 4 - National Expansion
 

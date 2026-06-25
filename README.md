@@ -50,7 +50,9 @@ pnpm run audit:local
 - `docs/SITE_MAP.md` - Public route and geography information architecture.
 - `docs/GEOGRAPHY_MODEL.md` - India administrative and local-government hierarchy contract.
 - `docs/STATE_PROFILE_MODEL.md` - State/UT profile provenance, economic definitions, and refresh procedure.
+- `docs/FEASIBILITY_AUDIT.md` - Direction, usefulness, feasibility, and source-class risk assessment.
+- `docs/AUTOMATED_INGESTION_PLAN.md` - Connector tiers, automation guardrails, and first live-ingestion backlog.
 
 ## Current Caveat
 
-Draft 3 checkpoint 3 uses deterministic fixture adapters, a dated state-profile snapshot, and a local file-backed correction queue. It keeps record context on NagrikSetu but does not yet run live crawlers, store data in PostGIS, submit grievances, or claim official completeness.
+Draft 3 checkpoint 4 start uses deterministic fixture adapters, a dated state-profile snapshot, and a local file-backed correction queue. It expands the official source registry and first-pass national route records, but does not yet run live crawlers, store data in PostGIS, submit grievances, or claim official completeness.

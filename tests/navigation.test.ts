@@ -96,7 +96,7 @@ describe("Draft 3 first-party navigation", () => {
 
   it("models national district and urban local body capacity separately", () => {
     expect(indiaDirectoryStats.find((stat) => stat.label === "Districts")?.value).toBe(784);
-    expect(indiaDirectoryStats.find((stat) => stat.label === "Urban Local Bodies")?.value).toBe(5045);
+    expect(indiaDirectoryStats.find((stat) => stat.label === "Urban Local Bodies")?.value).toBe(5052);
 
     const mcgm = getRegionById("mcgm");
     const hWest = getRegionById("h-west-ward");

@@ -10,12 +10,54 @@ const sources = {
     priority: "open-government",
     licenseNote: "Use dataset-level licenses and attribution before redistribution."
   },
+  lgd: {
+    sourceName: "Local Government Directory",
+    sourceUrl: "https://lgdirectory.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Use public directory metadata with LGD attribution and extraction dates."
+  },
+  nationalPortal: {
+    sourceName: "National Portal of India",
+    sourceUrl: "https://www.india.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Use public directory facts with National Portal attribution and last-checked dates."
+  },
+  rbi: {
+    sourceName: "RBI Handbook of Statistics on Indian States",
+    sourceUrl: "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=23183",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Preserve RBI publication, table number, reporting period, and last-checked date."
+  },
   cppp: {
     sourceName: "Central Public Procurement Portal",
     sourceUrl: "https://eprocure.gov.in/eprocure/app",
     lastChecked: today,
     priority: "official",
     licenseNote: "Link to original tender notices and preserve portal policy caveats."
+  },
+  pmgsy: {
+    sourceName: "Pradhan Mantri Gram Sadak Yojana",
+    sourceUrl: "https://pmgsy.nic.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Use public road and project metadata with original scheme and report links."
+  },
+  morth: {
+    sourceName: "Ministry of Road Transport and Highways",
+    sourceUrl: "https://morth.nic.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Use official public notices, reports, and road-sector documents with attribution."
+  },
+  nhai: {
+    sourceName: "National Highways Authority of India",
+    sourceUrl: "https://nhai.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Route users to official NHAI channels and preserve source URLs for highway metadata."
   },
   cpgrams: {
     sourceName: "CPGRAMS / PG Portal",
@@ -24,12 +66,47 @@ const sources = {
     priority: "official",
     licenseNote: "Route users to official grievance filing; do not proxy personal submissions."
   },
+  railMadad: {
+    sourceName: "Rail Madad",
+    sourceUrl: "https://railmadad.indianrailways.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Route users to official Rail Madad channels and do not collect passenger grievance details."
+  },
+  umang: {
+    sourceName: "UMANG",
+    sourceUrl: "https://web.umang.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Use as an official service directory and do not collect user account data."
+  },
+  egramswaraj: {
+    sourceName: "eGramSwaraj",
+    sourceUrl: "https://egramswaraj.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Use public panchayat profile and planning metadata with source report links."
+  },
+  bhuvan: {
+    sourceName: "Bhuvan",
+    sourceUrl: "https://bhuvan.nrsc.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Use public geospatial layers with NRSC attribution and layer-specific terms."
+  },
   myBmc: {
     sourceName: "Brihanmumbai Municipal Corporation citizen portal",
     sourceUrl: "https://portal.mcgm.gov.in/",
     lastChecked: today,
     priority: "official",
     licenseNote: "Public contact and complaint routing data only."
+  },
+  mcd311: {
+    sourceName: "Municipal Corporation of Delhi 311",
+    sourceUrl: "https://mcdonline.nic.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Collect public civic service routing only and link users to official MCD channels."
   },
   osm: {
     sourceName: "OpenStreetMap",
@@ -83,6 +160,51 @@ export const seedRecords: NagrikRecord[] = [
     provenance: sources.myBmc
   },
   {
+    id: "source-lgd-directory",
+    kind: "source",
+    title: "Local Government Directory civic geography backbone",
+    summary:
+      "Official directory source for Indian administrative and local-government identifiers, including states, districts, sub-districts, villages, rural bodies, and urban local bodies.",
+    department: "Ministry of Panchayati Raj",
+    jurisdiction: "India",
+    website: "https://lgdirectory.gov.in/",
+    issueTags: ["LGD", "district", "panchayat", "urban local body", "geography"],
+    languageTags: ["en", "hi"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.lgd
+  },
+  {
+    id: "source-national-portal-directory",
+    kind: "source",
+    title: "National Portal state and government directory",
+    summary:
+      "Official national directory for state and Union Territory facts, government portals, district references, and public Who's Who links.",
+    department: "Government of India",
+    jurisdiction: "India",
+    website: "https://www.india.gov.in/",
+    issueTags: ["state directory", "district directory", "official portal", "chief minister", "governor"],
+    languageTags: ["en", "hi"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.nationalPortal
+  },
+  {
+    id: "source-rbi-state-statistics",
+    kind: "source",
+    title: "RBI state statistics handbook",
+    summary:
+      "Official statistical publication used for state and Union Territory economic profile fields such as per-capita NSDP at current prices.",
+    department: "Reserve Bank of India",
+    jurisdiction: "India",
+    website: "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=23183",
+    issueTags: ["state profile", "NSDP", "economy", "statistics", "RBI"],
+    languageTags: ["en"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.rbi
+  },
+  {
     id: "tender-cppp-roadworks",
     kind: "tender",
     title: "Central public procurement tender search",
@@ -99,6 +221,42 @@ export const seedRecords: NagrikRecord[] = [
     confidence: "high",
     updatedAt: today,
     provenance: sources.cppp
+  },
+  {
+    id: "project-pmgsy-road-discovery",
+    kind: "project",
+    title: "PMGSY rural road project discovery",
+    summary:
+      "Official scheme source for discovering rural road packages, habitation connectivity, project progress, and maintenance context before routing responsibility.",
+    department: "Ministry of Rural Development",
+    jurisdiction: "India",
+    status: "Source connector planned; official project discovery route available",
+    budget: "Not publicly available in normalized records yet",
+    expectedCompletion: "Varies by project package",
+    supervisingOffice: "PMGSY programme authorities and state rural road agencies",
+    website: "https://pmgsy.nic.in/",
+    issueTags: ["rural road", "PMGSY", "project", "habitation", "maintenance"],
+    languageTags: ["en", "hi"],
+    confidence: "medium",
+    updatedAt: today,
+    provenance: sources.pmgsy
+  },
+  {
+    id: "complaint-nhai-highway",
+    kind: "complaint",
+    title: "National highway complaint and incident route",
+    summary:
+      "Official NHAI-facing route for national highway issues such as road condition, toll plaza service, incidents, and highway assistance.",
+    department: "National Highways Authority of India",
+    jurisdiction: "India",
+    website: "https://nhai.gov.in/",
+    portalUrl: "https://nhai.gov.in/",
+    escalation: ["Use the official NHAI route or 1033 channel where applicable", "Keep highway, chainage, toll plaza, and incident details", "Track through the official channel"],
+    issueTags: ["national highway", "NHAI", "road complaint", "toll", "incident", "1033"],
+    languageTags: ["en", "hi"],
+    confidence: "medium",
+    updatedAt: today,
+    provenance: sources.nhai
   },
   {
     id: "complaint-cpgrams",
@@ -118,6 +276,70 @@ export const seedRecords: NagrikRecord[] = [
     provenance: sources.cpgrams
   },
   {
+    id: "complaint-rail-madad",
+    kind: "complaint",
+    title: "Rail Madad railway grievance route",
+    summary:
+      "Official Indian Railways route for railway service grievances involving trains, stations, passenger amenities, freight, and railway assistance.",
+    department: "Indian Railways",
+    jurisdiction: "India",
+    website: "https://railmadad.indianrailways.gov.in/",
+    portalUrl: "https://railmadad.indianrailways.gov.in/",
+    escalation: ["Open the official Rail Madad portal", "Choose the relevant train, station, or service category", "Save the official complaint or reference number"],
+    issueTags: ["railway complaint", "train", "station", "passenger grievance", "Rail Madad"],
+    languageTags: ["en", "hi"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.railMadad
+  },
+  {
+    id: "complaint-umang-service-discovery",
+    kind: "complaint",
+    title: "UMANG official service discovery route",
+    summary:
+      "Official service directory for finding government services and eligible grievance or request flows without NagrikSetu collecting account data.",
+    department: "Ministry of Electronics and Information Technology",
+    jurisdiction: "India",
+    website: "https://web.umang.gov.in/",
+    portalUrl: "https://web.umang.gov.in/",
+    escalation: ["Search the official UMANG service directory", "Open the responsible department service", "Complete login-only actions on UMANG or the linked official service"],
+    issueTags: ["government service", "UMANG", "service directory", "complaint", "application"],
+    languageTags: ["en", "hi"],
+    confidence: "medium",
+    updatedAt: today,
+    provenance: sources.umang
+  },
+  {
+    id: "source-egramswaraj-panchayat",
+    kind: "source",
+    title: "eGramSwaraj panchayat profile and planning source",
+    summary:
+      "Official rural local-government source for panchayat profiles, planning, and public reporting that can enrich Gram Panchayat pages after LGD import.",
+    department: "Ministry of Panchayati Raj",
+    jurisdiction: "India",
+    website: "https://egramswaraj.gov.in/",
+    issueTags: ["panchayat", "rural local body", "Gram Panchayat", "planning", "village"],
+    languageTags: ["en", "hi"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.egramswaraj
+  },
+  {
+    id: "source-bhuvan-geospatial",
+    kind: "source",
+    title: "Bhuvan public geospatial reference",
+    summary:
+      "Official geospatial platform that can support boundary, base-map, and layer discovery after layer-specific terms are verified.",
+    department: "National Remote Sensing Centre",
+    jurisdiction: "India",
+    website: "https://bhuvan.nrsc.gov.in/",
+    issueTags: ["map", "boundary", "geospatial", "Bhuvan", "NRSC"],
+    languageTags: ["en"],
+    confidence: "medium",
+    updatedAt: today,
+    provenance: sources.bhuvan
+  },
+  {
     id: "road-demo-linking-road",
     kind: "road",
     title: "Linking Road responsibility lookup - demo record",
@@ -135,6 +357,23 @@ export const seedRecords: NagrikRecord[] = [
     confidence: "low",
     updatedAt: today,
     provenance: sources.osm
+  },
+  {
+    id: "complaint-mcd-civic",
+    kind: "complaint",
+    title: "Municipal Corporation of Delhi civic complaint route",
+    summary:
+      "Official Delhi municipal route candidate for civic issues such as sanitation, street lights, roads, drains, and ward-level municipal service routing.",
+    department: "Municipal Corporation of Delhi",
+    jurisdiction: "Delhi",
+    website: "https://mcdonline.nic.in/",
+    portalUrl: "https://mcdonline.nic.in/",
+    escalation: ["Use the official MCD online route or 311 channel where applicable", "Keep ward, colony, and issue details", "Track using the official complaint reference"],
+    issueTags: ["Delhi", "MCD", "311", "civic complaint", "sanitation", "street light", "road"],
+    languageTags: ["en", "hi"],
+    confidence: "medium",
+    updatedAt: today,
+    provenance: sources.mcd311
   },
   {
     id: "source-data-gov-india",

@@ -2,12 +2,42 @@
   "generatedAt": "2026-06-23",
   "health": [
     {
+      "sourceId": "lgd-india",
+      "sourceName": "Local Government Directory",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 14,
+      "recordCount": 1,
+      "warnings": []
+    },
+    {
+      "sourceId": "national-portal-india",
+      "sourceName": "National Portal of India",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 14,
+      "recordCount": 1,
+      "warnings": []
+    },
+    {
       "sourceId": "data-gov-in",
       "sourceName": "Open Government Data Platform India",
       "status": "healthy",
       "lastSuccessfulRun": "2026-06-23",
       "daysSinceLastSuccess": 0,
       "expectedFreshnessDays": 14,
+      "recordCount": 1,
+      "warnings": []
+    },
+    {
+      "sourceId": "rbi-handbook-state-statistics",
+      "sourceName": "RBI Handbook of Statistics on Indian States",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 120,
       "recordCount": 1,
       "warnings": []
     },
@@ -22,6 +52,36 @@
       "warnings": []
     },
     {
+      "sourceId": "pmgsy",
+      "sourceName": "Pradhan Mantri Gram Sadak Yojana",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 45,
+      "recordCount": 2,
+      "warnings": []
+    },
+    {
+      "sourceId": "morth",
+      "sourceName": "Ministry of Road Transport and Highways",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 45,
+      "recordCount": 1,
+      "warnings": []
+    },
+    {
+      "sourceId": "nhai",
+      "sourceName": "National Highways Authority of India",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 14,
+      "recordCount": 2,
+      "warnings": []
+    },
+    {
       "sourceId": "cpgrams-pgportal",
       "sourceName": "CPGRAMS / PG Portal",
       "status": "healthy",
@@ -32,6 +92,46 @@
       "warnings": []
     },
     {
+      "sourceId": "rail-madad",
+      "sourceName": "Rail Madad",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 45,
+      "recordCount": 2,
+      "warnings": []
+    },
+    {
+      "sourceId": "umang",
+      "sourceName": "UMANG",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 45,
+      "recordCount": 2,
+      "warnings": []
+    },
+    {
+      "sourceId": "egramswaraj",
+      "sourceName": "eGramSwaraj",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 45,
+      "recordCount": 1,
+      "warnings": []
+    },
+    {
+      "sourceId": "bhuvan",
+      "sourceName": "Bhuvan",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 45,
+      "recordCount": 1,
+      "warnings": []
+    },
+    {
       "sourceId": "bmc-citizen-portal",
       "sourceName": "Brihanmumbai Municipal Corporation citizen portal",
       "status": "healthy",
@@ -39,6 +139,16 @@
       "daysSinceLastSuccess": 0,
       "expectedFreshnessDays": 14,
       "recordCount": 3,
+      "warnings": []
+    },
+    {
+      "sourceId": "mcd-311",
+      "sourceName": "Municipal Corporation of Delhi 311",
+      "status": "healthy",
+      "lastSuccessfulRun": "2026-06-23",
+      "daysSinceLastSuccess": 0,
+      "expectedFreshnessDays": 14,
+      "recordCount": 2,
       "warnings": []
     },
     {
@@ -56,8 +166,32 @@
   ],
   "events": [
     {
+      "sourceId": "lgd-india",
+      "adapterName": "lgd-india-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 1,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
+      "sourceId": "national-portal-india",
+      "adapterName": "national-portal-india-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 1,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
       "sourceId": "data-gov-in",
       "adapterName": "data-gov-in-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 1,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
+      "sourceId": "rbi-handbook-state-statistics",
+      "adapterName": "rbi-handbook-state-statistics-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 1,
       "warningCount": 0,
@@ -72,6 +206,30 @@
       "status": "healthy"
     },
     {
+      "sourceId": "pmgsy",
+      "adapterName": "pmgsy-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 2,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
+      "sourceId": "morth",
+      "adapterName": "morth-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 1,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
+      "sourceId": "nhai",
+      "adapterName": "nhai-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 2,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
       "sourceId": "cpgrams-pgportal",
       "adapterName": "cpgrams-pgportal-fixture-adapter",
       "fetchedAt": "2026-06-23",
@@ -80,10 +238,50 @@
       "status": "healthy"
     },
     {
+      "sourceId": "rail-madad",
+      "adapterName": "rail-madad-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 2,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
+      "sourceId": "umang",
+      "adapterName": "umang-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 2,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
+      "sourceId": "egramswaraj",
+      "adapterName": "egramswaraj-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 1,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
+      "sourceId": "bhuvan",
+      "adapterName": "bhuvan-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 1,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
       "sourceId": "bmc-citizen-portal",
       "adapterName": "bmc-citizen-portal-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 3,
+      "warningCount": 0,
+      "status": "healthy"
+    },
+    {
+      "sourceId": "mcd-311",
+      "adapterName": "mcd-311-fixture-adapter",
+      "fetchedAt": "2026-06-23",
+      "recordCount": 2,
       "warningCount": 0,
       "status": "healthy"
     },
