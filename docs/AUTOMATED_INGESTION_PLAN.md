@@ -111,8 +111,9 @@ Track completeness as a matrix, not a single claim:
 
 ## Local Development Milestones
 
-1. Add `data/raw/.gitkeep` and a raw snapshot writer.
-2. Add connector-specific fixtures for LGD and one public HTML page.
-3. Add dedupe keys to the ingestion adapter result.
-4. Add a `pnpm run ingest:lgd` script that writes normalized geography artifacts.
-5. Add a source-health CLI that checks HTTP reachability, freshness, and robots URLs without crawling.
+1. Added `data/raw/.gitkeep` and `src/ingestion/raw-snapshot.ts` so connectors can archive raw bytes plus metadata before parsing.
+2. Added `src/ingestion/lgd.ts` with LGD fixture rows and branch-preserving geography normalization.
+3. Added `pnpm run ingest:lgd`, which writes `data/normalized/lgd-regions.json` for the deterministic LGD import baseline.
+4. Next: add connector-specific fixtures for one public HTML page.
+5. Next: add dedupe keys to the ingestion adapter result.
+6. Next: add a source-health CLI that checks HTTP reachability, freshness, and robots URLs without crawling.

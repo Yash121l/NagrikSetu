@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-06-26",
+  "source": {
+    "sourceName": "Local Government Directory",
+    "sourceUrl": "https://lgdirectory.gov.in/",
+    "licenseNote": "Use public directory downloads for identifiers and hierarchy; preserve LGD attribution and extraction dates."
+  },
+  "warnings": [],
+  "regions": [
+    {
+      "id": "lgd-27",
+      "kind": "state",
+      "name": "Maharashtra",
+      "localName": "महाराष्ट्र",
+      "slug": [
+        "india",
+        "maharashtra-27"
+      ],
+      "parentId": "india",
+      "governanceBranch": "administrative",
+      "dataStatus": "directory-page",
+      "summary": "Maharashtra imported from the Local Government Directory as a state entry.",
+      "center": {
+        "lat": 19.7515,
+        "lng": 75.7139
+      },
+      "directRecordIds": [],
+      "facts": [
+        {
+          "label": "LGD code",
+          "value": "27"
+        },
+        {
+          "label": "Governance branch",
+          "value": "administrative"
+        },
+        {
+          "label": "Source checked",
+          "value": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "id": "lgd-482",
+      "kind": "district",
+      "name": "Mumbai",
+      "slug": [
+        "india",
+        "maharashtra-27",
+        "mumbai-482"
+      ],
+      "parentId": "lgd-27",
+      "governanceBranch": "administrative",
+      "dataStatus": "directory-page",
+      "summary": "Mumbai imported from the Local Government Directory as a district entry.",
+      "center": {
+        "lat": 18.9388,
+        "lng": 72.8354
+      },
+      "directRecordIds": [],
+      "facts": [
+        {
+          "label": "LGD code",
+          "value": "482"
+        },
+        {
+          "label": "Governance branch",
+          "value": "administrative"
+        },
+        {
+          "label": "Source checked",
+          "value": "2026-06-26"
+        }
+      ]
+    },
+    {
+      "id": "lgd-483",
+      "kind": "district",
+      "name": "Mumbai Suburban",
+      "slug": [
+        "india",
+        "maharashtra-27",
+        "mumbai-suburban-483"
+      ],
+      "parentId": "lgd-27",
+      "governanceBranch": "administrative",
+      "dataStatus": "directory-page",
+      "summary": "Mumbai Suburban imported from the Local Government Directory as a district entry.",
+      "center": {
+        "lat": 19.1538,
+        "lng": 72.8752
+      },
+      "directRecordIds": [],
+      "facts": [
+        {
+          "label": "LGD code",
+          "value": "483"
+        },
+        {
+          "label": "Governance branch",
+          "value": "administrative"
+        },
+        {
+          "label": "Source checked",
+          "value": "2026-06-26"
+        }
+      ]
+    }
+  ]
+}

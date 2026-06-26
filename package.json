@@ -12,7 +12,8 @@
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run",
     "ingest:demo": "node --import tsx scripts/ingest-demo.ts",
-    "validate:data": "node --import tsx scripts/ingest-demo.ts --check",
+    "ingest:lgd": "node --import tsx scripts/ingest-lgd.ts",
+    "validate:data": "node --import tsx scripts/ingest-demo.ts --check && node --import tsx scripts/ingest-lgd.ts --check",
     "audit:local": "pnpm run validate:data && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build"
   },
   "dependencies": {

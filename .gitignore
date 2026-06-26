@@ -12,3 +12,5 @@ playwright-report/
 test-results/
 data/corrections/*.json
 data/corrections/*.json.tmp
+data/raw/**
+!data/raw/.gitkeep
