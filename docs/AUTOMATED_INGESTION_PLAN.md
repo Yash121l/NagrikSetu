@@ -117,4 +117,5 @@ Track completeness as a matrix, not a single claim:
 4. Added adapter-level dedupe keys and `src/ingestion/connector-runner.ts` so duplicate source claims become reviewable warnings.
 5. Added `pnpm run source-health:local`, which checks catalog homepages and robots URLs with HEAD requests and records license/robots warnings without crawling content.
 6. Added the `NagrikRepository` contract and `db/schema.sql` so fixture-backed reads can be replaced by PostgreSQL/PostGIS without changing app routes.
-7. Next: add connector-specific fixtures for one public HTML page and implement the first database-backed repository behind the same contract.
+7. Added `pnpm run readiness:production`, which audits production environment gates, legal/source metadata, robots review, license review, and human moderation readiness.
+8. Next: add connector-specific fixtures for one public HTML page and implement the first database-backed repository behind the same contract.

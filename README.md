@@ -28,6 +28,9 @@ pnpm run typecheck
 pnpm run test
 pnpm run build
 pnpm run ingest:demo
+pnpm run ingest:lgd
+pnpm run source-health:local
+pnpm run readiness:production
 pnpm run validate:data
 pnpm run audit:local
 ```
@@ -54,6 +57,7 @@ pnpm run audit:local
 - `docs/FEASIBILITY_AUDIT.md` - Direction, usefulness, feasibility, and source-class risk assessment.
 - `docs/AUTOMATED_INGESTION_PLAN.md` - Connector tiers, automation guardrails, and first live-ingestion backlog.
 - `docs/POSTGRES_MIGRATION.md` - Repository-contract migration plan for moving fixture-backed reads to PostgreSQL/PostGIS.
+- `docs/DEPLOYMENT_READINESS.md` - Production environment, connector gate, source-review, and phased rollout checklist.
 
 ## Current Caveat
 

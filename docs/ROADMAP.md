@@ -48,6 +48,7 @@
 - Added first-pass national complaint/project records for NHAI, Rail Madad, UMANG, PMGSY, and MCD.
 - Added feasibility and automated-ingestion planning docs for connector development, raw snapshot storage, source-health monitoring, and future PostgreSQL/PostGIS migration.
 - Added the repository contract and PostgreSQL/PostGIS schema baseline for production persistence.
+- Added a production-readiness audit and deployment checklist covering environment gates, source legal review, human moderation, raw snapshots, and phased source rollout.
 
 ## Draft 4 - National Expansion
 
