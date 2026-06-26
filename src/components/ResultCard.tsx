@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { AlertTriangle, ArrowRight, ExternalLink, MapPin, Phone, ShieldCheck } from "lucide-react";
 import { getRecordWarnings } from "@/lib/quality";
+import { toSafeExternalHref } from "@/lib/urls";
 import type { SearchMatch } from "@/lib/types";
 
 export function ResultCard({ match, active, onSelect }: { match: SearchMatch; active: boolean; onSelect: () => void }) {
   const { record } = match;
   const warnings = getRecordWarnings(record);
-  const sourceHref = record.website ?? record.provenance.sourceUrl;
+  const sourceHref = toSafeExternalHref(record.website, record.provenance.sourceUrl);
   const sourceLabel =
     record.provenance.priority === "official"
       ? "Official evidence"
@@ -48,9 +49,11 @@ export function ResultCard({ match, active, onSelect }: { match: SearchMatch; ac
         <Link className="detail-link" href={`/records/${record.id}`}>
           View NagrikSetu record <ArrowRight aria-hidden="true" size={15} />
         </Link>
-        <a className="source-link" href={sourceHref} target="_blank" rel="noreferrer">
-          {sourceLabel} <ExternalLink aria-hidden="true" size={15} />
-        </a>
+        {sourceHref ? (
+          <a className="source-link" href={sourceHref} target="_blank" rel="noreferrer">
+            {sourceLabel} <ExternalLink aria-hidden="true" size={15} />
+          </a>
+        ) : null}
       </div>
     </article>
   );

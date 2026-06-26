@@ -1,5 +1,7 @@
 import { getAllRecords } from "@/data/repository";
 import type { EntityKind, NagrikRecord, SearchMatch, SearchResponse } from "./types";
+import { applyWorkspaceControls, defaultWorkspaceFilters } from "./workspace";
+import type { WorkspaceFilters } from "./types";
 
 const queryWeights: Record<string, number> = {
   title: 8,
@@ -62,8 +64,13 @@ export function searchRecords(query: string, kind: EntityKind | "all" = "all", r
     .sort((a, b) => b.score - a.score || a.record.title.localeCompare(b.record.title));
 }
 
-export function buildSearchResponse(query: string, kind: EntityKind | "all" = "all"): SearchResponse {
-  const matches = searchRecords(query, kind).slice(0, 8);
+export function buildSearchResponse(
+  query: string,
+  kind: EntityKind | "all" = "all",
+  options: { filters?: Partial<WorkspaceFilters>; limit?: number } = {}
+): SearchResponse {
+  const filters = { ...defaultWorkspaceFilters, ...options.filters, kind };
+  const matches = applyWorkspaceControls(searchRecords(query, kind), filters).slice(0, options.limit ?? 8);
 
   return {
     query,

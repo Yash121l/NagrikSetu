@@ -84,6 +84,32 @@ export interface SearchRequest {
   language?: "en" | "hi";
 }
 
+export type WorkspaceViewMode = "cards" | "table";
+export type WorkspaceSortKey =
+  | "relevance"
+  | "title"
+  | "kind"
+  | "jurisdiction"
+  | "department"
+  | "confidence"
+  | "lastChecked"
+  | "updatedAt";
+export type WorkspaceSortDirection = "asc" | "desc";
+export type WorkspaceFreshnessFilter = "all" | "fresh" | "stale";
+export type WorkspaceLocationFilter = "all" | "with-location" | "missing-location";
+
+export interface WorkspaceFilters {
+  kind: EntityKind | "all";
+  confidence: Confidence | "all";
+  sourcePriority: SourcePriority | "all";
+  freshness: WorkspaceFreshnessFilter;
+  location: WorkspaceLocationFilter;
+  language: string;
+  department: string;
+  sortBy: WorkspaceSortKey;
+  sortDirection: WorkspaceSortDirection;
+}
+
 export interface SearchMatch {
   record: NagrikRecord;
   score: number;
