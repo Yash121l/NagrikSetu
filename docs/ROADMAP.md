@@ -37,6 +37,7 @@
 - PostgreSQL/PostGIS persistence and migration path.
 - Source inventory admin workflow.
 - Freshness and broken-link monitoring.
+- Database-backed repository implementation against the PostgreSQL/PostGIS schema baseline.
 - Automated refresh and change review for state administration and economy snapshots.
 - Voice/readout experiments.
 - Deployment hardening and observability.
@@ -46,6 +47,7 @@
 - Expanded the tracked source registry from the initial pilot set into a national expansion inventory covering LGD, National Portal, RBI, PMGSY, MoRTH, NHAI, Rail Madad, UMANG, eGramSwaraj, Bhuvan, BMC, MCD, CPPP, CPGRAMS, data.gov.in, and OSM.
 - Added first-pass national complaint/project records for NHAI, Rail Madad, UMANG, PMGSY, and MCD.
 - Added feasibility and automated-ingestion planning docs for connector development, raw snapshot storage, source-health monitoring, and future PostgreSQL/PostGIS migration.
+- Added the repository contract and PostgreSQL/PostGIS schema baseline for production persistence.
 
 ## Draft 4 - National Expansion
 

@@ -55,6 +55,8 @@ Phase 4 adapter runs add `dedupeKeys` to each `AdapterRunResult`. The connector 
 
 `pnpm run source-health:local` produces live source-health JSON for catalog homepages and robots URLs. It stores HTTP status, redistribution mode, license notes, and warnings, but does not crawl source content.
 
+Phase 5 adds the `NagrikRepository` contract and `db/schema.sql` for PostgreSQL/PostGIS migration. The current app still uses the local fixture repository, while production should implement the same repository interface against database tables.
+
 ## Draft 3 Correction Queue
 
 Draft 3 checkpoint 2 adds `CorrectionSubmission` in `src/lib/corrections.ts`.

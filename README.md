@@ -39,6 +39,7 @@ pnpm run audit:local
 - `src/lib` - Typed civic records, deterministic base records, search logic, and quality helpers.
 - `src/ingestion` - Source catalog, adapter contracts, validation, and deterministic ingestion report.
 - `src/data` - Repository facade used by the app and APIs.
+- `db/schema.sql` - PostgreSQL/PostGIS persistence baseline for production migration.
 - `src/data/geography.ts` - All 28 states, 8 UTs, national counts, and extensible administrative/rural/urban local-government hierarchy.
 - `src/data/state-profiles.ts` - Sourced capitals, government identifiers, current administration, and per-capita NSDP snapshots for all 36 top-level jurisdictions.
 - `scripts` - Executable agent utilities such as the demo ingestion generator.
@@ -52,6 +53,7 @@ pnpm run audit:local
 - `docs/STATE_PROFILE_MODEL.md` - State/UT profile provenance, economic definitions, and refresh procedure.
 - `docs/FEASIBILITY_AUDIT.md` - Direction, usefulness, feasibility, and source-class risk assessment.
 - `docs/AUTOMATED_INGESTION_PLAN.md` - Connector tiers, automation guardrails, and first live-ingestion backlog.
+- `docs/POSTGRES_MIGRATION.md` - Repository-contract migration plan for moving fixture-backed reads to PostgreSQL/PostGIS.
 
 ## Current Caveat
 

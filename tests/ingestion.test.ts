@@ -2,13 +2,14 @@ import { describe, expect, it } from "vitest";
 import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
-import { getAllRecords, getIngestionReport, getRecordStats } from "@/data/repository";
+import { activeRepository, getAllRecords, getIngestionReport, getRecordStats } from "@/data/repository";
 import { findDedupeCollisions } from "@/ingestion/connector-runner";
 import { lgdFixtureRows, normalizeLgdRows } from "@/ingestion/lgd";
 import { sourceCatalog } from "@/ingestion/source-catalog";
 import { checkSource, classifyEndpointStatus } from "@/ingestion/source-health-check";
 import { writeRawSnapshot } from "@/ingestion/raw-snapshot";
 import { validateRecords } from "@/ingestion/validator";
+import { moderationStatuses } from "@/lib/corrections";
 import type { AdapterRunResult } from "@/ingestion/types";
 
 describe("Draft 2 ingestion backbone", () => {
@@ -44,6 +45,29 @@ describe("Draft 2 ingestion backbone", () => {
     expect(stats.totalRecords).toBeGreaterThan(6);
     expect(stats.officialSourceRecords).toBeGreaterThan(0);
     expect(stats.lowConfidenceRecords).toBeGreaterThan(0);
+  });
+
+  it("keeps the app behind the repository contract until database migration", () => {
+    const records = getAllRecords();
+    const stats = activeRepository.getRecordStats(records);
+
+    expect(activeRepository.mode).toBe("local-fixture");
+    expect(stats.totalRecords).toBe(records.length);
+    expect(stats.byKind.office).toBeGreaterThan(0);
+  });
+
+  it("documents the production persistence schema boundary", async () => {
+    const schema = await readFile(path.join(process.cwd(), "db/schema.sql"), "utf8");
+
+    expect(schema).toContain("create extension if not exists postgis");
+    expect(schema).toContain("create table if not exists civic_records");
+    expect(schema).toContain("search_document tsvector generated always as");
+    expect(schema).toContain("create table if not exists record_dedupe_keys");
+    expect(schema).toContain("create table if not exists geography_regions");
+    expect(schema).toContain("create table if not exists correction_submissions");
+    for (const status of moderationStatuses) {
+      expect(schema).toContain(`'${status}'`);
+    }
   });
 
   it("returns validation issues instead of throwing for malformed records", () => {

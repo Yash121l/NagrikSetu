@@ -12,7 +12,7 @@ Draft 3 checkpoint 3 is a Next.js full-stack app with a deterministic local data
 - `src/lib/seed-data.ts` stores deterministic base records that the Draft 2 ingestion demo normalizes with generated source records.
 - `src/lib/corrections.ts` owns correction validation, ids, and persistence boundaries.
 - `src/ingestion` defines source catalog, adapter contracts, validation, and source-health checks.
-- `src/data/repository.ts` gives the app one read path for records and ingestion state.
+- `src/data/repository.ts` gives the app one read path for records and ingestion state through the `NagrikRepository` contract.
 - `src/lib/search.ts` provides deterministic local ranking.
 - `src/lib/i18n.ts` provides the pilot English/Hindi interface copy.
 - `src/app/records/[id]` renders first-party detail pages for every normalized record.
@@ -46,3 +46,4 @@ flowchart LR
 - Keep local correction artifacts out of source control while preserving a queue directory for development.
 - Model administrative and local-government geography as overlapping branches with explicit related-region links.
 - Generate top-level pages for all 28 states and 8 Union Territories while leaving unpopulated lower-level records visibly under development.
+- Keep PostgreSQL/PostGIS migration behind the repository contract; see `db/schema.sql` and `docs/POSTGRES_MIGRATION.md`.
