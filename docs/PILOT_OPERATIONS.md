@@ -12,6 +12,15 @@ This checkpoint prepares NagrikSetu for controlled public-pilot testing without 
 - Queue files are ignored by Git and correction intake does not collect personal contact details.
 - A moderator must verify each correction against official sources before records change.
 
+## Moderation Workflow
+
+- Correction artifacts now carry moderation statuses: `new`, `triaged`, `source-check-needed`, `accepted`, `rejected`, `duplicate`, and `published`.
+- Reviewer updates may store a reviewer note, an official source URL, a suggested normalized change, and an append-only audit trail.
+- `GET /api/moderation/corrections` lists correction submissions for operators.
+- `PATCH /api/moderation/corrections/[id]` updates moderation state.
+- Moderation routes require `Authorization: Bearer <NAGRIKSETU_ADMIN_TOKEN>` and fail closed when the token is not configured.
+- Public correction intake remains privacy-limited to record id, message, and interface language.
+
 ## PWA Readiness
 
 - `src/app/manifest.ts` exposes install metadata.
