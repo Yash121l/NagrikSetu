@@ -170,6 +170,7 @@
       "adapterName": "lgd-india-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 1,
+      "dedupeKeyCount": 1,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -178,6 +179,7 @@
       "adapterName": "national-portal-india-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 1,
+      "dedupeKeyCount": 1,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -186,6 +188,7 @@
       "adapterName": "data-gov-in-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 1,
+      "dedupeKeyCount": 1,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -194,6 +197,7 @@
       "adapterName": "rbi-handbook-state-statistics-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 1,
+      "dedupeKeyCount": 1,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -202,6 +206,7 @@
       "adapterName": "cppp-eprocure-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 2,
+      "dedupeKeyCount": 2,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -210,6 +215,7 @@
       "adapterName": "pmgsy-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 2,
+      "dedupeKeyCount": 2,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -218,6 +224,7 @@
       "adapterName": "morth-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 1,
+      "dedupeKeyCount": 1,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -226,6 +233,7 @@
       "adapterName": "nhai-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 2,
+      "dedupeKeyCount": 2,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -234,6 +242,7 @@
       "adapterName": "cpgrams-pgportal-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 2,
+      "dedupeKeyCount": 2,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -242,6 +251,7 @@
       "adapterName": "rail-madad-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 2,
+      "dedupeKeyCount": 2,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -250,6 +260,7 @@
       "adapterName": "umang-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 2,
+      "dedupeKeyCount": 2,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -258,6 +269,7 @@
       "adapterName": "egramswaraj-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 1,
+      "dedupeKeyCount": 1,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -266,6 +278,7 @@
       "adapterName": "bhuvan-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 1,
+      "dedupeKeyCount": 1,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -274,6 +287,7 @@
       "adapterName": "bmc-citizen-portal-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 3,
+      "dedupeKeyCount": 3,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -282,6 +296,7 @@
       "adapterName": "mcd-311-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 2,
+      "dedupeKeyCount": 2,
       "warningCount": 0,
       "status": "healthy"
     },
@@ -290,6 +305,7 @@
       "adapterName": "openstreetmap-fixture-adapter",
       "fetchedAt": "2026-06-23",
       "recordCount": 2,
+      "dedupeKeyCount": 2,
       "warningCount": 1,
       "status": "watch"
     }

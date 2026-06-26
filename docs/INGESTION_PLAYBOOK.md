@@ -39,6 +39,8 @@ Each adapter should return:
 ## Draft 3 Implementation Plan
 
 - Keep correction submissions in `data/corrections` during local development and move them into the moderation store before public launch.
+- Use `src/ingestion/connector-runner.ts` so adapter dedupe keys are checked before publication.
+- Run `pnpm run source-health:local` to inspect catalog homepage and robots reachability without crawling content.
 - Add live adapters for data.gov.in, CPPP, CPGRAMS route metadata, and one city portal.
 - Store raw snapshots in object storage or `data/raw` for local development.
 - Store normalized records in PostgreSQL/PostGIS.

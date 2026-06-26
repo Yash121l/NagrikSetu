@@ -114,6 +114,6 @@ Track completeness as a matrix, not a single claim:
 1. Added `data/raw/.gitkeep` and `src/ingestion/raw-snapshot.ts` so connectors can archive raw bytes plus metadata before parsing.
 2. Added `src/ingestion/lgd.ts` with LGD fixture rows and branch-preserving geography normalization.
 3. Added `pnpm run ingest:lgd`, which writes `data/normalized/lgd-regions.json` for the deterministic LGD import baseline.
-4. Next: add connector-specific fixtures for one public HTML page.
-5. Next: add dedupe keys to the ingestion adapter result.
-6. Next: add a source-health CLI that checks HTTP reachability, freshness, and robots URLs without crawling.
+4. Added adapter-level dedupe keys and `src/ingestion/connector-runner.ts` so duplicate source claims become reviewable warnings.
+5. Added `pnpm run source-health:local`, which checks catalog homepages and robots URLs with HEAD requests and records license/robots warnings without crawling content.
+6. Next: add connector-specific fixtures for one public HTML page.

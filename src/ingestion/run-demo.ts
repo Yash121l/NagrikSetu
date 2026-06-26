@@ -1,5 +1,6 @@
 import { seedRecords } from "@/lib/seed-data";
 import { sourceCatalog } from "./source-catalog";
+import { runAdapters } from "./connector-runner";
 import { createFixtureAdapter } from "./fixture-adapter";
 import { assertReportIsUsable, buildSourceHealth, validateRecords } from "./validator";
 import type { IngestionReport } from "./types";
@@ -44,7 +45,8 @@ export function buildDemoRecords() {
 export function runDemoIngestion(asOf = demoAsOf): IngestionReport {
   const records = buildDemoRecords();
   const adapters = sourceCatalog.map((source) => createFixtureAdapter(source, records));
-  const results = adapters.map((adapter) => adapter.run({ asOf }));
+  const runnerResult = runAdapters(adapters, { asOf });
+  const results = runnerResult.results;
   const events = results.map((result) => result.event);
   const adapterIssues = results.flatMap((result) =>
     result.warnings.map((message) => ({
@@ -53,7 +55,7 @@ export function runDemoIngestion(asOf = demoAsOf): IngestionReport {
       message
     }))
   );
-  const issues = [...validateRecords(records), ...adapterIssues];
+  const issues = [...validateRecords(records), ...adapterIssues, ...runnerResult.issues];
   const health = buildSourceHealth(sourceCatalog, events, asOf);
   const report = { generatedAt: asOf, records, health, issues, events };
 

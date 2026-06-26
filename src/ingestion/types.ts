@@ -43,6 +43,7 @@ export interface SourceRunEvent {
   adapterName: string;
   fetchedAt: string;
   recordCount: number;
+  dedupeKeyCount: number;
   warningCount: number;
   status: SourceHealthStatus;
 }
@@ -65,6 +66,7 @@ export interface AdapterRunContext {
 export interface AdapterRunResult {
   source: SourceCatalogEntry;
   records: NagrikRecord[];
+  dedupeKeys: string[];
   warnings: string[];
   event: SourceRunEvent;
 }

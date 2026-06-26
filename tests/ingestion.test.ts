@@ -3,10 +3,13 @@ import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { getAllRecords, getIngestionReport, getRecordStats } from "@/data/repository";
+import { findDedupeCollisions } from "@/ingestion/connector-runner";
 import { lgdFixtureRows, normalizeLgdRows } from "@/ingestion/lgd";
 import { sourceCatalog } from "@/ingestion/source-catalog";
+import { checkSource, classifyEndpointStatus } from "@/ingestion/source-health-check";
 import { writeRawSnapshot } from "@/ingestion/raw-snapshot";
 import { validateRecords } from "@/ingestion/validator";
+import type { AdapterRunResult } from "@/ingestion/types";
 
 describe("Draft 2 ingestion backbone", () => {
   it("produces valid normalized records with unique ids", () => {
@@ -22,6 +25,7 @@ describe("Draft 2 ingestion backbone", () => {
 
     expect(report.health).toHaveLength(sourceCatalog.length);
     expect(report.health.every((source) => source.recordCount > 0)).toBe(true);
+    expect(report.events.every((event) => event.dedupeKeyCount === event.recordCount)).toBe(true);
   });
 
   it("covers the next national source expansion backlog", () => {
@@ -164,5 +168,47 @@ describe("Draft 2 ingestion backbone", () => {
 
     expect(result.regions).toHaveLength(0);
     expect(result.warnings.some((warning) => warning.includes("Expected an HTTP(S) URL"))).toBe(true);
+  });
+
+  it("reports dedupe key collisions across adapter results", () => {
+    const [record] = getAllRecords();
+    const resultFor = (sourceIndex: number): AdapterRunResult => ({
+      source: sourceCatalog[sourceIndex],
+      records: [record],
+      dedupeKeys: [`${record.kind}:${record.id}`],
+      warnings: [],
+      event: {
+        sourceId: sourceCatalog[sourceIndex].id,
+        adapterName: `${sourceCatalog[sourceIndex].id}-test`,
+        fetchedAt: "2026-06-26",
+        recordCount: 1,
+        dedupeKeyCount: 1,
+        warningCount: 0,
+        status: "healthy"
+      }
+    });
+
+    const collisions = findDedupeCollisions([resultFor(0), resultFor(1)]);
+
+    expect(collisions).toHaveLength(1);
+    expect(collisions[0]?.dedupeKey).toBe(`${record.kind}:${record.id}`);
+    expect(collisions[0]?.sourceIds).toEqual([sourceCatalog[0].id, sourceCatalog[1].id]);
+  });
+
+  it("classifies source endpoint health without crawling content", async () => {
+    const fetchImpl: typeof fetch = async (url) => {
+      const status = String(url).includes("robots.txt") ? 403 : 204;
+      return new Response(null, { status });
+    };
+
+    expect(classifyEndpointStatus(204)).toBe("reachable");
+    expect(classifyEndpointStatus(403)).toBe("blocked");
+    expect(classifyEndpointStatus(undefined, "network failure")).toBe("watch");
+
+    const result = await checkSource(sourceCatalog[0], { checkedAt: "2026-06-26T00:00:00.000Z", fetchImpl });
+
+    expect(result.homepage.status).toBe("reachable");
+    expect(result.robots?.status).toBe("blocked");
+    expect(result.warnings.some((warning) => warning.includes("robots.txt"))).toBe(true);
   });
 });

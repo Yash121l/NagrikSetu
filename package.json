@@ -13,6 +13,7 @@
     "test": "vitest run",
     "ingest:demo": "node --import tsx scripts/ingest-demo.ts",
     "ingest:lgd": "node --import tsx scripts/ingest-lgd.ts",
+    "source-health:local": "node --import tsx scripts/check-source-health.ts",
     "validate:data": "node --import tsx scripts/ingest-demo.ts --check && node --import tsx scripts/ingest-lgd.ts --check",
     "audit:local": "pnpm run validate:data && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build"
   },
