@@ -94,6 +94,18 @@ describe("Draft 3 first-party navigation", () => {
     expect(stateProfiles.filter((profile) => profile.economy.perCapitaNsdpInr !== null)).toHaveLength(33);
   });
 
+  it("gives every state and Union Territory source-backed records", () => {
+    for (const entry of stateAndUnionTerritoryEntries) {
+      const region = getRegionBySlug(["india", entry.id]);
+      if (!region) throw new Error(`missing region for ${entry.id}`);
+
+      const records = getRegionRecords(region);
+      expect(records.length, `missing records for ${entry.id}`).toBeGreaterThanOrEqual(2);
+      expect(records.some((record) => record.id === `office-${entry.id}-official-portal`)).toBe(true);
+      expect(records.some((record) => record.id === `source-${entry.id}-state-profile`)).toBe(true);
+    }
+  });
+
   it("models national district and urban local body capacity separately", () => {
     expect(indiaDirectoryStats.find((stat) => stat.label === "Districts")?.value).toBe(784);
     expect(indiaDirectoryStats.find((stat) => stat.label === "Urban Local Bodies")?.value).toBe(5052);

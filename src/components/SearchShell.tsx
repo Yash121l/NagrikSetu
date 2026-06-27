@@ -313,6 +313,18 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
             </div>
           </div>
 
+          <div className="context-strip">
+            <div className="map-panel">
+              <div className="map-panel__heading">
+                <MapPinned aria-hidden="true" size={19} />
+                {t.mapHeading}
+              </div>
+              <NagrikMap activeId={activeRecord?.id} records={visibleRecords} onSelect={setActiveId} />
+            </div>
+            <EvidencePanel record={activeRecord} />
+            <CorrectionForm locale={locale} recordId={activeRecord?.id} recordLabel={activeRecord?.title} />
+          </div>
+
           <div className="results-grid">
             <div className={viewMode === "table" ? "results-list results-list--table" : "results-list"}>
               {controlledMatches.length > 0 && viewMode === "cards" ? (
@@ -446,15 +458,6 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
                   </div>
                 </div>
               ) : null}
-            </div>
-            <div className="map-panel">
-              <div className="map-panel__heading">
-                <MapPinned aria-hidden="true" size={19} />
-                {t.mapHeading}
-              </div>
-              <NagrikMap activeId={activeRecord?.id} records={visibleRecords} onSelect={setActiveId} />
-              <EvidencePanel record={activeRecord} />
-              <CorrectionForm locale={locale} recordId={activeRecord?.id} recordLabel={activeRecord?.title} />
             </div>
           </div>
         </div>

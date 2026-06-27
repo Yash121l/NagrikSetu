@@ -81,3 +81,12 @@
 - Regenerated `data/normalized/nagrik-records.json` and `data/normalized/source-health.json`; the demo ingestion now writes 59 normalized records and 34 source-health rows.
 - Passed `pnpm run audit:local` with the bundled Node runtime: data validation, lint, typecheck, 46 tests across 6 files, and a 113-page production build.
 - Ran `pnpm run source-health:local`; 22/34 catalog homepages were reachable by HEAD, 12 were watch, 1 robots endpoint was blocked, and several robots endpoints require manual review before unattended automation.
+
+## 2026-06-27 - Draft 3 Checkpoint 4 UX And State Coverage Pass
+
+- Reworked the homepage into a calmer search workspace: removed the oversized image-led hero treatment, reduced visual boxiness, and moved the map into a compact non-sticky context strip so it no longer blocks result data.
+- Updated card, table, place, and state-profile styling toward a cleaner modern civic interface with softer surfaces, more whitespace, and better desktop/mobile behavior.
+- Generated two source-backed records for every state and Union Territory from existing National Portal/RBI state-profile provenance: an official government portal office record and a state-profile source-bundle record.
+- Wired every top-level state/UT page to its generated records, so pages such as Bihar now show on-site source-backed records instead of an empty under-development box.
+- Regenerated `data/normalized/nagrik-records.json`; the demo database now contains 131 normalized records while source-health remains at 34 tracked catalog sources.
+- Passed `pnpm run audit:local` with the bundled Node runtime: data validation, lint, typecheck, 47 tests across 6 files, and a 185-page production build.

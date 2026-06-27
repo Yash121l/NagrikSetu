@@ -905,6 +905,2418 @@
     }
   },
   {
+    "id": "office-andhra-pradesh-official-portal",
+    "kind": "office",
+    "title": "Andhra Pradesh official government portal",
+    "summary": "Official state portal for Andhra Pradesh, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Andhra Pradesh",
+    "jurisdiction": "Andhra Pradesh",
+    "website": "https://www.ap.gov.in/",
+    "issueTags": [
+      "Andhra Pradesh",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-andhra-pradesh-state-profile",
+    "kind": "source",
+    "title": "Andhra Pradesh state profile source bundle",
+    "summary": "Source-backed profile for Andhra Pradesh: capital Amaravati, government code AP, LGD code 28, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Andhra Pradesh",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Andhra Pradesh",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-arunachal-pradesh-official-portal",
+    "kind": "office",
+    "title": "Arunachal Pradesh official government portal",
+    "summary": "Official state portal for Arunachal Pradesh, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Arunachal Pradesh",
+    "jurisdiction": "Arunachal Pradesh",
+    "website": "https://arunachalpradesh.gov.in/",
+    "issueTags": [
+      "Arunachal Pradesh",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-arunachal-pradesh-state-profile",
+    "kind": "source",
+    "title": "Arunachal Pradesh state profile source bundle",
+    "summary": "Source-backed profile for Arunachal Pradesh: capital Itanagar, government code AR, LGD code 12, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Arunachal Pradesh",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Arunachal Pradesh",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-assam-official-portal",
+    "kind": "office",
+    "title": "Assam official government portal",
+    "summary": "Official state portal for Assam, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Assam",
+    "jurisdiction": "Assam",
+    "website": "https://assam.gov.in/",
+    "issueTags": [
+      "Assam",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-assam-state-profile",
+    "kind": "source",
+    "title": "Assam state profile source bundle",
+    "summary": "Source-backed profile for Assam: capital Dispur, government code AS, LGD code 18, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Assam",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Assam",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-bihar-official-portal",
+    "kind": "office",
+    "title": "Bihar official government portal",
+    "summary": "Official state portal for Bihar, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Bihar",
+    "jurisdiction": "Bihar",
+    "website": "https://state.bihar.gov.in/main/CitizenHome.html",
+    "issueTags": [
+      "Bihar",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-bihar-state-profile",
+    "kind": "source",
+    "title": "Bihar state profile source bundle",
+    "summary": "Source-backed profile for Bihar: capital Patna, government code BR, LGD code 10, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Bihar",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Bihar",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-chhattisgarh-official-portal",
+    "kind": "office",
+    "title": "Chhattisgarh official government portal",
+    "summary": "Official state portal for Chhattisgarh, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Chhattisgarh",
+    "jurisdiction": "Chhattisgarh",
+    "website": "https://cgstate.gov.in/",
+    "issueTags": [
+      "Chhattisgarh",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-chhattisgarh-state-profile",
+    "kind": "source",
+    "title": "Chhattisgarh state profile source bundle",
+    "summary": "Source-backed profile for Chhattisgarh: capital Raipur, government code CG, LGD code 22, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Chhattisgarh",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Chhattisgarh",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-goa-official-portal",
+    "kind": "office",
+    "title": "Goa official government portal",
+    "summary": "Official state portal for Goa, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Goa",
+    "jurisdiction": "Goa",
+    "website": "https://www.goa.gov.in/",
+    "issueTags": [
+      "Goa",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-goa-state-profile",
+    "kind": "source",
+    "title": "Goa state profile source bundle",
+    "summary": "Source-backed profile for Goa: capital Panaji, government code GA, LGD code 30, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Goa",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Goa",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-gujarat-official-portal",
+    "kind": "office",
+    "title": "Gujarat official government portal",
+    "summary": "Official state portal for Gujarat, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Gujarat",
+    "jurisdiction": "Gujarat",
+    "website": "https://gujaratindia.gov.in/",
+    "issueTags": [
+      "Gujarat",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-gujarat-state-profile",
+    "kind": "source",
+    "title": "Gujarat state profile source bundle",
+    "summary": "Source-backed profile for Gujarat: capital Gandhinagar, government code GJ, LGD code 24, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Gujarat",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Gujarat",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-haryana-official-portal",
+    "kind": "office",
+    "title": "Haryana official government portal",
+    "summary": "Official state portal for Haryana, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Haryana",
+    "jurisdiction": "Haryana",
+    "website": "https://haryana.gov.in/",
+    "issueTags": [
+      "Haryana",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-haryana-state-profile",
+    "kind": "source",
+    "title": "Haryana state profile source bundle",
+    "summary": "Source-backed profile for Haryana: capital Chandigarh, government code HR, LGD code 6, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Haryana",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Haryana",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-himachal-pradesh-official-portal",
+    "kind": "office",
+    "title": "Himachal Pradesh official government portal",
+    "summary": "Official state portal for Himachal Pradesh, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Himachal Pradesh",
+    "jurisdiction": "Himachal Pradesh",
+    "website": "https://himachal.gov.in/en-IN/",
+    "issueTags": [
+      "Himachal Pradesh",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-himachal-pradesh-state-profile",
+    "kind": "source",
+    "title": "Himachal Pradesh state profile source bundle",
+    "summary": "Source-backed profile for Himachal Pradesh: capital Shimla, government code HP, LGD code 2, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Himachal Pradesh",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Himachal Pradesh",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-jharkhand-official-portal",
+    "kind": "office",
+    "title": "Jharkhand official government portal",
+    "summary": "Official state portal for Jharkhand, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Jharkhand",
+    "jurisdiction": "Jharkhand",
+    "website": "https://www.jharkhand.gov.in/",
+    "issueTags": [
+      "Jharkhand",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-jharkhand-state-profile",
+    "kind": "source",
+    "title": "Jharkhand state profile source bundle",
+    "summary": "Source-backed profile for Jharkhand: capital Ranchi, government code JH, LGD code 20, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Jharkhand",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Jharkhand",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-karnataka-official-portal",
+    "kind": "office",
+    "title": "Karnataka official government portal",
+    "summary": "Official state portal for Karnataka, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Karnataka",
+    "jurisdiction": "Karnataka",
+    "website": "https://www.karnataka.gov.in/english",
+    "issueTags": [
+      "Karnataka",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-karnataka-state-profile",
+    "kind": "source",
+    "title": "Karnataka state profile source bundle",
+    "summary": "Source-backed profile for Karnataka: capital Bengaluru, government code KA, LGD code 29, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Karnataka",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Karnataka",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-kerala-official-portal",
+    "kind": "office",
+    "title": "Kerala official government portal",
+    "summary": "Official state portal for Kerala, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Kerala",
+    "jurisdiction": "Kerala",
+    "website": "https://kerala.gov.in/",
+    "issueTags": [
+      "Kerala",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-kerala-state-profile",
+    "kind": "source",
+    "title": "Kerala state profile source bundle",
+    "summary": "Source-backed profile for Kerala: capital Thiruvananthapuram, government code KL, LGD code 32, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Kerala",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Kerala",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-madhya-pradesh-official-portal",
+    "kind": "office",
+    "title": "Madhya Pradesh official government portal",
+    "summary": "Official state portal for Madhya Pradesh, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Madhya Pradesh",
+    "jurisdiction": "Madhya Pradesh",
+    "website": "https://mp.gov.in/",
+    "issueTags": [
+      "Madhya Pradesh",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-madhya-pradesh-state-profile",
+    "kind": "source",
+    "title": "Madhya Pradesh state profile source bundle",
+    "summary": "Source-backed profile for Madhya Pradesh: capital Bhopal, government code MP, LGD code 23, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Madhya Pradesh",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Madhya Pradesh",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-maharashtra-official-portal",
+    "kind": "office",
+    "title": "Maharashtra official government portal",
+    "summary": "Official state portal for Maharashtra, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Maharashtra",
+    "jurisdiction": "Maharashtra",
+    "website": "https://www.maharashtra.gov.in/",
+    "issueTags": [
+      "Maharashtra",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-maharashtra-state-profile",
+    "kind": "source",
+    "title": "Maharashtra state profile source bundle",
+    "summary": "Source-backed profile for Maharashtra: capital Mumbai, government code MH, LGD code 27, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Maharashtra",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Maharashtra",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-manipur-official-portal",
+    "kind": "office",
+    "title": "Manipur official government portal",
+    "summary": "Official state portal for Manipur, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Manipur",
+    "jurisdiction": "Manipur",
+    "website": "https://manipur.gov.in/",
+    "issueTags": [
+      "Manipur",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-manipur-state-profile",
+    "kind": "source",
+    "title": "Manipur state profile source bundle",
+    "summary": "Source-backed profile for Manipur: capital Imphal, government code MN, LGD code 14, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Manipur",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Manipur",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-meghalaya-official-portal",
+    "kind": "office",
+    "title": "Meghalaya official government portal",
+    "summary": "Official state portal for Meghalaya, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Meghalaya",
+    "jurisdiction": "Meghalaya",
+    "website": "https://meghalaya.gov.in/",
+    "issueTags": [
+      "Meghalaya",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-meghalaya-state-profile",
+    "kind": "source",
+    "title": "Meghalaya state profile source bundle",
+    "summary": "Source-backed profile for Meghalaya: capital Shillong, government code ML, LGD code 17, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Meghalaya",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Meghalaya",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-mizoram-official-portal",
+    "kind": "office",
+    "title": "Mizoram official government portal",
+    "summary": "Official state portal for Mizoram, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Mizoram",
+    "jurisdiction": "Mizoram",
+    "website": "https://mizoram.gov.in/",
+    "issueTags": [
+      "Mizoram",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-mizoram-state-profile",
+    "kind": "source",
+    "title": "Mizoram state profile source bundle",
+    "summary": "Source-backed profile for Mizoram: capital Aizawl, government code MZ, LGD code 15, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Mizoram",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Mizoram",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-nagaland-official-portal",
+    "kind": "office",
+    "title": "Nagaland official government portal",
+    "summary": "Official state portal for Nagaland, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Nagaland",
+    "jurisdiction": "Nagaland",
+    "website": "https://www.nagaland.gov.in/",
+    "issueTags": [
+      "Nagaland",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-nagaland-state-profile",
+    "kind": "source",
+    "title": "Nagaland state profile source bundle",
+    "summary": "Source-backed profile for Nagaland: capital Kohima, government code NL, LGD code 13, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Nagaland",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Nagaland",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-odisha-official-portal",
+    "kind": "office",
+    "title": "Odisha official government portal",
+    "summary": "Official state portal for Odisha, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Odisha",
+    "jurisdiction": "Odisha",
+    "website": "https://odisha.gov.in/",
+    "issueTags": [
+      "Odisha",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-odisha-state-profile",
+    "kind": "source",
+    "title": "Odisha state profile source bundle",
+    "summary": "Source-backed profile for Odisha: capital Bhubaneswar, government code OD, LGD code 21, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Odisha",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Odisha",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-punjab-official-portal",
+    "kind": "office",
+    "title": "Punjab official government portal",
+    "summary": "Official state portal for Punjab, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Punjab",
+    "jurisdiction": "Punjab",
+    "website": "https://punjab.gov.in/",
+    "issueTags": [
+      "Punjab",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-punjab-state-profile",
+    "kind": "source",
+    "title": "Punjab state profile source bundle",
+    "summary": "Source-backed profile for Punjab: capital Chandigarh, government code PB, LGD code 3, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Punjab",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Punjab",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-rajasthan-official-portal",
+    "kind": "office",
+    "title": "Rajasthan official government portal",
+    "summary": "Official state portal for Rajasthan, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Rajasthan",
+    "jurisdiction": "Rajasthan",
+    "website": "https://rajasthan.gov.in/",
+    "issueTags": [
+      "Rajasthan",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-rajasthan-state-profile",
+    "kind": "source",
+    "title": "Rajasthan state profile source bundle",
+    "summary": "Source-backed profile for Rajasthan: capital Jaipur, government code RJ, LGD code 8, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Rajasthan",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Rajasthan",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-sikkim-official-portal",
+    "kind": "office",
+    "title": "Sikkim official government portal",
+    "summary": "Official state portal for Sikkim, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Sikkim",
+    "jurisdiction": "Sikkim",
+    "website": "https://sikkim.gov.in/",
+    "issueTags": [
+      "Sikkim",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-sikkim-state-profile",
+    "kind": "source",
+    "title": "Sikkim state profile source bundle",
+    "summary": "Source-backed profile for Sikkim: capital Gangtok, government code SK, LGD code 11, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Sikkim",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Sikkim",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-tamil-nadu-official-portal",
+    "kind": "office",
+    "title": "Tamil Nadu official government portal",
+    "summary": "Official state portal for Tamil Nadu, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Tamil Nadu",
+    "jurisdiction": "Tamil Nadu",
+    "website": "https://www.tn.gov.in/",
+    "issueTags": [
+      "Tamil Nadu",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-tamil-nadu-state-profile",
+    "kind": "source",
+    "title": "Tamil Nadu state profile source bundle",
+    "summary": "Source-backed profile for Tamil Nadu: capital Chennai, government code TN, LGD code 33, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Tamil Nadu",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Tamil Nadu",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-telangana-official-portal",
+    "kind": "office",
+    "title": "Telangana official government portal",
+    "summary": "Official state portal for Telangana, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Telangana",
+    "jurisdiction": "Telangana",
+    "website": "https://www.telangana.gov.in/",
+    "issueTags": [
+      "Telangana",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-telangana-state-profile",
+    "kind": "source",
+    "title": "Telangana state profile source bundle",
+    "summary": "Source-backed profile for Telangana: capital Hyderabad, government code TS, LGD code 36, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Telangana",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Telangana",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-tripura-official-portal",
+    "kind": "office",
+    "title": "Tripura official government portal",
+    "summary": "Official state portal for Tripura, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Tripura",
+    "jurisdiction": "Tripura",
+    "website": "https://tripura.gov.in/",
+    "issueTags": [
+      "Tripura",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-tripura-state-profile",
+    "kind": "source",
+    "title": "Tripura state profile source bundle",
+    "summary": "Source-backed profile for Tripura: capital Agartala, government code TR, LGD code 16, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Tripura",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Tripura",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-uttar-pradesh-official-portal",
+    "kind": "office",
+    "title": "Uttar Pradesh official government portal",
+    "summary": "Official state portal for Uttar Pradesh, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Uttar Pradesh",
+    "jurisdiction": "Uttar Pradesh",
+    "website": "https://up.gov.in/en",
+    "issueTags": [
+      "Uttar Pradesh",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-uttar-pradesh-state-profile",
+    "kind": "source",
+    "title": "Uttar Pradesh state profile source bundle",
+    "summary": "Source-backed profile for Uttar Pradesh: capital Lucknow, government code UP, LGD code 9, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Uttar Pradesh",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Uttar Pradesh",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-uttarakhand-official-portal",
+    "kind": "office",
+    "title": "Uttarakhand official government portal",
+    "summary": "Official state portal for Uttarakhand, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Uttarakhand",
+    "jurisdiction": "Uttarakhand",
+    "website": "https://uk.gov.in/",
+    "issueTags": [
+      "Uttarakhand",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-uttarakhand-state-profile",
+    "kind": "source",
+    "title": "Uttarakhand state profile source bundle",
+    "summary": "Source-backed profile for Uttarakhand: capital Dehradun, government code UK, LGD code 5, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Uttarakhand",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Uttarakhand",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-west-bengal-official-portal",
+    "kind": "office",
+    "title": "West Bengal official government portal",
+    "summary": "Official state portal for West Bengal, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of West Bengal",
+    "jurisdiction": "West Bengal",
+    "website": "https://wb.gov.in/",
+    "issueTags": [
+      "West Bengal",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-west-bengal-state-profile",
+    "kind": "source",
+    "title": "West Bengal state profile source bundle",
+    "summary": "Source-backed profile for West Bengal: capital Kolkata, government code WB, LGD code 19, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "West Bengal",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "West Bengal",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-andaman-and-nicobar-islands-official-portal",
+    "kind": "office",
+    "title": "Andaman and Nicobar Islands official government portal",
+    "summary": "Official union territory portal for Andaman and Nicobar Islands, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Andaman and Nicobar Islands",
+    "jurisdiction": "Andaman and Nicobar Islands",
+    "website": "https://andamannicobar.gov.in/",
+    "issueTags": [
+      "Andaman and Nicobar Islands",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-andaman-and-nicobar-islands-state-profile",
+    "kind": "source",
+    "title": "Andaman and Nicobar Islands state profile source bundle",
+    "summary": "Source-backed profile for Andaman and Nicobar Islands: capital Sri Vijaya Puram, government code AN, LGD code 35, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Andaman and Nicobar Islands",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Andaman and Nicobar Islands",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-chandigarh-official-portal",
+    "kind": "office",
+    "title": "Chandigarh official government portal",
+    "summary": "Official union territory portal for Chandigarh, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Chandigarh",
+    "jurisdiction": "Chandigarh",
+    "website": "https://chandigarh.gov.in/",
+    "issueTags": [
+      "Chandigarh",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-chandigarh-state-profile",
+    "kind": "source",
+    "title": "Chandigarh state profile source bundle",
+    "summary": "Source-backed profile for Chandigarh: capital Chandigarh, government code CH, LGD code 4, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Chandigarh",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Chandigarh",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-dadra-and-nagar-haveli-and-daman-and-diu-official-portal",
+    "kind": "office",
+    "title": "Dadra and Nagar Haveli and Daman and Diu official government portal",
+    "summary": "Official union territory portal for Dadra and Nagar Haveli and Daman and Diu, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Dadra and Nagar Haveli and Daman and Diu",
+    "jurisdiction": "Dadra and Nagar Haveli and Daman and Diu",
+    "website": "https://ddd.gov.in/",
+    "issueTags": [
+      "Dadra and Nagar Haveli and Daman and Diu",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-dadra-and-nagar-haveli-and-daman-and-diu-state-profile",
+    "kind": "source",
+    "title": "Dadra and Nagar Haveli and Daman and Diu state profile source bundle",
+    "summary": "Source-backed profile for Dadra and Nagar Haveli and Daman and Diu: capital Daman, government code ND, LGD code 38, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Dadra and Nagar Haveli and Daman and Diu",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Dadra and Nagar Haveli and Daman and Diu",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "medium",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-delhi-official-portal",
+    "kind": "office",
+    "title": "National Capital Territory of Delhi official government portal",
+    "summary": "Official union territory portal for National Capital Territory of Delhi, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of National Capital Territory of Delhi",
+    "jurisdiction": "National Capital Territory of Delhi",
+    "website": "https://delhi.gov.in/",
+    "issueTags": [
+      "National Capital Territory of Delhi",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-delhi-state-profile",
+    "kind": "source",
+    "title": "National Capital Territory of Delhi state profile source bundle",
+    "summary": "Source-backed profile for National Capital Territory of Delhi: capital Delhi, government code DL, LGD code 7, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "National Capital Territory of Delhi",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "National Capital Territory of Delhi",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-jammu-and-kashmir-official-portal",
+    "kind": "office",
+    "title": "Jammu and Kashmir official government portal",
+    "summary": "Official union territory portal for Jammu and Kashmir, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Jammu and Kashmir",
+    "jurisdiction": "Jammu and Kashmir",
+    "website": "https://jk.gov.in/jammukashmir/",
+    "issueTags": [
+      "Jammu and Kashmir",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-jammu-and-kashmir-state-profile",
+    "kind": "source",
+    "title": "Jammu and Kashmir state profile source bundle",
+    "summary": "Source-backed profile for Jammu and Kashmir: capital Srinagar (summer), Jammu (winter), government code JK, LGD code 1, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Jammu and Kashmir",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Jammu and Kashmir",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-ladakh-official-portal",
+    "kind": "office",
+    "title": "Ladakh official government portal",
+    "summary": "Official union territory portal for Ladakh, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Ladakh",
+    "jurisdiction": "Ladakh",
+    "website": "https://ladakh.gov.in/",
+    "issueTags": [
+      "Ladakh",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-ladakh-state-profile",
+    "kind": "source",
+    "title": "Ladakh state profile source bundle",
+    "summary": "Source-backed profile for Ladakh: capital Leh, government code LA, LGD code 37, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Ladakh",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Ladakh",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "medium",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-lakshadweep-official-portal",
+    "kind": "office",
+    "title": "Lakshadweep official government portal",
+    "summary": "Official union territory portal for Lakshadweep, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Lakshadweep",
+    "jurisdiction": "Lakshadweep",
+    "website": "https://lakshadweep.gov.in/",
+    "issueTags": [
+      "Lakshadweep",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-lakshadweep-state-profile",
+    "kind": "source",
+    "title": "Lakshadweep state profile source bundle",
+    "summary": "Source-backed profile for Lakshadweep: capital Kavaratti, government code LD, LGD code 31, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Lakshadweep",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Lakshadweep",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "medium",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "office-puducherry-official-portal",
+    "kind": "office",
+    "title": "Puducherry official government portal",
+    "summary": "Official union territory portal for Puducherry, linked from the National Portal state and Union Territory directory. Use this as the first source for departments, services, notices, and official state-level updates.",
+    "department": "Government of Puducherry",
+    "jurisdiction": "Puducherry",
+    "website": "https://py.gov.in/",
+    "issueTags": [
+      "Puducherry",
+      "official portal",
+      "state services",
+      "government departments",
+      "public information"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "services": [
+      "Official portal",
+      "Government departments",
+      "Public notices",
+      "State services"
+    ],
+    "parentOffice": "Government of India state and Union Territory directory",
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
+    "id": "source-puducherry-state-profile",
+    "kind": "source",
+    "title": "Puducherry state profile source bundle",
+    "summary": "Source-backed profile for Puducherry: capital Puducherry, government code PY, LGD code 34, official portal, National Portal leadership directories, and latest available RBI per-capita NSDP. Volatile office-holder fields should be rechecked before release updates.",
+    "department": "National Portal of India and Reserve Bank of India",
+    "jurisdiction": "Puducherry",
+    "website": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+    "issueTags": [
+      "Puducherry",
+      "state profile",
+      "official portal",
+      "LGD code",
+      "chief minister",
+      "governor",
+      "RBI NSDP"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-24",
+    "provenance": {
+      "sourceName": "National Portal of India state and UT directory",
+      "sourceUrl": "https://www.india.gov.in/explore-india/facts-of-india/states-ut-districts",
+      "lastChecked": "2026-06-24",
+      "priority": "official",
+      "licenseNote": "Use National Portal state and UT directory facts with source dates; recheck volatile office-holder fields separately."
+    }
+  },
+  {
     "id": "source-lgd-india",
     "kind": "source",
     "title": "Local Government Directory",

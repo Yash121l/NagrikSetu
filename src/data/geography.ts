@@ -161,7 +161,11 @@ const topLevelRecordIdsByRegion: Record<string, string[]> = {
 const topLevelRegions: GeographicRegion[] = stateAndUnionTerritoryEntries.map((entry) => {
   const isMaharashtra = entry.id === "maharashtra";
   const typeLabel = entry.kind === "state" ? "State" : "Union Territory";
-  const directRecordIds = topLevelRecordIdsByRegion[entry.id] ?? [];
+  const directRecordIds = [
+    `office-${entry.id}-official-portal`,
+    `source-${entry.id}-state-profile`,
+    ...(topLevelRecordIdsByRegion[entry.id] ?? [])
+  ];
 
   return {
     id: entry.id,
@@ -171,10 +175,10 @@ const topLevelRegions: GeographicRegion[] = stateAndUnionTerritoryEntries.map((e
     slug: ["india", entry.id],
     parentId: "india",
     governanceBranch: "administrative",
-    dataStatus: isMaharashtra ? "source-backed-pilot" : "directory-page",
+    dataStatus: "source-backed-pilot",
     summary: isMaharashtra
       ? "State-level entry point for Maharashtra civic offices, grievance paths, public works, districts, cities, and local bodies."
-      : `${typeLabel} directory page for ${entry.name}. District, city, rural-body, and urban-body data is under structured development.`,
+      : `${typeLabel} directory page for ${entry.name} with official portal and source-backed state profile records. District, city, rural-body, and urban-body data is under structured development.`,
     center: isMaharashtra ? { lat: 19.7515, lng: 75.7139 } : undefined,
     directRecordIds,
     facts: [
@@ -183,9 +187,7 @@ const topLevelRegions: GeographicRegion[] = stateAndUnionTerritoryEntries.map((e
         label: "Data status",
         value: isMaharashtra
           ? "Mumbai source-backed pilot available"
-          : directRecordIds.length > 0
-            ? "Top-level page has source-backed records; lower levels under development"
-            : "Top-level page ready; lower levels under development"
+          : "Top-level source-backed records available; lower levels under development"
       }
     ]
   };

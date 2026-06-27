@@ -48,6 +48,8 @@
 - Added first-pass national complaint/project records for NHAI, Rail Madad, UMANG, PMGSY, and MCD.
 - Added the first data-population batch for official national service/grievance routes and four state grievance portals: ERSS 112, National Cyber Crime Reporting Portal, National Consumer Helpline, DigiLocker, eSanjeevani, PM-JAY CGRMS, Maharashtra Aaple Sarkar, e-District Delhi, Karnataka Janaspandana, and Tamil Nadu CM Helpline.
 - Added a second data-population batch and acquisition backlog for National Government Services Portal, myScheme, UIDAI, Passport Seva, EPFiGMS, Tele-MANAS, GeM bids, and Census of India.
+- Added generated official-portal and state-profile records for every state and Union Territory so all 36 top-level jurisdictions have source-backed records while lower-level LGD/database ingestion is built.
+- Redesigned the search workspace to make result data primary and keep map/evidence/corrections in a compact context strip instead of a blocking sticky map column.
 - Added feasibility and automated-ingestion planning docs for connector development, raw snapshot storage, source-health monitoring, and future PostgreSQL/PostGIS migration.
 - Added the repository contract and PostgreSQL/PostGIS schema baseline for production persistence.
 - Added a production-readiness audit and deployment checklist covering environment gates, source legal review, human moderation, raw snapshots, and phased source rollout.
