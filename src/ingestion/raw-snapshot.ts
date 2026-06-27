@@ -72,6 +72,8 @@ export async function writeRawSnapshot(input: RawSnapshotInput, rawDir = default
   const snapshotDir = path.join(rawDir, safePathPart(input.sourceId), fetchedDate, contentHash.slice(0, 16));
   const bodyPath = path.join(snapshotDir, `body.${extensionForContentType(input.contentType)}`);
   const manifestPath = path.join(snapshotDir, "manifest.json");
+  const relativeBodyPath = path.relative(rawDir, bodyPath);
+  const relativeManifestPath = path.relative(rawDir, manifestPath);
 
   await mkdir(snapshotDir, { recursive: true });
   await writeFile(bodyPath, bytes);
@@ -87,10 +89,18 @@ export async function writeRawSnapshot(input: RawSnapshotInput, rawDir = default
     licenseNote: input.licenseNote,
     robotsTxtUrl: input.robotsTxtUrl,
     parserVersion: input.parserVersion,
-    bodyPath,
-    manifestPath
+    bodyPath: relativeBodyPath,
+    manifestPath: relativeManifestPath
   };
 
   await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
   return manifest;
+}
+
+export function resolveRawSnapshotManifestPaths(manifest: RawSnapshotManifest, rawDir = defaultRawDir()): RawSnapshotManifest {
+  return {
+    ...manifest,
+    bodyPath: path.isAbsolute(manifest.bodyPath) ? manifest.bodyPath : path.join(rawDir, manifest.bodyPath),
+    manifestPath: path.isAbsolute(manifest.manifestPath) ? manifest.manifestPath : path.join(rawDir, manifest.manifestPath)
+  };
 }

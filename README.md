@@ -35,6 +35,8 @@ pnpm run validate:data
 pnpm run audit:local
 ```
 
+`pnpm run source-health:local -- --fail-on-watch` exits non-zero when a catalog homepage is not reachable or a listed robots.txt endpoint is blocked.
+
 ## Repository Map
 
 - `src/app` - Next.js app routes and API endpoints.

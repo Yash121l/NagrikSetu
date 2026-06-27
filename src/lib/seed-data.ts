@@ -160,51 +160,6 @@ export const seedRecords: NagrikRecord[] = [
     provenance: sources.myBmc
   },
   {
-    id: "source-lgd-directory",
-    kind: "source",
-    title: "Local Government Directory civic geography backbone",
-    summary:
-      "Official directory source for Indian administrative and local-government identifiers, including states, districts, sub-districts, villages, rural bodies, and urban local bodies.",
-    department: "Ministry of Panchayati Raj",
-    jurisdiction: "India",
-    website: "https://lgdirectory.gov.in/",
-    issueTags: ["LGD", "district", "panchayat", "urban local body", "geography"],
-    languageTags: ["en", "hi"],
-    confidence: "high",
-    updatedAt: today,
-    provenance: sources.lgd
-  },
-  {
-    id: "source-national-portal-directory",
-    kind: "source",
-    title: "National Portal state and government directory",
-    summary:
-      "Official national directory for state and Union Territory facts, government portals, district references, and public Who's Who links.",
-    department: "Government of India",
-    jurisdiction: "India",
-    website: "https://www.india.gov.in/",
-    issueTags: ["state directory", "district directory", "official portal", "chief minister", "governor"],
-    languageTags: ["en", "hi"],
-    confidence: "high",
-    updatedAt: today,
-    provenance: sources.nationalPortal
-  },
-  {
-    id: "source-rbi-state-statistics",
-    kind: "source",
-    title: "RBI state statistics handbook",
-    summary:
-      "Official statistical publication used for state and Union Territory economic profile fields such as per-capita NSDP at current prices.",
-    department: "Reserve Bank of India",
-    jurisdiction: "India",
-    website: "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=23183",
-    issueTags: ["state profile", "NSDP", "economy", "statistics", "RBI"],
-    languageTags: ["en"],
-    confidence: "high",
-    updatedAt: today,
-    provenance: sources.rbi
-  },
-  {
     id: "tender-cppp-roadworks",
     kind: "tender",
     title: "Central public procurement tender search",

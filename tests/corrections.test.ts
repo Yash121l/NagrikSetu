@@ -1,4 +1,4 @@
-import { mkdtemp, readFile, rm } from "node:fs/promises";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
@@ -120,6 +120,24 @@ describe("Draft 3 correction queue", () => {
         { queueDir }
       )
     ).rejects.toThrow(CorrectionInputError);
+  });
+
+  it("skips malformed queue files while listing valid correction submissions", async () => {
+    queueDir = await mkdtemp(path.join(tmpdir(), "nagriksetu-corrections-"));
+    await writeFile(path.join(queueDir, "broken.json"), "{not-json", "utf8");
+    await submitCorrection(
+      {
+        recordId: "complaint-bmc-road",
+        message: "The source link is still useful.",
+        language: "en"
+      },
+      { now: new Date("2026-06-23T11:20:00.000Z"), queueDir }
+    );
+
+    const queue = await listCorrectionQueue(queueDir);
+
+    expect(queue).toHaveLength(1);
+    expect(queue[0]?.submission.recordId).toBe("complaint-bmc-road");
   });
 
   it("fails closed when moderation admin token is not configured or does not match", () => {

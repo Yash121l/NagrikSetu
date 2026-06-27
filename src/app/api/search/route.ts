@@ -10,13 +10,14 @@ export function GET(request: NextRequest) {
   const kindParam = request.nextUrl.searchParams.get("kind") ?? "all";
   const kind = allowedKinds.has(kindParam as EntityKind | "all") ? (kindParam as EntityKind | "all") : "all";
   const filters = parseWorkspaceFilters(request.nextUrl.searchParams);
-  const limit = Number(request.nextUrl.searchParams.get("limit") ?? 8);
+  const requestedLimit = Number(request.nextUrl.searchParams.get("limit") ?? 8);
+  const limit = Number.isFinite(requestedLimit) && requestedLimit > 0 ? Math.min(Math.floor(requestedLimit), 100) : 8;
 
   if (!query) {
     return NextResponse.json({ error: "Missing required query parameter: q" }, { status: 400 });
   }
 
-  return NextResponse.json(buildSearchResponse(query, kind, { filters, limit: Number.isFinite(limit) ? Math.min(limit, 100) : 8 }), {
+  return NextResponse.json(buildSearchResponse(query, kind, { filters, limit }), {
     headers: {
       "Cache-Control": "public, max-age=30, stale-while-revalidate=120"
     }

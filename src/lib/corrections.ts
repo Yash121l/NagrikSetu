@@ -160,12 +160,19 @@ export async function listCorrectionQueue(queueDir = defaultQueueDir()) {
   const files = entries
     .filter((entry) => entry.isFile() && correctionFilePattern.test(entry.name))
     .map((entry) => path.join(queueDir, entry.name));
-  const submissions = await Promise.all(
-    files.map(async (filePath) => {
-      const submission = normalizeCorrectionSubmission(JSON.parse(await readFile(filePath, "utf8")));
-      return { filePath, submission };
-    })
-  );
+  const submissions = (
+    await Promise.all(
+      files.map(async (filePath) => {
+        try {
+          const submission = normalizeCorrectionSubmission(JSON.parse(await readFile(filePath, "utf8")));
+          return { filePath, submission };
+        } catch (error) {
+          console.error(`Skipping unreadable correction queue file: ${filePath}`, error);
+          return null;
+        }
+      })
+    )
+  ).filter((entry): entry is CorrectionPersistResult => entry !== null);
 
   return submissions.sort((a, b) => b.submission.submittedAt.localeCompare(a.submission.submittedAt));
 }

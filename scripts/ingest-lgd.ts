@@ -9,16 +9,30 @@ const checkOnly = process.argv.includes("--check");
 async function readIfExists(filePath: string) {
   try {
     return await readFile(filePath, "utf8");
-  } catch {
-    return "";
+  } catch (error) {
+    if (error && typeof error === "object" && "code" in error && error.code === "ENOENT") {
+      return "";
+    }
+    throw error;
   }
+}
+
+function argumentValue(name: string) {
+  const prefix = `${name}=`;
+  const match = process.argv.find((argument) => argument.startsWith(prefix));
+  return match?.slice(prefix.length);
+}
+
+function generatedAtForRows() {
+  return lgdFixtureRows.map((row) => row.lastChecked).sort((a, b) => b.localeCompare(a))[0] ?? new Date().toISOString().slice(0, 10);
 }
 
 async function main() {
   const result = normalizeLgdRows(lgdFixtureRows);
+  const generatedAt = argumentValue("--generated-at") ?? generatedAtForRows();
   const json = `${JSON.stringify(
     {
-      generatedAt: "2026-06-26",
+      generatedAt,
       source: {
         sourceName: "Local Government Directory",
         sourceUrl: "https://lgdirectory.gov.in/",

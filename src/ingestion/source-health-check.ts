@@ -42,11 +42,11 @@ export function classifyEndpointStatus(httpStatus?: number, errorMessage?: strin
 }
 
 async function checkEndpoint(url: string, options: Required<Pick<SourceHealthCheckOptions, "fetchImpl" | "timeoutMs">>): Promise<EndpointHealth> {
-  requireHttpUrl(url);
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), options.timeoutMs);
 
   try {
+    requireHttpUrl(url);
     const response = await options.fetchImpl(url, {
       method: "HEAD",
       redirect: "follow",

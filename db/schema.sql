@@ -124,7 +124,7 @@ create table if not exists record_regions (
 create table if not exists correction_submissions (
   id text primary key,
   status text not null check (status in ('new', 'triaged', 'source-check-needed', 'accepted', 'rejected', 'duplicate', 'published')),
-  record_id text not null,
+  record_id text not null references civic_records(id) on delete restrict,
   message text not null,
   language text not null,
   submitted_at timestamptz not null,

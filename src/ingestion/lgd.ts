@@ -162,12 +162,14 @@ export function normalizeLgdRows(rows: unknown[]): LgdImportResult {
     return false;
   });
 
-  const regions = hierarchyRows.map<GeographicRegion>((row) => {
-    const parentId = row.parentLgdCode ? regionIdFromCode(row.parentLgdCode) : "india";
-    if (row.parentLgdCode && !byCode.has(row.parentLgdCode)) {
-      warnings.push(`${row.lgdCode}: parent LGD code ${row.parentLgdCode} was not present in this import batch.`);
-    }
+  const rowsWithResolvedParents = hierarchyRows.filter((row) => {
+    if (!row.parentLgdCode || byCode.has(row.parentLgdCode)) return true;
+    warnings.push(`${row.lgdCode}: parent LGD code ${row.parentLgdCode} was not present in this import batch; row was skipped.`);
+    return false;
+  });
 
+  const regions = rowsWithResolvedParents.map<GeographicRegion>((row) => {
+    const parentId = row.parentLgdCode ? regionIdFromCode(row.parentLgdCode) : "india";
     const id = regionId(row);
 
     return {

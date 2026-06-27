@@ -6,14 +6,18 @@ import { assertReportIsUsable, buildSourceHealth, validateRecords } from "./vali
 import type { IngestionReport } from "./types";
 import type { NagrikRecord } from "@/lib/types";
 
-const demoAsOf = "2026-06-23";
+const demoAsOf = "2026-06-26";
+
+function indefiniteArticle(value: string) {
+  return /^[aeiou]/i.test(value.trim()) ? "an" : "a";
+}
 
 export function buildSourceRecords(): NagrikRecord[] {
   return sourceCatalog.map((source) => ({
     id: `source-${source.id}`,
     kind: "source",
     title: source.name,
-    summary: `${source.name} is tracked as a ${source.priority} source for ${source.entityKinds.join(", ")} records in ${source.geography}.`,
+    summary: `${source.name} is tracked as ${indefiniteArticle(source.priority)} ${source.priority} source for ${source.entityKinds.join(", ")} records in ${source.geography}.`,
     department: source.owner,
     jurisdiction: source.geography,
     website: source.homepageUrl,

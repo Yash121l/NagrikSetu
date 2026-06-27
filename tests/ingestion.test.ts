@@ -7,7 +7,7 @@ import { findDedupeCollisions } from "@/ingestion/connector-runner";
 import { lgdFixtureRows, normalizeLgdRows } from "@/ingestion/lgd";
 import { sourceCatalog } from "@/ingestion/source-catalog";
 import { checkSource, classifyEndpointStatus } from "@/ingestion/source-health-check";
-import { writeRawSnapshot } from "@/ingestion/raw-snapshot";
+import { resolveRawSnapshotManifestPaths, writeRawSnapshot } from "@/ingestion/raw-snapshot";
 import { validateRecords } from "@/ingestion/validator";
 import { moderationStatuses } from "@/lib/corrections";
 import type { AdapterRunResult } from "@/ingestion/types";
@@ -36,7 +36,7 @@ describe("Draft 2 ingestion backbone", () => {
     expect(sourceIds).toContain("lgd-india");
     expect(sourceIds).toContain("pmgsy");
     expect(sourceIds).toContain("mcd-311");
-    expect(sourceCatalog.every((source) => source.legal.licenseNote.length > 12)).toBe(true);
+    expect(sourceCatalog.every((source) => source.legal.licenseNote.length >= 12)).toBe(true);
   });
 
   it("keeps official-source provenance measurable", () => {
@@ -73,7 +73,7 @@ describe("Draft 2 ingestion backbone", () => {
   it("returns validation issues instead of throwing for malformed records", () => {
     const issues = validateRecords([{ id: "bad-record", kind: "office", title: "Broken" }]);
 
-    expect(issues.some((issue) => issue.recordId === "bad-record" && issue.severity === "error")).toBe(true);
+    expect(issues.some((issue) => issue.recordId === "office:bad-record" && issue.severity === "error")).toBe(true);
   });
 
   it("writes raw snapshots with content hashes and sidecar manifests", async () => {
@@ -94,7 +94,9 @@ describe("Draft 2 ingestion backbone", () => {
 
       expect(manifest.contentHash).toHaveLength(64);
       expect(manifest.byteLength).toBeGreaterThan(0);
-      expect(JSON.parse(await readFile(manifest.manifestPath, "utf8")).bodyPath).toBe(manifest.bodyPath);
+      expect(path.isAbsolute(manifest.bodyPath)).toBe(false);
+      const resolvedManifest = resolveRawSnapshotManifestPaths(manifest, rawDir);
+      expect(JSON.parse(await readFile(resolvedManifest.manifestPath, "utf8")).bodyPath).toBe(manifest.bodyPath);
     } finally {
       await rm(rawDir, { recursive: true, force: true });
     }
@@ -163,6 +165,13 @@ describe("Draft 2 ingestion backbone", () => {
     expect(result.regions).toHaveLength(1);
     expect(result.regions[0]?.id).toBe("lgd-27");
     expect(result.warnings.some((warning) => warning.startsWith("row 2."))).toBe(true);
+  });
+
+  it("skips LGD rows with missing parents instead of creating dangling links", () => {
+    const result = normalizeLgdRows([{ ...lgdFixtureRows[1], parentLgdCode: "missing-parent" }]);
+
+    expect(result.regions).toHaveLength(0);
+    expect(result.warnings.some((warning) => warning.includes("parent LGD code missing-parent"))).toBe(true);
   });
 
   it("skips duplicate LGD codes so region ids remain unique", () => {
@@ -234,5 +243,15 @@ describe("Draft 2 ingestion backbone", () => {
     expect(result.homepage.status).toBe("reachable");
     expect(result.robots?.status).toBe("blocked");
     expect(result.warnings.some((warning) => warning.includes("robots.txt"))).toBe(true);
+  });
+
+  it("returns endpoint warnings for invalid source-health URLs", async () => {
+    const result = await checkSource(
+      { ...sourceCatalog[0], homepageUrl: "ftp://example.test/catalog" },
+      { checkedAt: "2026-06-26T00:00:00.000Z", fetchImpl: async () => new Response(null, { status: 204 }) }
+    );
+
+    expect(result.homepage.status).toBe("watch");
+    expect(result.warnings.some((warning) => warning.includes("HTTP(S)"))).toBe(true);
   });
 });

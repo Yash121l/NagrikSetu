@@ -27,12 +27,11 @@ describe("production readiness", () => {
     expect(report.checks.find((check) => check.id === "raw-snapshot-store")?.status).toBe("blocked");
   });
 
-  it("passes required deployment gates while preserving source-review watches", () => {
+  it("blocks required deployment gates until source reviews are complete", () => {
     const report = buildProductionReadinessReport(productionEnv, undefined, "2026-06-26T00:00:00.000Z");
 
-    expect(report.summary.blocked).toBe(0);
     expect(report.checks.find((check) => check.id === "site-url")?.status).toBe("pass");
     expect(report.checks.find((check) => check.id === "admin-token")?.status).toBe("pass");
-    expect(report.checks.find((check) => check.id === "license-review")?.status).toBe("watch");
+    expect(report.checks.find((check) => check.id === "license-review")?.status).toBe("blocked");
   });
 });

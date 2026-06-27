@@ -18,10 +18,10 @@ export interface NagrikRepository {
 
 export function buildRecordStats(records: NagrikRecord[]): RecordStats {
   const byKind = records.reduce(
-    (counts, record) => ({
-      ...counts,
-      [record.kind]: (counts[record.kind] ?? 0) + 1
-    }),
+    (counts, record) => {
+      counts[record.kind] = (counts[record.kind] ?? 0) + 1;
+      return counts;
+    },
     {} as Partial<Record<EntityKind, number>>
   );
 

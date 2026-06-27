@@ -11,12 +11,14 @@ async function main() {
     totalSources: results.length,
     reachableHomepages: results.filter((result) => result.homepage.status === "reachable").length,
     blockedHomepages: results.filter((result) => result.homepage.status === "blocked").length,
-    watchHomepages: results.filter((result) => result.homepage.status === "watch").length
+    watchHomepages: results.filter((result) => result.homepage.status === "watch").length,
+    blockedRobots: results.filter((result) => result.robots?.status === "blocked").length,
+    watchRobots: results.filter((result) => result.robots?.status === "watch").length
   };
 
   console.log(JSON.stringify({ summary, results }, null, 2));
 
-  if (failOnWatch && results.some((result) => result.homepage.status !== "reachable")) {
+  if (failOnWatch && results.some((result) => result.homepage.status !== "reachable" || result.robots?.status === "blocked")) {
     process.exitCode = 1;
   }
 }

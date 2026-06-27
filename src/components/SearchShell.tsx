@@ -93,10 +93,14 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
 
   function runSearch(event?: FormEvent<HTMLFormElement>) {
     event?.preventDefault();
-    const response = buildSearchResponse(query, workspaceFilters.kind, { filters: workspaceFilters, limit: 100 });
+    applySearch(query, workspaceFilters);
+  }
+
+  function applySearch(nextQuery: string, nextFilters: WorkspaceFilters) {
+    const response = buildSearchResponse(nextQuery, nextFilters.kind, { filters: nextFilters, limit: 100 });
     setMatches(response.matches);
     setActiveId(response.matches[0]?.record.id);
-    setSubmittedQuery(query);
+    setSubmittedQuery(nextQuery);
     setCompareIds([]);
   }
 
@@ -132,7 +136,7 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
     sortBy: workspaceFilters.sortBy,
     sortDirection: workspaceFilters.sortDirection
   });
-  const visibleRecords = controlledMatches.length ? controlledMatches.map((match) => match.record) : initialRecords;
+  const visibleRecords = controlledMatches.map((match) => match.record);
 
   return (
     <main>
@@ -190,11 +194,7 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
                   onClick={() => {
                     const nextFilters = { ...workspaceFilters, kind: item.value };
                     setWorkspaceFilters(nextFilters);
-                    const response = buildSearchResponse(query, item.value, { filters: nextFilters, limit: 100 });
-                    setMatches(response.matches);
-                    setActiveId(response.matches[0]?.record.id);
-                    setSubmittedQuery(query);
-                    setCompareIds([]);
+                    applySearch(query, nextFilters);
                   }}
                   type="button"
                 >
@@ -344,7 +344,17 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
                           ["updatedAt", "Updated"],
                           ["relevance", "Score"]
                         ].map(([key, label]) => (
-                          <th scope="col" key={key}>
+                          <th
+                            aria-sort={
+                              workspaceFilters.sortBy === key
+                                ? workspaceFilters.sortDirection === "asc"
+                                  ? "ascending"
+                                  : "descending"
+                                : "none"
+                            }
+                            scope="col"
+                            key={key}
+                          >
                             <button onClick={() => sortBy(key as WorkspaceSortKey)} type="button">
                               {label} <ArrowUpDown aria-hidden="true" size={14} />
                             </button>

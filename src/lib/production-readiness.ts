@@ -54,11 +54,11 @@ function sourceMetadataIssues(source: SourceCatalogEntry) {
 
 function buildSummary(checks: ReadinessCheck[]): Record<ReadinessStatus, number> {
   return checks.reduce(
-    (summary, check) => ({
-      ...summary,
-      [check.status]: summary[check.status] + 1
-    }),
-    { pass: 0, watch: 0, blocked: 0 }
+    (summary, check) => {
+      summary[check.status] += 1;
+      return summary;
+    },
+    { pass: 0, watch: 0, blocked: 0 } as Record<ReadinessStatus, number>
   );
 }
 
@@ -121,7 +121,7 @@ export function buildProductionReadinessReport(
     {
       id: "robots-review",
       title: "Robots and terms review",
-      status: missingRobots.length === 0 ? "pass" : "watch",
+      status: missingRobots.length === 0 ? "pass" : "blocked",
       detail:
         missingRobots.length === 0
           ? "Automated sources list robots.txt URLs for preflight checks."
@@ -131,7 +131,7 @@ export function buildProductionReadinessReport(
     {
       id: "license-review",
       title: "Dataset license queue",
-      status: datasetLicenseSources.length === 0 ? "pass" : "watch",
+      status: datasetLicenseSources.length === 0 ? "pass" : "blocked",
       detail:
         datasetLicenseSources.length === 0
           ? "No catalog sources require dataset-level redistribution review."
