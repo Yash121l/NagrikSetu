@@ -26,4 +26,6 @@
 - Do not collect email addresses, phone numbers, or other personal follow-up details in correction intake.
 - Do not publish correction content directly into search results.
 - Keep local `data/corrections/*.json` artifacts out of Git.
+- Keep moderation APIs behind `NAGRIKSETU_ADMIN_TOKEN` or a stronger authenticated operator system.
+- Reviewer notes and suggested normalized changes must cite official source URLs before publication.
 - Replace the local file queue with authenticated, access-controlled storage before public launch.

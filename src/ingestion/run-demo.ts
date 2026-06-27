@@ -1,18 +1,23 @@
 import { seedRecords } from "@/lib/seed-data";
 import { sourceCatalog } from "./source-catalog";
+import { runAdapters } from "./connector-runner";
 import { createFixtureAdapter } from "./fixture-adapter";
 import { assertReportIsUsable, buildSourceHealth, validateRecords } from "./validator";
 import type { IngestionReport } from "./types";
 import type { NagrikRecord } from "@/lib/types";
 
-const demoAsOf = "2026-06-23";
+const demoAsOf = "2026-06-26";
+
+function indefiniteArticle(value: string) {
+  return /^[aeiou]/i.test(value.trim()) ? "an" : "a";
+}
 
 export function buildSourceRecords(): NagrikRecord[] {
   return sourceCatalog.map((source) => ({
     id: `source-${source.id}`,
     kind: "source",
     title: source.name,
-    summary: `${source.name} is tracked as a ${source.priority} source for ${source.entityKinds.join(", ")} records in ${source.geography}.`,
+    summary: `${source.name} is tracked as ${indefiniteArticle(source.priority)} ${source.priority} source for ${source.entityKinds.join(", ")} records in ${source.geography}.`,
     department: source.owner,
     jurisdiction: source.geography,
     website: source.homepageUrl,
@@ -44,7 +49,8 @@ export function buildDemoRecords() {
 export function runDemoIngestion(asOf = demoAsOf): IngestionReport {
   const records = buildDemoRecords();
   const adapters = sourceCatalog.map((source) => createFixtureAdapter(source, records));
-  const results = adapters.map((adapter) => adapter.run({ asOf }));
+  const runnerResult = runAdapters(adapters, { asOf });
+  const results = runnerResult.results;
   const events = results.map((result) => result.event);
   const adapterIssues = results.flatMap((result) =>
     result.warnings.map((message) => ({
@@ -53,7 +59,7 @@ export function runDemoIngestion(asOf = demoAsOf): IngestionReport {
       message
     }))
   );
-  const issues = [...validateRecords(records), ...adapterIssues];
+  const issues = [...validateRecords(records), ...adapterIssues, ...runnerResult.issues];
   const health = buildSourceHealth(sourceCatalog, events, asOf);
   const report = { generatedAt: asOf, records, health, issues, events };
 

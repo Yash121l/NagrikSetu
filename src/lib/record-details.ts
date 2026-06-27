@@ -1,4 +1,5 @@
 import type { NagrikRecord } from "@/lib/types";
+import { toSafeExternalHref } from "@/lib/urls";
 
 export interface RecordFact {
   label: string;
@@ -11,19 +12,6 @@ export interface RecordSection {
 }
 
 const optionalFact = (label: string, value?: string): RecordFact[] => (value ? [{ label, value }] : []);
-
-function toSafeExternalHref(...candidates: Array<string | undefined>) {
-  for (const candidate of candidates) {
-    if (!candidate) continue;
-    try {
-      const url = new URL(candidate);
-      if (url.protocol === "http:" || url.protocol === "https:") return url.toString();
-    } catch {
-      // Try the next sourced candidate.
-    }
-  }
-  return null;
-}
 
 export function getRecordSections(record: NagrikRecord): RecordSection[] {
   const overview: RecordSection = {

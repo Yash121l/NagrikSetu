@@ -103,18 +103,18 @@ export const indiaDirectoryStats = [
   { label: "Districts", value: 784, group: "Administrative" },
   { label: "Sub-districts", value: 7090, group: "Administrative" },
   { label: "Development Blocks", value: 7323, group: "Administrative" },
-  { label: "Villages", value: 676858, group: "Administrative" },
-  { label: "Inhabited villages", value: 657587, group: "Administrative" },
-  { label: "Rural villages", value: 641271, group: "Administrative" },
-  { label: "Urban villages", value: 21636, group: "Administrative" },
-  { label: "Rural Local Bodies", value: 262767, group: "Rural local government" },
+  { label: "Villages", value: 676859, group: "Administrative" },
+  { label: "Inhabited villages", value: 657588, group: "Administrative" },
+  { label: "Rural villages", value: 641617, group: "Administrative" },
+  { label: "Urban villages", value: 21720, group: "Administrative" },
+  { label: "Rural Local Bodies", value: 262752, group: "Rural local government" },
   { label: "District Panchayats", value: 674, group: "Rural local government" },
   { label: "Block Panchayats", value: 6756, group: "Rural local government" },
-  { label: "Gram Panchayats", value: 255337, group: "Rural local government" },
-  { label: "Urban Local Bodies", value: 5045, group: "Urban local government" },
+  { label: "Gram Panchayats", value: 255322, group: "Rural local government" },
+  { label: "Urban Local Bodies", value: 5052, group: "Urban local government" },
   { label: "Municipal Corporations", value: 271, group: "Urban local government" },
   { label: "Municipalities", value: 2012, group: "Urban local government" },
-  { label: "Town Panchayats", value: 2411, group: "Urban local government" },
+  { label: "Town Panchayats", value: 2418, group: "Urban local government" },
   { label: "Cantonment Boards", value: 60, group: "Urban local government" }
 ] as const;
 
@@ -151,9 +151,14 @@ export const indiaHierarchyModels = [
   }
 ] as const;
 
+const topLevelRecordIdsByRegion: Record<string, string[]> = {
+  delhi: ["complaint-mcd-civic", "source-mcd-311"]
+};
+
 const topLevelRegions: GeographicRegion[] = stateAndUnionTerritoryEntries.map((entry) => {
   const isMaharashtra = entry.id === "maharashtra";
   const typeLabel = entry.kind === "state" ? "State" : "Union Territory";
+  const directRecordIds = topLevelRecordIdsByRegion[entry.id] ?? [];
 
   return {
     id: entry.id,
@@ -168,10 +173,17 @@ const topLevelRegions: GeographicRegion[] = stateAndUnionTerritoryEntries.map((e
       ? "State-level entry point for Maharashtra civic offices, grievance paths, public works, districts, cities, and local bodies."
       : `${typeLabel} directory page for ${entry.name}. District, city, rural-body, and urban-body data is under structured development.`,
     center: isMaharashtra ? { lat: 19.7515, lng: 75.7139 } : undefined,
-    directRecordIds: [],
+    directRecordIds,
     facts: [
       { label: "Administrative type", value: typeLabel },
-      { label: "Data status", value: isMaharashtra ? "Mumbai source-backed pilot available" : "Top-level page ready; lower levels under development" }
+      {
+        label: "Data status",
+        value: isMaharashtra
+          ? "Mumbai source-backed pilot available"
+          : directRecordIds.length > 0
+            ? "Top-level page has national-source records; lower levels under development"
+            : "Top-level page ready; lower levels under development"
+      }
     ]
   };
 });
@@ -288,10 +300,24 @@ export const geographicRegions: GeographicRegion[] = [
     center: { lat: 22.9734, lng: 78.6569 },
     directRecordIds: [
       "tender-cppp-roadworks",
+      "project-pmgsy-road-discovery",
+      "complaint-nhai-highway",
       "complaint-cpgrams",
+      "complaint-rail-madad",
+      "complaint-umang-service-discovery",
+      "source-lgd-india",
+      "source-national-portal-india",
       "source-data-gov-in",
+      "source-rbi-handbook-state-statistics",
       "source-cppp-eprocure",
+      "source-pmgsy",
+      "source-morth",
+      "source-nhai",
       "source-cpgrams-pgportal",
+      "source-rail-madad",
+      "source-umang",
+      "source-egramswaraj",
+      "source-bhuvan",
       "source-openstreetmap"
     ],
     facts: [

@@ -9,6 +9,9 @@ function daysBetween(olderIso: string, newerIso: string) {
 
 function getPotentialRecordId(record: unknown) {
   if (record && typeof record === "object" && "id" in record && typeof record.id === "string") {
+    if ("kind" in record && typeof record.kind === "string") {
+      return `${record.kind}:${record.id}`;
+    }
     return record.id;
   }
   return "unknown";

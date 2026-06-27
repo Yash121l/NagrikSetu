@@ -28,9 +28,14 @@ pnpm run typecheck
 pnpm run test
 pnpm run build
 pnpm run ingest:demo
+pnpm run ingest:lgd
+pnpm run source-health:local
+pnpm run readiness:production
 pnpm run validate:data
 pnpm run audit:local
 ```
+
+`pnpm run source-health:local -- --fail-on-watch` exits non-zero when a catalog homepage is not reachable or a listed robots.txt endpoint is blocked.
 
 ## Repository Map
 
@@ -39,6 +44,7 @@ pnpm run audit:local
 - `src/lib` - Typed civic records, deterministic base records, search logic, and quality helpers.
 - `src/ingestion` - Source catalog, adapter contracts, validation, and deterministic ingestion report.
 - `src/data` - Repository facade used by the app and APIs.
+- `db/schema.sql` - PostgreSQL/PostGIS persistence baseline for production migration.
 - `src/data/geography.ts` - All 28 states, 8 UTs, national counts, and extensible administrative/rural/urban local-government hierarchy.
 - `src/data/state-profiles.ts` - Sourced capitals, government identifiers, current administration, and per-capita NSDP snapshots for all 36 top-level jurisdictions.
 - `scripts` - Executable agent utilities such as the demo ingestion generator.
@@ -50,7 +56,11 @@ pnpm run audit:local
 - `docs/SITE_MAP.md` - Public route and geography information architecture.
 - `docs/GEOGRAPHY_MODEL.md` - India administrative and local-government hierarchy contract.
 - `docs/STATE_PROFILE_MODEL.md` - State/UT profile provenance, economic definitions, and refresh procedure.
+- `docs/FEASIBILITY_AUDIT.md` - Direction, usefulness, feasibility, and source-class risk assessment.
+- `docs/AUTOMATED_INGESTION_PLAN.md` - Connector tiers, automation guardrails, and first live-ingestion backlog.
+- `docs/POSTGRES_MIGRATION.md` - Repository-contract migration plan for moving fixture-backed reads to PostgreSQL/PostGIS.
+- `docs/DEPLOYMENT_READINESS.md` - Production environment, connector gate, source-review, and phased rollout checklist.
 
 ## Current Caveat
 
-Draft 3 checkpoint 3 uses deterministic fixture adapters, a dated state-profile snapshot, and a local file-backed correction queue. It keeps record context on NagrikSetu but does not yet run live crawlers, store data in PostGIS, submit grievances, or claim official completeness.
+Draft 3 checkpoint 4 start uses deterministic fixture adapters, a dated state-profile snapshot, and a local file-backed correction queue. It expands the official source registry and first-pass national route records, but does not yet run live crawlers, store data in PostGIS, submit grievances, or claim official completeness.

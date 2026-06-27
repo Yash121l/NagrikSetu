@@ -116,6 +116,75 @@
     }
   },
   {
+    "id": "project-pmgsy-road-discovery",
+    "kind": "project",
+    "title": "PMGSY rural road project discovery",
+    "summary": "Official scheme source for discovering rural road packages, habitation connectivity, project progress, and maintenance context before routing responsibility.",
+    "department": "Ministry of Rural Development",
+    "jurisdiction": "India",
+    "status": "Source connector planned; official project discovery route available",
+    "budget": "Not publicly available in normalized records yet",
+    "expectedCompletion": "Varies by project package",
+    "supervisingOffice": "PMGSY programme authorities and state rural road agencies",
+    "website": "https://pmgsy.nic.in/",
+    "issueTags": [
+      "rural road",
+      "PMGSY",
+      "project",
+      "habitation",
+      "maintenance"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "medium",
+    "updatedAt": "2026-06-23",
+    "provenance": {
+      "sourceName": "Pradhan Mantri Gram Sadak Yojana",
+      "sourceUrl": "https://pmgsy.nic.in/",
+      "lastChecked": "2026-06-23",
+      "priority": "official",
+      "licenseNote": "Use public road and project metadata with original scheme and report links."
+    }
+  },
+  {
+    "id": "complaint-nhai-highway",
+    "kind": "complaint",
+    "title": "National highway complaint and incident route",
+    "summary": "Official NHAI-facing route for national highway issues such as road condition, toll plaza service, incidents, and highway assistance.",
+    "department": "National Highways Authority of India",
+    "jurisdiction": "India",
+    "website": "https://nhai.gov.in/",
+    "portalUrl": "https://nhai.gov.in/",
+    "escalation": [
+      "Use the official NHAI route or 1033 channel where applicable",
+      "Keep highway, chainage, toll plaza, and incident details",
+      "Track through the official channel"
+    ],
+    "issueTags": [
+      "national highway",
+      "NHAI",
+      "road complaint",
+      "toll",
+      "incident",
+      "1033"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "medium",
+    "updatedAt": "2026-06-23",
+    "provenance": {
+      "sourceName": "National Highways Authority of India",
+      "sourceUrl": "https://nhai.gov.in/",
+      "lastChecked": "2026-06-23",
+      "priority": "official",
+      "licenseNote": "Route users to official NHAI channels and preserve source URLs for highway metadata."
+    }
+  },
+  {
     "id": "complaint-cpgrams",
     "kind": "complaint",
     "title": "CPGRAMS central grievance route",
@@ -149,6 +218,76 @@
       "lastChecked": "2026-06-23",
       "priority": "official",
       "licenseNote": "Route users to official grievance filing; do not proxy personal submissions."
+    }
+  },
+  {
+    "id": "complaint-rail-madad",
+    "kind": "complaint",
+    "title": "Rail Madad railway grievance route",
+    "summary": "Official Indian Railways route for railway service grievances involving trains, stations, passenger amenities, freight, and railway assistance.",
+    "department": "Indian Railways",
+    "jurisdiction": "India",
+    "website": "https://railmadad.indianrailways.gov.in/",
+    "portalUrl": "https://railmadad.indianrailways.gov.in/",
+    "escalation": [
+      "Open the official Rail Madad portal",
+      "Choose the relevant train, station, or service category",
+      "Save the official complaint or reference number"
+    ],
+    "issueTags": [
+      "railway complaint",
+      "train",
+      "station",
+      "passenger grievance",
+      "Rail Madad"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-23",
+    "provenance": {
+      "sourceName": "Rail Madad",
+      "sourceUrl": "https://railmadad.indianrailways.gov.in/",
+      "lastChecked": "2026-06-23",
+      "priority": "official",
+      "licenseNote": "Route users to official Rail Madad channels and do not collect passenger grievance details."
+    }
+  },
+  {
+    "id": "complaint-umang-service-discovery",
+    "kind": "complaint",
+    "title": "UMANG official service discovery route",
+    "summary": "Official service directory for finding government services and eligible grievance or request flows without NagrikSetu collecting account data.",
+    "department": "Ministry of Electronics and Information Technology",
+    "jurisdiction": "India",
+    "website": "https://web.umang.gov.in/",
+    "portalUrl": "https://web.umang.gov.in/",
+    "escalation": [
+      "Search the official UMANG service directory",
+      "Open the responsible department service",
+      "Complete login-only actions on UMANG or the linked official service"
+    ],
+    "issueTags": [
+      "government service",
+      "UMANG",
+      "service directory",
+      "complaint",
+      "application"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "medium",
+    "updatedAt": "2026-06-23",
+    "provenance": {
+      "sourceName": "UMANG",
+      "sourceUrl": "https://web.umang.gov.in/",
+      "lastChecked": "2026-06-23",
+      "priority": "official",
+      "licenseNote": "Use as an official service directory and do not collect user account data."
     }
   },
   {
@@ -189,10 +328,101 @@
     }
   },
   {
+    "id": "complaint-mcd-civic",
+    "kind": "complaint",
+    "title": "Municipal Corporation of Delhi civic complaint route",
+    "summary": "Official Delhi municipal route candidate for civic issues such as sanitation, street lights, roads, drains, and ward-level municipal service routing.",
+    "department": "Municipal Corporation of Delhi",
+    "jurisdiction": "Delhi",
+    "website": "https://mcdonline.nic.in/",
+    "portalUrl": "https://mcdonline.nic.in/",
+    "escalation": [
+      "Use the official MCD online route or 311 channel where applicable",
+      "Keep ward, colony, and issue details",
+      "Track using the official complaint reference"
+    ],
+    "issueTags": [
+      "Delhi",
+      "MCD",
+      "311",
+      "civic complaint",
+      "sanitation",
+      "street light",
+      "road"
+    ],
+    "languageTags": [
+      "en",
+      "hi"
+    ],
+    "confidence": "medium",
+    "updatedAt": "2026-06-23",
+    "provenance": {
+      "sourceName": "Municipal Corporation of Delhi 311",
+      "sourceUrl": "https://mcdonline.nic.in/",
+      "lastChecked": "2026-06-23",
+      "priority": "official",
+      "licenseNote": "Collect public civic service routing only and link users to official MCD channels."
+    }
+  },
+  {
+    "id": "source-lgd-india",
+    "kind": "source",
+    "title": "Local Government Directory",
+    "summary": "Local Government Directory is tracked as an official source for source, office records in India.",
+    "department": "Ministry of Panchayati Raj",
+    "jurisdiction": "India",
+    "website": "https://lgdirectory.gov.in/",
+    "issueTags": [
+      "source inventory",
+      "source",
+      "office"
+    ],
+    "languageTags": [
+      "en"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-26",
+    "provenance": {
+      "sourceName": "Local Government Directory",
+      "sourceUrl": "https://lgdirectory.gov.in/",
+      "lastChecked": "2026-06-26",
+      "priority": "official",
+      "licenseNote": "Use public directory downloads for identifiers and hierarchy; preserve LGD attribution and extraction dates."
+    }
+  },
+  {
+    "id": "source-national-portal-india",
+    "kind": "source",
+    "title": "National Portal of India",
+    "summary": "National Portal of India is tracked as an official source for source, office, officer, complaint records in India.",
+    "department": "Government of India",
+    "jurisdiction": "India",
+    "website": "https://www.india.gov.in/",
+    "issueTags": [
+      "source inventory",
+      "source",
+      "office",
+      "officer",
+      "complaint"
+    ],
+    "languageTags": [
+      "en"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-26",
+    "provenance": {
+      "sourceName": "National Portal of India",
+      "sourceUrl": "https://www.india.gov.in/",
+      "lastChecked": "2026-06-26",
+      "priority": "official",
+      "licenseNote": "Use public directory facts with attribution to the National Portal and preserve last-checked dates."
+    }
+  },
+  {
     "id": "source-data-gov-in",
     "kind": "source",
     "title": "Open Government Data Platform India",
-    "summary": "Open Government Data Platform India is tracked as a open-government source for source, office, project records in India.",
+    "summary": "Open Government Data Platform India is tracked as an open-government source for source, office, project records in India.",
     "department": "Government of India",
     "jurisdiction": "India",
     "website": "https://data.gov.in/",
@@ -206,20 +436,45 @@
       "en"
     ],
     "confidence": "high",
-    "updatedAt": "2026-06-23",
+    "updatedAt": "2026-06-26",
     "provenance": {
       "sourceName": "Open Government Data Platform India",
       "sourceUrl": "https://data.gov.in/",
-      "lastChecked": "2026-06-23",
+      "lastChecked": "2026-06-26",
       "priority": "open-government",
       "licenseNote": "Use dataset-level licenses and attribution before redistribution."
+    }
+  },
+  {
+    "id": "source-rbi-handbook-state-statistics",
+    "kind": "source",
+    "title": "RBI Handbook of Statistics on Indian States",
+    "summary": "RBI Handbook of Statistics on Indian States is tracked as an official source for source records in India.",
+    "department": "Reserve Bank of India",
+    "jurisdiction": "India",
+    "website": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=23183",
+    "issueTags": [
+      "source inventory",
+      "source"
+    ],
+    "languageTags": [
+      "en"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-26",
+    "provenance": {
+      "sourceName": "RBI Handbook of Statistics on Indian States",
+      "sourceUrl": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=23183",
+      "lastChecked": "2026-06-26",
+      "priority": "official",
+      "licenseNote": "Preserve RBI publication, table number, reporting period, and last-checked date for economic facts."
     }
   },
   {
     "id": "source-cppp-eprocure",
     "kind": "source",
     "title": "Central Public Procurement Portal",
-    "summary": "Central Public Procurement Portal is tracked as a official source for tender, source records in India.",
+    "summary": "Central Public Procurement Portal is tracked as an official source for tender, source records in India.",
     "department": "Government of India",
     "jurisdiction": "India",
     "website": "https://eprocure.gov.in/eprocure/app",
@@ -232,20 +487,104 @@
       "en"
     ],
     "confidence": "high",
-    "updatedAt": "2026-06-23",
+    "updatedAt": "2026-06-26",
     "provenance": {
       "sourceName": "Central Public Procurement Portal",
       "sourceUrl": "https://eprocure.gov.in/eprocure/app",
-      "lastChecked": "2026-06-23",
+      "lastChecked": "2026-06-26",
       "priority": "official",
       "licenseNote": "Preserve original tender notice links and portal policy caveats."
+    }
+  },
+  {
+    "id": "source-pmgsy",
+    "kind": "source",
+    "title": "Pradhan Mantri Gram Sadak Yojana",
+    "summary": "Pradhan Mantri Gram Sadak Yojana is tracked as an official source for project, road, source records in India.",
+    "department": "Ministry of Rural Development",
+    "jurisdiction": "India",
+    "website": "https://pmgsy.nic.in/",
+    "issueTags": [
+      "source inventory",
+      "project",
+      "road",
+      "source"
+    ],
+    "languageTags": [
+      "en"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-26",
+    "provenance": {
+      "sourceName": "Pradhan Mantri Gram Sadak Yojana",
+      "sourceUrl": "https://pmgsy.nic.in/",
+      "lastChecked": "2026-06-26",
+      "priority": "official",
+      "licenseNote": "Use public project and road metadata with original scheme and report links."
+    }
+  },
+  {
+    "id": "source-morth",
+    "kind": "source",
+    "title": "Ministry of Road Transport and Highways",
+    "summary": "Ministry of Road Transport and Highways is tracked as an official source for office, project, road, source records in India.",
+    "department": "Ministry of Road Transport and Highways",
+    "jurisdiction": "India",
+    "website": "https://morth.nic.in/",
+    "issueTags": [
+      "source inventory",
+      "office",
+      "project",
+      "road",
+      "source"
+    ],
+    "languageTags": [
+      "en"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-26",
+    "provenance": {
+      "sourceName": "Ministry of Road Transport and Highways",
+      "sourceUrl": "https://morth.nic.in/",
+      "lastChecked": "2026-06-26",
+      "priority": "official",
+      "licenseNote": "Use official public notices, reports, and road-sector documents with attribution and source dates."
+    }
+  },
+  {
+    "id": "source-nhai",
+    "kind": "source",
+    "title": "National Highways Authority of India",
+    "summary": "National Highways Authority of India is tracked as an official source for office, project, road, complaint, source records in India.",
+    "department": "National Highways Authority of India",
+    "jurisdiction": "India",
+    "website": "https://nhai.gov.in/",
+    "issueTags": [
+      "source inventory",
+      "office",
+      "project",
+      "road",
+      "complaint",
+      "source"
+    ],
+    "languageTags": [
+      "en"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-26",
+    "provenance": {
+      "sourceName": "National Highways Authority of India",
+      "sourceUrl": "https://nhai.gov.in/",
+      "lastChecked": "2026-06-26",
+      "priority": "official",
+      "licenseNote": "Link users to official NHAI routes and preserve source URLs for highway complaint metadata."
     }
   },
   {
     "id": "source-cpgrams-pgportal",
     "kind": "source",
     "title": "CPGRAMS / PG Portal",
-    "summary": "CPGRAMS / PG Portal is tracked as a official source for complaint, source records in India.",
+    "summary": "CPGRAMS / PG Portal is tracked as an official source for complaint, source records in India.",
     "department": "Department of Administrative Reforms and Public Grievances",
     "jurisdiction": "India",
     "website": "https://pgportal.gov.in/",
@@ -258,20 +597,125 @@
       "en"
     ],
     "confidence": "high",
-    "updatedAt": "2026-06-23",
+    "updatedAt": "2026-06-26",
     "provenance": {
       "sourceName": "CPGRAMS / PG Portal",
       "sourceUrl": "https://pgportal.gov.in/",
-      "lastChecked": "2026-06-23",
+      "lastChecked": "2026-06-26",
       "priority": "official",
       "licenseNote": "Route users to official filing and tracking; never proxy private grievance content in Draft 2."
+    }
+  },
+  {
+    "id": "source-rail-madad",
+    "kind": "source",
+    "title": "Rail Madad",
+    "summary": "Rail Madad is tracked as an official source for complaint, source records in India.",
+    "department": "Indian Railways",
+    "jurisdiction": "India",
+    "website": "https://railmadad.indianrailways.gov.in/",
+    "issueTags": [
+      "source inventory",
+      "complaint",
+      "source"
+    ],
+    "languageTags": [
+      "en"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-26",
+    "provenance": {
+      "sourceName": "Rail Madad",
+      "sourceUrl": "https://railmadad.indianrailways.gov.in/",
+      "lastChecked": "2026-06-26",
+      "priority": "official",
+      "licenseNote": "Route passengers to official Rail Madad channels; do not collect or proxy passenger grievance details."
+    }
+  },
+  {
+    "id": "source-umang",
+    "kind": "source",
+    "title": "UMANG",
+    "summary": "UMANG is tracked as an official source for complaint, source records in India.",
+    "department": "Ministry of Electronics and Information Technology",
+    "jurisdiction": "India",
+    "website": "https://web.umang.gov.in/",
+    "issueTags": [
+      "source inventory",
+      "complaint",
+      "source"
+    ],
+    "languageTags": [
+      "en"
+    ],
+    "confidence": "medium",
+    "updatedAt": "2026-06-26",
+    "provenance": {
+      "sourceName": "UMANG",
+      "sourceUrl": "https://web.umang.gov.in/",
+      "lastChecked": "2026-06-26",
+      "priority": "official",
+      "licenseNote": "Use as an official service directory and deep-link users to services; do not collect user account data."
+    }
+  },
+  {
+    "id": "source-egramswaraj",
+    "kind": "source",
+    "title": "eGramSwaraj",
+    "summary": "eGramSwaraj is tracked as an official source for office, project, source records in India.",
+    "department": "Ministry of Panchayati Raj",
+    "jurisdiction": "India",
+    "website": "https://egramswaraj.gov.in/",
+    "issueTags": [
+      "source inventory",
+      "office",
+      "project",
+      "source"
+    ],
+    "languageTags": [
+      "en"
+    ],
+    "confidence": "high",
+    "updatedAt": "2026-06-26",
+    "provenance": {
+      "sourceName": "eGramSwaraj",
+      "sourceUrl": "https://egramswaraj.gov.in/",
+      "lastChecked": "2026-06-26",
+      "priority": "official",
+      "licenseNote": "Use public panchayat planning and profile metadata with source report links and extraction dates."
+    }
+  },
+  {
+    "id": "source-bhuvan",
+    "kind": "source",
+    "title": "Bhuvan",
+    "summary": "Bhuvan is tracked as an official source for road, source records in India.",
+    "department": "National Remote Sensing Centre",
+    "jurisdiction": "India",
+    "website": "https://bhuvan.nrsc.gov.in/",
+    "issueTags": [
+      "source inventory",
+      "road",
+      "source"
+    ],
+    "languageTags": [
+      "en"
+    ],
+    "confidence": "medium",
+    "updatedAt": "2026-06-26",
+    "provenance": {
+      "sourceName": "Bhuvan",
+      "sourceUrl": "https://bhuvan.nrsc.gov.in/",
+      "lastChecked": "2026-06-26",
+      "priority": "official",
+      "licenseNote": "Use public geospatial services with NRSC attribution and layer-specific usage notes."
     }
   },
   {
     "id": "source-bmc-citizen-portal",
     "kind": "source",
     "title": "Brihanmumbai Municipal Corporation citizen portal",
-    "summary": "Brihanmumbai Municipal Corporation citizen portal is tracked as a official source for office, complaint, road, source records in Mumbai, Maharashtra.",
+    "summary": "Brihanmumbai Municipal Corporation citizen portal is tracked as an official source for office, complaint, road, source records in Mumbai, Maharashtra.",
     "department": "Brihanmumbai Municipal Corporation",
     "jurisdiction": "Mumbai, Maharashtra",
     "website": "https://portal.mcgm.gov.in/",
@@ -286,13 +730,40 @@
       "en"
     ],
     "confidence": "medium",
-    "updatedAt": "2026-06-23",
+    "updatedAt": "2026-06-26",
     "provenance": {
       "sourceName": "Brihanmumbai Municipal Corporation citizen portal",
       "sourceUrl": "https://portal.mcgm.gov.in/",
-      "lastChecked": "2026-06-23",
+      "lastChecked": "2026-06-26",
       "priority": "official",
       "licenseNote": "Collect public office/contact/routing metadata only; link users to official complaint forms."
+    }
+  },
+  {
+    "id": "source-mcd-311",
+    "kind": "source",
+    "title": "Municipal Corporation of Delhi 311",
+    "summary": "Municipal Corporation of Delhi 311 is tracked as an official source for complaint, office, source records in Delhi.",
+    "department": "Municipal Corporation of Delhi",
+    "jurisdiction": "Delhi",
+    "website": "https://mcdonline.nic.in/",
+    "issueTags": [
+      "source inventory",
+      "complaint",
+      "office",
+      "source"
+    ],
+    "languageTags": [
+      "en"
+    ],
+    "confidence": "medium",
+    "updatedAt": "2026-06-26",
+    "provenance": {
+      "sourceName": "Municipal Corporation of Delhi 311",
+      "sourceUrl": "https://mcdonline.nic.in/",
+      "lastChecked": "2026-06-26",
+      "priority": "official",
+      "licenseNote": "Collect public civic service routing only; link users to official MCD channels for complaint submission."
     }
   },
   {
@@ -312,11 +783,11 @@
       "en"
     ],
     "confidence": "medium",
-    "updatedAt": "2026-06-23",
+    "updatedAt": "2026-06-26",
     "provenance": {
       "sourceName": "OpenStreetMap",
       "sourceUrl": "https://www.openstreetmap.org/",
-      "lastChecked": "2026-06-23",
+      "lastChecked": "2026-06-26",
       "priority": "permissive-third-party",
       "licenseNote": "OpenStreetMap data is available under ODbL with attribution."
     }

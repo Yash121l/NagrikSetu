@@ -1,33 +1,21 @@
-import { runDemoIngestion } from "@/ingestion/run-demo";
-import type { EntityKind, NagrikRecord } from "@/lib/types";
+import { localRepository } from "./local-repository";
+import type { NagrikRepository } from "./repository-contract";
+import type { NagrikRecord } from "@/lib/types";
 
-const report = runDemoIngestion();
+export const activeRepository: NagrikRepository = localRepository;
 
 export function getAllRecords(): NagrikRecord[] {
-  return report.records;
+  return activeRepository.getAllRecords();
 }
 
 export function getSourceHealth() {
-  return report.health;
+  return activeRepository.getSourceHealth();
 }
 
 export function getIngestionReport() {
-  return report;
+  return activeRepository.getIngestionReport();
 }
 
-export function getRecordStats(records = report.records) {
-  const byKind = records.reduce(
-    (counts, record) => ({
-      ...counts,
-      [record.kind]: (counts[record.kind] ?? 0) + 1
-    }),
-    {} as Partial<Record<EntityKind, number>>
-  );
-
-  return {
-    totalRecords: records.length,
-    officialSourceRecords: records.filter((record) => record.provenance.priority === "official").length,
-    lowConfidenceRecords: records.filter((record) => record.confidence === "low").length,
-    byKind
-  };
+export function getRecordStats(records = activeRepository.getAllRecords()) {
+  return activeRepository.getRecordStats(records);
 }

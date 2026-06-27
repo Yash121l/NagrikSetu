@@ -1,6 +1,13 @@
 import type { EntityKind, NagrikRecord, SourcePriority } from "@/lib/types";
 
-export type AccessMethod = "api" | "bulk-download" | "html-public-page" | "document-parse" | "manual-seed";
+export type AccessMethod =
+  | "api"
+  | "bulk-download"
+  | "geospatial-service"
+  | "html-public-page"
+  | "document-parse"
+  | "sitemap"
+  | "manual-seed";
 export type AutomationMode = "official-first" | "controlled-browser" | "manual-review-required";
 export type SourceHealthStatus = "healthy" | "watch" | "stale" | "not-run";
 
@@ -36,6 +43,7 @@ export interface SourceRunEvent {
   adapterName: string;
   fetchedAt: string;
   recordCount: number;
+  dedupeKeyCount: number;
   warningCount: number;
   status: SourceHealthStatus;
 }
@@ -58,6 +66,7 @@ export interface AdapterRunContext {
 export interface AdapterRunResult {
   source: SourceCatalogEntry;
   records: NagrikRecord[];
+  dedupeKeys: string[];
   warnings: string[];
   event: SourceRunEvent;
 }

@@ -61,3 +61,10 @@
 - Ran a follow-up CodeRabbit CLI review and resolved all 4 findings: in-flight correction state, assistive-technology announcements, outbound URL protocol validation, and normalized department matching.
 - A fresh Codex CLI review was attempted but interrupted by the configured account usage limit; the preceding Draft 3 Codex pass completed cleanly before the state-profile extension.
 - Add final follow-up review, commit, and push results.
+
+## 2026-06-26 - Draft 3 Checkpoint 4 Start
+
+- Completed a feasibility audit and documented the product direction as a source-first civic search/routing index, not a complaint-filing proxy.
+- Expanded the source catalog from 5 pilot sources to a national expansion inventory covering LGD, National Portal, RBI, CPPP, PMGSY, MoRTH, NHAI, CPGRAMS, Rail Madad, UMANG, eGramSwaraj, Bhuvan, BMC, MCD, data.gov.in, and OSM.
+- Added first-pass normalized records for PMGSY rural road discovery, NHAI highway complaint routing, Rail Madad railway grievances, UMANG service discovery, and MCD civic complaint routing.
+- Added `docs/FEASIBILITY_AUDIT.md` and `docs/AUTOMATED_INGESTION_PLAN.md` for the next live connector phase.

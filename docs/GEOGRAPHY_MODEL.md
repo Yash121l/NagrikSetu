@@ -47,10 +47,10 @@ Urban local bodies can overlap or relate to more than one administrative distric
 - 36 total top-level pages
 - 36 sourced top-level civic profiles with capitals, administration, official portals, and economic snapshots
 - 784 districts represented as national capacity, with detailed district pages added source by source
-- 5,045 urban local bodies represented in the schema and national capacity model
+- 5,052 urban local bodies represented in the schema and national capacity model
 - Mumbai pilot pages for two districts, city context, municipal corporation, and ward
 
-The national counts are a supplied snapshot based on the Government of India Local Government Directory. Counts can change as governments create, merge, or remap units.
+The national counts are a supplied snapshot based on the Government of India Local Government Directory, last refreshed on 2026-06-26. Counts can change as governments create, merge, or remap units.
 
 ## Data Status
 

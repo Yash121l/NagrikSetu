@@ -275,9 +275,232 @@ textarea {
   gap: 18px;
 }
 
+.workspace-controls {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(130px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.workspace-controls label {
+  display: grid;
+  min-width: 0;
+  gap: 5px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.workspace-controls select {
+  width: 100%;
+  min-width: 0;
+  padding: 8px 9px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fdfefd;
+  color: var(--ink);
+  text-transform: none;
+}
+
+.workspace-controls__wide {
+  grid-column: span 2;
+}
+
+.view-switch,
+.export-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: end;
+}
+
+.view-switch__button,
+.export-actions a {
+  display: inline-flex;
+  min-height: 37px;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #eef5f1;
+  color: #294640;
+  cursor: pointer;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.view-switch__button--active {
+  border-color: var(--teal);
+  background: var(--mint);
+  color: var(--teal-strong);
+}
+
 .results-list {
   display: grid;
   gap: 12px;
+}
+
+.results-list--table {
+  min-width: 0;
+}
+
+.records-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(16, 32, 29, 0.06);
+}
+
+.records-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+.records-table caption {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-weight: 800;
+  text-align: left;
+}
+
+.records-table th,
+.records-table td {
+  padding: 11px 10px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  text-align: left;
+}
+
+.records-table th {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  background: #f1f7f4;
+  color: #294640;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+}
+
+.records-table th button,
+.table-record-button,
+.comparison-panel button {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+.records-table th button {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  padding: 0;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.records-table small {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.records-table__active {
+  background: #f0fbf6;
+}
+
+.table-record-button {
+  max-width: 300px;
+  padding: 0;
+  color: var(--teal-strong);
+  font-weight: 850;
+  text-align: left;
+}
+
+.records-table a {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.comparison-panel {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.comparison-panel__heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.comparison-panel button {
+  color: var(--teal-strong);
+  font-weight: 850;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.comparison-grid article {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fdfefd;
+}
+
+.comparison-grid article > span {
+  color: var(--teal-strong);
+  font-size: 0.72rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.comparison-grid dl {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+
+.comparison-grid dl > div {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 8px;
+}
+
+.comparison-grid dt {
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 850;
+}
+
+.comparison-grid dd {
+  margin: 0;
+  line-height: 1.4;
 }
 
 .result-card,
@@ -1240,7 +1463,8 @@ textarea {
 
   .national-stats-grid,
   .hierarchy-grid,
-  .state-profile__overview {
+  .state-profile__overview,
+  .workspace-controls {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1308,8 +1532,15 @@ textarea {
   .hierarchy-grid,
   .state-profile__overview,
   .state-profile__columns,
-  .profile-fact-list > div {
+  .profile-fact-list > div,
+  .workspace-controls,
+  .comparison-grid,
+  .comparison-grid dl > div {
     grid-template-columns: 1fr;
+  }
+
+  .workspace-controls__wide {
+    grid-column: auto;
   }
 
   .national-stats-grid {
