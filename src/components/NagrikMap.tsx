@@ -7,9 +7,16 @@ import type { NagrikRecord } from "@/lib/types";
 export function NagrikMap({ records, activeId, onSelect }: { records: NagrikRecord[]; activeId?: string; onSelect: (id: string) => void }) {
   const located = records.filter((record) => record.location);
   const center = located[0]?.location ?? { lat: 22.9734, lng: 78.6569 };
+  const mapKey = `${center.lat}:${center.lng}:${located.map((record) => record.id).join("|")}`;
 
   return (
-    <MapContainer className="map" center={[center.lat, center.lng]} zoom={located.length > 1 ? 5 : 11} scrollWheelZoom={false}>
+    <MapContainer
+      className="map"
+      center={[center.lat, center.lng]}
+      key={mapKey}
+      zoom={located.length > 1 ? 5 : 11}
+      scrollWheelZoom={false}
+    >
       <TileLayer
         attribution={process.env.NEXT_PUBLIC_MAP_ATTRIBUTION ?? "Map data © OpenStreetMap contributors"}
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
