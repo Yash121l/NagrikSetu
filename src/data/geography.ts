@@ -152,7 +152,10 @@ export const indiaHierarchyModels = [
 ] as const;
 
 const topLevelRecordIdsByRegion: Record<string, string[]> = {
-  delhi: ["complaint-mcd-civic", "source-mcd-311"]
+  delhi: ["complaint-mcd-civic", "complaint-delhi-edistrict", "source-mcd-311", "source-delhi-edistrict"],
+  karnataka: ["complaint-karnataka-janaspandana", "source-karnataka-janaspandana"],
+  maharashtra: ["complaint-maharashtra-aaple-sarkar", "source-maharashtra-aaple-sarkar"],
+  "tamil-nadu": ["complaint-tamil-nadu-cm-helpline", "source-tamil-nadu-cm-helpline"]
 };
 
 const topLevelRegions: GeographicRegion[] = stateAndUnionTerritoryEntries.map((entry) => {
@@ -181,7 +184,7 @@ const topLevelRegions: GeographicRegion[] = stateAndUnionTerritoryEntries.map((e
         value: isMaharashtra
           ? "Mumbai source-backed pilot available"
           : directRecordIds.length > 0
-            ? "Top-level page has national-source records; lower levels under development"
+            ? "Top-level page has source-backed records; lower levels under development"
             : "Top-level page ready; lower levels under development"
       }
     ]
@@ -305,17 +308,42 @@ export const geographicRegions: GeographicRegion[] = [
       "complaint-cpgrams",
       "complaint-rail-madad",
       "complaint-umang-service-discovery",
+      "complaint-erss-112",
+      "complaint-cybercrime-reporting",
+      "complaint-national-consumer-helpline",
+      "complaint-pmjay-cgrms",
+      "complaint-digilocker-support",
+      "complaint-esanjeevani-feedback",
+      "complaint-uidai-aadhaar-support",
+      "complaint-passport-seva-support",
+      "complaint-epfigms",
+      "complaint-tele-manas",
       "source-lgd-india",
       "source-national-portal-india",
+      "source-national-services-portal",
       "source-data-gov-in",
       "source-rbi-handbook-state-statistics",
       "source-cppp-eprocure",
+      "tender-gem-bids-discovery",
       "source-pmgsy",
       "source-morth",
       "source-nhai",
       "source-cpgrams-pgportal",
       "source-rail-madad",
       "source-umang",
+      "source-national-consumer-helpline",
+      "source-cybercrime-portal",
+      "source-erss-112",
+      "source-digilocker",
+      "source-esanjeevani",
+      "source-pmjay-cgrms",
+      "source-myscheme",
+      "source-uidai",
+      "source-passport-seva",
+      "source-epfigms",
+      "source-tele-manas",
+      "source-gem-bids",
+      "source-census-india",
       "source-egramswaraj",
       "source-bhuvan",
       "source-openstreetmap"

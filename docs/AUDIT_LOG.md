@@ -68,3 +68,16 @@
 - Expanded the source catalog from 5 pilot sources to a national expansion inventory covering LGD, National Portal, RBI, CPPP, PMGSY, MoRTH, NHAI, CPGRAMS, Rail Madad, UMANG, eGramSwaraj, Bhuvan, BMC, MCD, data.gov.in, and OSM.
 - Added first-pass normalized records for PMGSY rural road discovery, NHAI highway complaint routing, Rail Madad railway grievances, UMANG service discovery, and MCD civic complaint routing.
 - Added `docs/FEASIBILITY_AUDIT.md` and `docs/AUTOMATED_INGESTION_PLAN.md` for the next live connector phase.
+
+## 2026-06-27 - Draft 3 Checkpoint 4 Data Population Pass 1
+
+- Reviewed `README.md`, `docs/AUDIT_LOG.md`, `docs/ROADMAP.md`, `docs/SOURCE_INVENTORY.md`, `docs/AUTOMATED_INGESTION_PLAN.md`, `docs/DEPLOYMENT_READINESS.md`, `docs/DATA_MODEL.md`, and `docs/ARCHITECTURE.md` for pending work.
+- Confirmed the remaining checkpoint-4 backlog centers on live source connectors, richer official records, LGD/PostGIS migration, source monitoring, and moderation/production gates.
+- Added 10 official service/grievance route records: ERSS 112, National Cyber Crime Reporting Portal, National Consumer Helpline, PM-JAY CGRMS, DigiLocker, eSanjeevani, Maharashtra Aaple Sarkar, e-District Delhi, Karnataka Janaspandana, and Tamil Nadu CM Helpline.
+- Added a second official-source batch for National Government Services Portal, myScheme, UIDAI, Passport Seva, EPFiGMS, Tele-MANAS, Government e Marketplace bids, and Census of India.
+- Expanded the source catalog from 16 to 34 entries and updated the source inventory with provenance, routing, and privacy caveats for the new sources.
+- Added `docs/DATA_ACQUISITION_BACKLOG.md` from the parallel research pass so the next records and connectors are tracked explicitly.
+- Assigned every new normalized record to India or its state/UT region so search, record pages, and place pages remain consistent.
+- Regenerated `data/normalized/nagrik-records.json` and `data/normalized/source-health.json`; the demo ingestion now writes 59 normalized records and 34 source-health rows.
+- Passed `pnpm run audit:local` with the bundled Node runtime: data validation, lint, typecheck, 46 tests across 6 files, and a 113-page production build.
+- Ran `pnpm run source-health:local`; 22/34 catalog homepages were reachable by HEAD, 12 were watch, 1 robots endpoint was blocked, and several robots endpoints require manual review before unattended automation.

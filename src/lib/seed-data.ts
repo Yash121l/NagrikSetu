@@ -1,6 +1,6 @@
 import type { NagrikRecord, Provenance } from "./types";
 
-const today = "2026-06-23";
+const today = "2026-06-27";
 
 const sources = {
   dataGov: {
@@ -79,6 +79,132 @@ const sources = {
     lastChecked: today,
     priority: "official",
     licenseNote: "Use as an official service directory and do not collect user account data."
+  },
+  nationalConsumerHelpline: {
+    sourceName: "National Consumer Helpline",
+    sourceUrl: "https://consumerhelpline.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Route consumers to official NCH channels; do not collect consumer grievance details."
+  },
+  cybercrimePortal: {
+    sourceName: "National Cyber Crime Reporting Portal",
+    sourceUrl: "https://cybercrime.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Route users to official cybercrime reporting and 1930 channels; do not collect incident details."
+  },
+  erss112: {
+    sourceName: "Emergency Response Support System 112",
+    sourceUrl: "https://112.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Route emergencies to the official 112 system; do not intermediate emergency requests."
+  },
+  digilocker: {
+    sourceName: "DigiLocker",
+    sourceUrl: "https://www.digilocker.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Link users to official DigiLocker account and support flows; do not collect identity documents."
+  },
+  esanjeevani: {
+    sourceName: "eSanjeevani",
+    sourceUrl: "https://esanjeevani.mohfw.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Link to official telemedicine and feedback paths; do not collect health or contact data."
+  },
+  pmjayCgrms: {
+    sourceName: "PM-JAY Central Grievance Redressal Management System",
+    sourceUrl: "https://cgrms.pmjay.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Route PM-JAY grievances to the official CGRMS portal; do not collect beneficiary details."
+  },
+  nationalServicesPortal: {
+    sourceName: "National Government Services Portal",
+    sourceUrl: "https://www.india.gov.in/services",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Use public service-directory metadata with National Portal attribution and source dates."
+  },
+  myScheme: {
+    sourceName: "myScheme",
+    sourceUrl: "https://www.myscheme.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Use as a scheme discovery route; eligibility and applications remain on official portals."
+  },
+  uidai: {
+    sourceName: "Unique Identification Authority of India",
+    sourceUrl: "https://uidai.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Route Aadhaar support to official UIDAI channels; do not collect identity or Aadhaar data."
+  },
+  passportSeva: {
+    sourceName: "Passport Seva",
+    sourceUrl: "https://www.passportindia.gov.in/psp",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Route passport services to the official MEA portal; do not collect identity documents."
+  },
+  epfigms: {
+    sourceName: "EPF i Grievance Management System",
+    sourceUrl: "https://epfigms.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Route EPFO grievances to official EPFiGMS; do not collect UAN, PPO, or employer details."
+  },
+  teleManas: {
+    sourceName: "Tele-MANAS",
+    sourceUrl: "https://telemanas.mohfw.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Route mental-health support to official Tele-MANAS channels; do not collect health data."
+  },
+  gemBids: {
+    sourceName: "Government e Marketplace bids",
+    sourceUrl: "https://bidplus.gem.gov.in/all-bids",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Link to original GeM bid pages and preserve buyer-published notice caveats."
+  },
+  censusIndia: {
+    sourceName: "Census of India",
+    sourceUrl: "https://censusindia.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Use Census geography and population references with publication and table-level attribution."
+  },
+  maharashtraAapleSarkar: {
+    sourceName: "Maharashtra Aaple Sarkar grievance portal",
+    sourceUrl: "https://grievances.maharashtra.gov.in/en",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Route state grievances to official Aaple Sarkar channels; do not collect complaint content."
+  },
+  delhiEdistrict: {
+    sourceName: "e-District Delhi",
+    sourceUrl: "https://edistrict.delhigovt.nic.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Use public service and grievance routing metadata; do not collect application documents."
+  },
+  karnatakaJanaspandana: {
+    sourceName: "Karnataka Janaspandana iPGRS",
+    sourceUrl: "https://ipgrs.karnataka.gov.in/",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Route Karnataka public grievances to official iPGRS and 1902 channels only."
+  },
+  tamilNaduCmHelpline: {
+    sourceName: "Tamil Nadu Mudhalvarin Mugavari CM Helpline",
+    sourceUrl: "https://cmhelpline.tnega.org/portal/en/home",
+    lastChecked: today,
+    priority: "official",
+    licenseNote: "Route Tamil Nadu grievances to official CM Helpline channels; do not collect petition details."
   },
   egramswaraj: {
     sourceName: "eGramSwaraj",
@@ -263,6 +389,268 @@ export const seedRecords: NagrikRecord[] = [
     confidence: "medium",
     updatedAt: today,
     provenance: sources.umang
+  },
+  {
+    id: "complaint-erss-112",
+    kind: "complaint",
+    title: "Emergency Response Support System 112",
+    summary:
+      "Official pan-India emergency route for police, fire, medical, women safety, child protection, and other immediate assistance requests.",
+    department: "Government of India",
+    jurisdiction: "India",
+    phone: "112",
+    website: "https://112.gov.in/",
+    portalUrl: "https://112.gov.in/",
+    escalation: ["Dial 112 for emergencies", "Use the 112 India app or state ERSS route where available", "Share location directly with official emergency responders"],
+    issueTags: ["emergency", "police", "fire", "medical", "women safety", "child protection", "112"],
+    languageTags: ["en", "hi"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.erss112
+  },
+  {
+    id: "complaint-cybercrime-reporting",
+    kind: "complaint",
+    title: "National Cyber Crime Reporting Portal",
+    summary:
+      "Official cybercrime reporting route for online financial fraud, cyber incidents, suspect identifiers, and complaint tracking through the Government of India portal.",
+    department: "Ministry of Home Affairs",
+    jurisdiction: "India",
+    phone: "1930",
+    website: "https://cybercrime.gov.in/",
+    portalUrl: "https://cybercrime.gov.in/",
+    escalation: ["Use the official cybercrime portal", "Call 1930 for online financial fraud where applicable", "Track status through the official complaint route"],
+    issueTags: ["cybercrime", "online fraud", "1930", "financial fraud", "suspect repository", "complaint"],
+    languageTags: ["en", "hi"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.cybercrimePortal
+  },
+  {
+    id: "complaint-national-consumer-helpline",
+    kind: "complaint",
+    title: "National Consumer Helpline grievance route",
+    summary:
+      "Official Department of Consumer Affairs route for consumer grievances through web, app, WhatsApp, UMANG, SMS, and helpline channels.",
+    department: "Department of Consumer Affairs",
+    jurisdiction: "India",
+    phone: "1915; 1800 11 4000",
+    website: "https://consumerhelpline.gov.in/",
+    portalUrl: "https://consumerhelpline.gov.in/",
+    escalation: ["Open the official NCH portal", "Call 1915 or 1800 11 4000 during listed hours", "Track using the official docket number"],
+    issueTags: ["consumer grievance", "NCH", "1915", "refund", "service complaint", "consumer rights"],
+    languageTags: ["en", "hi"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.nationalConsumerHelpline
+  },
+  {
+    id: "complaint-pmjay-cgrms",
+    kind: "complaint",
+    title: "PM-JAY CGRMS grievance route",
+    summary:
+      "Official PM-JAY grievance redressal route for scheme stakeholders and beneficiaries, with online lodging and tracking through a unique grievance number.",
+    department: "National Health Authority",
+    jurisdiction: "India",
+    website: "https://cgrms.pmjay.gov.in/",
+    portalUrl: "https://cgrms.pmjay.gov.in/",
+    escalation: ["Open the official CGRMS portal", "Lodge or track grievance on the official system", "Use the official unique grievance number for follow-up"],
+    issueTags: ["PM-JAY", "Ayushman Bharat", "health grievance", "beneficiary", "hospital", "CGRMS"],
+    languageTags: ["en", "hi"],
+    confidence: "medium",
+    updatedAt: today,
+    provenance: sources.pmjayCgrms
+  },
+  {
+    id: "complaint-digilocker-support",
+    kind: "complaint",
+    title: "DigiLocker support and feedback route",
+    summary:
+      "Official DigiLocker route for document-wallet support, issuer/requester information, and user feedback while identity-document actions remain on DigiLocker.",
+    department: "National e-Governance Division",
+    jurisdiction: "India",
+    website: "https://www.digilocker.gov.in/",
+    portalUrl: "https://www.digilocker.gov.in/",
+    escalation: ["Open official DigiLocker support or feedback", "Use DigiLocker account flows only on the official site", "Do not share documents with third-party intermediaries"],
+    issueTags: ["DigiLocker", "digital documents", "identity documents", "certificates", "support"],
+    languageTags: ["en", "hi"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.digilocker
+  },
+  {
+    id: "complaint-esanjeevani-feedback",
+    kind: "complaint",
+    title: "eSanjeevani feedback and telemedicine support route",
+    summary:
+      "Official telemedicine platform route for eSanjeevani account, consultation, feedback, and service-support paths without NagrikSetu collecting health data.",
+    department: "Ministry of Health and Family Welfare",
+    jurisdiction: "India",
+    website: "https://esanjeevani.mohfw.gov.in/",
+    portalUrl: "https://esanjeevani.mohfw.gov.in/",
+    escalation: ["Open the official eSanjeevani site", "Use official contact or feedback paths for account and consultation support", "Keep health details inside the official platform only"],
+    issueTags: ["eSanjeevani", "telemedicine", "health", "consultation", "feedback"],
+    languageTags: ["en", "hi"],
+    confidence: "medium",
+    updatedAt: today,
+    provenance: sources.esanjeevani
+  },
+  {
+    id: "complaint-uidai-aadhaar-support",
+    kind: "complaint",
+    title: "UIDAI Aadhaar support route",
+    summary:
+      "Official UIDAI route for Aadhaar enrolment, update, status, and support questions through the UIDAI website and 1947 helpline.",
+    department: "Unique Identification Authority of India",
+    jurisdiction: "India",
+    phone: "1947",
+    website: "https://uidai.gov.in/",
+    portalUrl: "https://uidai.gov.in/en/contact-support.html",
+    escalation: ["Open the official UIDAI contact and support page", "Call 1947 for Aadhaar support", "Keep identity documents inside official UIDAI flows only"],
+    issueTags: ["Aadhaar", "UIDAI", "1947", "identity", "enrolment", "update"],
+    languageTags: ["en", "hi"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.uidai
+  },
+  {
+    id: "complaint-passport-seva-support",
+    kind: "complaint",
+    title: "Passport Seva service route",
+    summary:
+      "Official Ministry of External Affairs route for passport applications, service information, login, application status, and Passport Seva Kendra discovery.",
+    department: "Ministry of External Affairs",
+    jurisdiction: "India",
+    website: "https://www.passportindia.gov.in/psp",
+    portalUrl: "https://www.passportindia.gov.in/psp",
+    escalation: ["Open the official Passport Seva portal", "Use official login, registration, and status pages", "Keep passport documents inside official MEA flows only"],
+    issueTags: ["passport", "Passport Seva", "MEA", "application status", "PSK"],
+    languageTags: ["en", "hi"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.passportSeva
+  },
+  {
+    id: "complaint-epfigms",
+    kind: "complaint",
+    title: "EPFiGMS EPFO grievance route",
+    summary:
+      "Official EPFO grievance route for PF members, pensioners, employers, and others to register, remind, track, and upload grievance documents.",
+    department: "Employees' Provident Fund Organisation",
+    jurisdiction: "India",
+    website: "https://epfigms.gov.in/",
+    portalUrl: "https://epfigms.gov.in/",
+    escalation: ["Open the official EPFiGMS portal", "Register or track grievances on the official site", "Keep UAN, PPO, establishment, and documents inside official EPFO flows"],
+    issueTags: ["EPFO", "EPF", "pension", "grievance", "UAN", "PPO"],
+    languageTags: ["en", "hi"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.epfigms
+  },
+  {
+    id: "complaint-tele-manas",
+    kind: "complaint",
+    title: "Tele-MANAS mental health support route",
+    summary:
+      "Official national tele-mental health support route for people seeking mental wellness support through Tele-MANAS helpline and official resources.",
+    department: "Ministry of Health and Family Welfare",
+    jurisdiction: "India",
+    phone: "14416",
+    website: "https://telemanas.mohfw.gov.in/",
+    portalUrl: "https://telemanas.mohfw.gov.in/",
+    escalation: ["Call the official Tele-MANAS helpline", "Use official Tele-MANAS resources for mental-health support", "Do not share personal health details with NagrikSetu"],
+    issueTags: ["Tele-MANAS", "mental health", "helpline", "14416", "wellness", "support"],
+    languageTags: ["en", "hi"],
+    confidence: "medium",
+    updatedAt: today,
+    provenance: sources.teleManas
+  },
+  {
+    id: "tender-gem-bids-discovery",
+    kind: "tender",
+    title: "GeM public bid discovery",
+    summary:
+      "Official public bid and reverse-auction discovery route for Government e Marketplace procurement notices and bid-status pages.",
+    department: "Government e Marketplace",
+    jurisdiction: "India",
+    tenderNumber: "GEM-BIDS",
+    closingDate: "Varies by bid",
+    documentUrl: "https://bidplus.gem.gov.in/all-bids",
+    website: "https://bidplus.gem.gov.in/all-bids",
+    issueTags: ["GeM", "bid", "procurement", "tender", "reverse auction"],
+    languageTags: ["en", "hi"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.gemBids
+  },
+  {
+    id: "complaint-maharashtra-aaple-sarkar",
+    kind: "complaint",
+    title: "Maharashtra Aaple Sarkar grievance route",
+    summary:
+      "Official Maharashtra grievance redressal route for state and district administration issues through the Aaple Sarkar grievance portal.",
+    department: "Government of Maharashtra",
+    jurisdiction: "Maharashtra",
+    website: "https://grievances.maharashtra.gov.in/en",
+    portalUrl: "https://grievances.maharashtra.gov.in/en",
+    escalation: ["Open the official Aaple Sarkar grievance portal", "Use citizen registration or login on the official site", "Track only through the official reference"],
+    issueTags: ["Maharashtra", "Aaple Sarkar", "state grievance", "district administration", "complaint"],
+    languageTags: ["en", "hi", "mr"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.maharashtraAapleSarkar
+  },
+  {
+    id: "complaint-delhi-edistrict",
+    kind: "complaint",
+    title: "e-District Delhi service and grievance route",
+    summary:
+      "Official Delhi e-District route for certificates, welfare services, citizen registration, grievance registration, grievance tracking, and sub-division lookup.",
+    department: "Government of NCT of Delhi",
+    jurisdiction: "Delhi",
+    website: "https://edistrict.delhigovt.nic.in/",
+    portalUrl: "https://edistrict.delhigovt.nic.in/",
+    escalation: ["Use the official e-District citizen corner", "Register or track grievances on the official portal", "Use locate sub-division for jurisdiction context"],
+    issueTags: ["Delhi", "e-District", "certificate", "service application", "grievance", "sub-division"],
+    languageTags: ["en", "hi"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.delhiEdistrict
+  },
+  {
+    id: "complaint-karnataka-janaspandana",
+    kind: "complaint",
+    title: "Karnataka Janaspandana iPGRS grievance route",
+    summary:
+      "Official Karnataka integrated public grievance route for department-linked complaints through the Janaspandana iPGRS portal and 1902 helpline.",
+    department: "Government of Karnataka",
+    jurisdiction: "Karnataka",
+    phone: "1902",
+    website: "https://ipgrs.karnataka.gov.in/",
+    portalUrl: "https://ipgrs.karnataka.gov.in/",
+    escalation: ["Open the official Janaspandana portal", "Call 1902 where appropriate", "Track department routing through official iPGRS"],
+    issueTags: ["Karnataka", "Janaspandana", "iPGRS", "1902", "state grievance"],
+    languageTags: ["en", "hi", "kn"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.karnatakaJanaspandana
+  },
+  {
+    id: "complaint-tamil-nadu-cm-helpline",
+    kind: "complaint",
+    title: "Tamil Nadu CM Helpline grievance route",
+    summary:
+      "Official Mudhalvarin Mugavari route for Tamil Nadu public grievances, petitions, questions, and status tracking through the CM Helpline portal.",
+    department: "Government of Tamil Nadu",
+    jurisdiction: "Tamil Nadu",
+    website: "https://cmhelpline.tnega.org/portal/en/home",
+    portalUrl: "https://cmhelpline.tnega.org/portal/en/home",
+    escalation: ["Open the official CM Helpline portal", "Login on the official site to file or track a grievance", "Use the official grievance ID for follow-up"],
+    issueTags: ["Tamil Nadu", "CM Helpline", "Mudhalvarin Mugavari", "state grievance", "petition"],
+    languageTags: ["en", "hi", "ta"],
+    confidence: "high",
+    updatedAt: today,
+    provenance: sources.tamilNaduCmHelpline
   },
   {
     id: "source-egramswaraj-panchayat",

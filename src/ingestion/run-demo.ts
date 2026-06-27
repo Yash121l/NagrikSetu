@@ -6,7 +6,7 @@ import { assertReportIsUsable, buildSourceHealth, validateRecords } from "./vali
 import type { IngestionReport } from "./types";
 import type { NagrikRecord } from "@/lib/types";
 
-const demoAsOf = "2026-06-26";
+const demoAsOf = "2026-06-27";
 
 function indefiniteArticle(value: string) {
   return /^[aeiou]/i.test(value.trim()) ? "an" : "a";

@@ -279,6 +279,355 @@ export const sourceCatalog: SourceCatalogEntry[] = [
     notes: "High-value official service discovery layer, but many actions require user login and must remain out of scope."
   },
   {
+    id: "national-consumer-helpline",
+    name: "National Consumer Helpline",
+    homepageUrl: "https://consumerhelpline.gov.in/",
+    priority: "official",
+    owner: "Department of Consumer Affairs",
+    geography: "India",
+    entityKinds: ["complaint", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "monthly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Route consumers to official NCH channels; do not collect consumer grievance details.",
+      robotsTxtUrl: "https://consumerhelpline.gov.in/robots.txt",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 45,
+      confidence: "high"
+    },
+    notes: "National consumer grievance route with web, mobile app, WhatsApp, UMANG, SMS, and helpline channels."
+  },
+  {
+    id: "cybercrime-portal",
+    name: "National Cyber Crime Reporting Portal",
+    homepageUrl: "https://cybercrime.gov.in/",
+    priority: "official",
+    owner: "Ministry of Home Affairs",
+    geography: "India",
+    entityKinds: ["complaint", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "weekly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Route users to official cybercrime reporting and 1930 channels; do not collect incident details.",
+      robotsTxtUrl: "https://cybercrime.gov.in/robots.txt",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 14,
+      confidence: "high"
+    },
+    notes: "Official cybercrime complaint, tracking, suspect repository, and awareness route operated under MHA/I4C."
+  },
+  {
+    id: "erss-112",
+    name: "Emergency Response Support System 112",
+    homepageUrl: "https://112.gov.in/",
+    priority: "official",
+    owner: "Government of India",
+    geography: "India",
+    entityKinds: ["complaint", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "monthly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Route emergencies to the official 112 system; do not intermediate emergency requests.",
+      robotsTxtUrl: "https://112.gov.in/robots.txt",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 45,
+      confidence: "high"
+    },
+    notes: "Pan-India emergency response route for police, fire, medical, women safety, and child protection situations."
+  },
+  {
+    id: "digilocker",
+    name: "DigiLocker",
+    homepageUrl: "https://www.digilocker.gov.in/",
+    priority: "official",
+    owner: "National e-Governance Division",
+    geography: "India",
+    entityKinds: ["complaint", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "monthly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Link users to official DigiLocker account and support flows; do not collect identity documents.",
+      robotsTxtUrl: "https://www.digilocker.gov.in/robots.txt",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 45,
+      confidence: "high"
+    },
+    notes: "Official digital document wallet and support route; document handling must stay on DigiLocker."
+  },
+  {
+    id: "esanjeevani",
+    name: "eSanjeevani",
+    homepageUrl: "https://esanjeevani.mohfw.gov.in/",
+    priority: "official",
+    owner: "Ministry of Health and Family Welfare",
+    geography: "India",
+    entityKinds: ["complaint", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "monthly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Link to official telemedicine and feedback paths; do not collect health or contact data.",
+      robotsTxtUrl: "https://esanjeevani.mohfw.gov.in/robots.txt",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 45,
+      confidence: "medium"
+    },
+    notes: "Official telemedicine service; privacy policy makes account and health data out of NagrikSetu scope."
+  },
+  {
+    id: "pmjay-cgrms",
+    name: "PM-JAY Central Grievance Redressal Management System",
+    homepageUrl: "https://cgrms.pmjay.gov.in/",
+    priority: "official",
+    owner: "National Health Authority",
+    geography: "India",
+    entityKinds: ["complaint", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "monthly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Route PM-JAY grievances to the official CGRMS portal; do not collect beneficiary details.",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 45,
+      confidence: "medium"
+    },
+    notes: "Official PM-JAY grievance and tracking route; OTP and beneficiary details remain on the source portal."
+  },
+  {
+    id: "national-services-portal",
+    name: "National Government Services Portal",
+    homepageUrl: "https://www.india.gov.in/services",
+    priority: "official",
+    owner: "Government of India",
+    geography: "India",
+    entityKinds: ["source"],
+    access: {
+      method: "sitemap",
+      refreshCadence: "weekly",
+      requiresAuth: false,
+      automationMode: "official-first"
+    },
+    legal: {
+      licenseNote: "Use public service-directory metadata with National Portal attribution and source dates.",
+      robotsTxtUrl: "https://www.india.gov.in/robots.txt",
+      redistribution: "metadata-ok"
+    },
+    quality: {
+      expectedFreshnessDays: 14,
+      confidence: "high"
+    },
+    notes: "Official service directory for discovering central, state, district, and local government service pages."
+  },
+  {
+    id: "myscheme",
+    name: "myScheme",
+    homepageUrl: "https://www.myscheme.gov.in/",
+    priority: "official",
+    owner: "Government of India",
+    geography: "India",
+    entityKinds: ["source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "weekly",
+      requiresAuth: false,
+      automationMode: "official-first"
+    },
+    legal: {
+      licenseNote: "Use as a scheme discovery route; eligibility and applications remain on official portals.",
+      robotsTxtUrl: "https://www.myscheme.gov.in/robots.txt",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 14,
+      confidence: "high"
+    },
+    notes: "National scheme discovery source; useful for service search, not for collecting eligibility answers inside NagrikSetu."
+  },
+  {
+    id: "uidai",
+    name: "Unique Identification Authority of India",
+    homepageUrl: "https://uidai.gov.in/",
+    priority: "official",
+    owner: "Unique Identification Authority of India",
+    geography: "India",
+    entityKinds: ["complaint", "office", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "monthly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Route Aadhaar support to official UIDAI channels; do not collect identity or Aadhaar data.",
+      robotsTxtUrl: "https://uidai.gov.in/robots.txt",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 45,
+      confidence: "high"
+    },
+    notes: "Official Aadhaar support and contact source, including the 1947 helpline and enrolment/update center discovery."
+  },
+  {
+    id: "passport-seva",
+    name: "Passport Seva",
+    homepageUrl: "https://www.passportindia.gov.in/psp",
+    priority: "official",
+    owner: "Ministry of External Affairs",
+    geography: "India",
+    entityKinds: ["complaint", "office", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "monthly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Route passport services to the official MEA portal; do not collect identity documents.",
+      robotsTxtUrl: "https://www.passportindia.gov.in/robots.txt",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 45,
+      confidence: "high"
+    },
+    notes: "Official passport service route for application, login, status, and Passport Seva Kendra discovery."
+  },
+  {
+    id: "epfigms",
+    name: "EPF i Grievance Management System",
+    homepageUrl: "https://epfigms.gov.in/",
+    priority: "official",
+    owner: "Employees' Provident Fund Organisation",
+    geography: "India",
+    entityKinds: ["complaint", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "monthly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Route EPFO grievances to official EPFiGMS; do not collect UAN, PPO, or employer details.",
+      robotsTxtUrl: "https://epfigms.gov.in/robots.txt",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 45,
+      confidence: "high"
+    },
+    notes: "Official EPFO grievance portal for PF members, pensioners, employers, and related follow-up actions."
+  },
+  {
+    id: "tele-manas",
+    name: "Tele-MANAS",
+    homepageUrl: "https://telemanas.mohfw.gov.in/",
+    priority: "official",
+    owner: "Ministry of Health and Family Welfare",
+    geography: "India",
+    entityKinds: ["complaint", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "monthly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Route mental-health support to official Tele-MANAS channels; do not collect health data.",
+      robotsTxtUrl: "https://telemanas.mohfw.gov.in/robots.txt",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 45,
+      confidence: "medium"
+    },
+    notes: "National tele-mental health support route; keep all personal support interactions on official channels."
+  },
+  {
+    id: "gem-bids",
+    name: "Government e Marketplace bids",
+    homepageUrl: "https://bidplus.gem.gov.in/all-bids",
+    priority: "official",
+    owner: "Government e Marketplace",
+    geography: "India",
+    entityKinds: ["tender", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "daily",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Link to original GeM bid pages and preserve buyer-published notice caveats.",
+      robotsTxtUrl: "https://bidplus.gem.gov.in/robots.txt",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 2,
+      confidence: "high"
+    },
+    notes: "Official public bid and reverse-auction discovery route; dynamic bid extraction should be reviewed before automation."
+  },
+  {
+    id: "census-india",
+    name: "Census of India",
+    homepageUrl: "https://censusindia.gov.in/",
+    priority: "official",
+    owner: "Office of the Registrar General and Census Commissioner, India",
+    geography: "India",
+    entityKinds: ["source"],
+    access: {
+      method: "document-parse",
+      refreshCadence: "quarterly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Use Census geography and population references with publication and table-level attribution.",
+      robotsTxtUrl: "https://censusindia.gov.in/robots.txt",
+      redistribution: "dataset-license-required"
+    },
+    quality: {
+      expectedFreshnessDays: 120,
+      confidence: "medium"
+    },
+    notes: "Official geography and population reference to pair with LGD identifiers; table-level licensing should be reviewed."
+  },
+  {
     id: "egramswaraj",
     name: "eGramSwaraj",
     homepageUrl: "https://egramswaraj.gov.in/",
@@ -377,6 +726,105 @@ export const sourceCatalog: SourceCatalogEntry[] = [
       confidence: "medium"
     },
     notes: "Second city candidate after Mumbai for ward and civic complaint routing."
+  },
+  {
+    id: "maharashtra-aaple-sarkar",
+    name: "Maharashtra Aaple Sarkar grievance portal",
+    homepageUrl: "https://grievances.maharashtra.gov.in/en",
+    priority: "official",
+    owner: "Government of Maharashtra",
+    geography: "Maharashtra",
+    entityKinds: ["complaint", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "weekly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Route state grievances to official Aaple Sarkar channels; do not collect complaint content.",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 14,
+      confidence: "high"
+    },
+    notes: "State grievance route for Maharashtra and district administration complaints."
+  },
+  {
+    id: "delhi-edistrict",
+    name: "e-District Delhi",
+    homepageUrl: "https://edistrict.delhigovt.nic.in/",
+    priority: "official",
+    owner: "Government of NCT of Delhi",
+    geography: "Delhi",
+    entityKinds: ["complaint", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "weekly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Use public service and grievance routing metadata; do not collect application documents.",
+      robotsTxtUrl: "https://edistrict.delhigovt.nic.in/robots.txt",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 14,
+      confidence: "high"
+    },
+    notes: "Delhi service and grievance route for certificates, welfare services, grievance tracking, and sub-division lookup."
+  },
+  {
+    id: "karnataka-janaspandana",
+    name: "Karnataka Janaspandana iPGRS",
+    homepageUrl: "https://ipgrs.karnataka.gov.in/",
+    priority: "official",
+    owner: "Government of Karnataka",
+    geography: "Karnataka",
+    entityKinds: ["complaint", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "weekly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Route Karnataka public grievances to official iPGRS and 1902 channels only.",
+      robotsTxtUrl: "https://ipgrs.karnataka.gov.in/robots.txt",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 14,
+      confidence: "high"
+    },
+    notes: "Integrated public grievance redressal system for Karnataka, including the 1902 helpline."
+  },
+  {
+    id: "tamil-nadu-cm-helpline",
+    name: "Tamil Nadu Mudhalvarin Mugavari CM Helpline",
+    homepageUrl: "https://cmhelpline.tnega.org/portal/en/home",
+    priority: "official",
+    owner: "Government of Tamil Nadu",
+    geography: "Tamil Nadu",
+    entityKinds: ["complaint", "source"],
+    access: {
+      method: "html-public-page",
+      refreshCadence: "weekly",
+      requiresAuth: false,
+      automationMode: "manual-review-required"
+    },
+    legal: {
+      licenseNote: "Route Tamil Nadu grievances to official CM Helpline channels; do not collect petition details.",
+      robotsTxtUrl: "https://cmhelpline.tnega.org/robots.txt",
+      redistribution: "link-only"
+    },
+    quality: {
+      expectedFreshnessDays: 14,
+      confidence: "high"
+    },
+    notes: "State grievance and petition route for Tamil Nadu, with online filing and tracking."
   },
   {
     id: "openstreetmap",

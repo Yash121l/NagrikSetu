@@ -13,8 +13,9 @@ describe("searchRecords", () => {
   it("filters by tender kind", () => {
     const results = searchRecords("road works tender", "tender");
 
-    expect(results).toHaveLength(1);
-    expect(results[0]?.record.kind).toBe("tender");
+    expect(results.length).toBeGreaterThan(0);
+    expect(results.every((result) => result.record.kind === "tender")).toBe(true);
+    expect(results.some((result) => result.record.id === "tender-cppp-roadworks")).toBe(true);
   });
 
   it("returns caveats with every response", () => {
