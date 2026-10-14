@@ -16,7 +16,7 @@ export function ResultCard({ match, active, onSelect }: { match: SearchMatch; ac
         : "Third-party source";
 
   return (
-    <article className={`result-card ${active ? "result-card--active" : ""}`}>
+    <article className={`result-card ${active ? "result-card--active" : ""}`} data-record-id={record.id}>
       <button className="result-card__button" onClick={onSelect} type="button">
         <span className="result-card__kind">{record.kind}</span>
         <strong>{record.title}</strong>

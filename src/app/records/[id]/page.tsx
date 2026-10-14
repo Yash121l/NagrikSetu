@@ -6,6 +6,7 @@ import { CorrectionForm } from "@/components/CorrectionForm";
 import { EvidencePanel } from "@/components/EvidencePanel";
 import { RecordLocationMap } from "@/components/RecordLocationMap";
 import { SiteHeader } from "@/components/SiteHeader";
+import { TrackRecordView } from "@/components/TrackRecordView";
 import { getAllRecords } from "@/data/repository";
 import { getPrimaryRegionForRecord } from "@/data/geography";
 import { getOfficialAction, getRecordSections, getRelatedRecords } from "@/lib/record-details";
@@ -43,7 +44,13 @@ export default async function RecordPage({ params }: RecordPageProps) {
   return (
     <div className="site-page">
       <SiteHeader />
-      <main className="detail-page">
+      <main className="detail-page" data-record-id={record.id}>
+        <TrackRecordView
+          confidence={record.confidence}
+          jurisdiction={record.jurisdiction}
+          kind={record.kind}
+          recordId={record.id}
+        />
         <nav className="breadcrumbs" aria-label="Breadcrumb">
           <Link href="/">Search</Link>
           {region ? <Link href={`/places/${region.slug.join("/")}`}>{region.name}</Link> : null}

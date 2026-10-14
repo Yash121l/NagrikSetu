@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { Send } from "lucide-react";
+import { track } from "@/lib/analytics";
 import { copy, type Locale } from "@/lib/i18n";
 
 interface CorrectionFormProps {
@@ -28,10 +29,13 @@ export function CorrectionForm({ recordId, recordLabel, locale = "en" }: Correct
       });
 
       if (!response.ok) {
+        track("correction_submitted", { record_id: recordId, locale, success: false, status: response.status });
         setState("error");
         return;
       }
 
+      // Message text is never sent to analytics, only its length.
+      track("correction_submitted", { record_id: recordId, locale, success: true, message_length: message.length });
       setMessage("");
       setState("sent");
     } catch {
