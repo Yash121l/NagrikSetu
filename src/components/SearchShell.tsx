@@ -21,6 +21,7 @@ import { Brand } from "@/components/Brand";
 import { CorrectionForm } from "@/components/CorrectionForm";
 import { EvidencePanel } from "@/components/EvidencePanel";
 import { ResultCard } from "@/components/ResultCard";
+import { track } from "@/lib/analytics";
 import { copy, type Locale } from "@/lib/i18n";
 import { buildSearchResponse } from "@/lib/search";
 import {
@@ -93,11 +94,21 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
 
   function runSearch(event?: FormEvent<HTMLFormElement>) {
     event?.preventDefault();
-    applySearch(query, workspaceFilters);
+    applySearch(query, workspaceFilters, "submit");
   }
 
-  function applySearch(nextQuery: string, nextFilters: WorkspaceFilters) {
+  function applySearch(nextQuery: string, nextFilters: WorkspaceFilters, trigger: "submit" | "kind_filter") {
     const response = buildSearchResponse(nextQuery, nextFilters.kind, { filters: nextFilters, limit: 100 });
+    // Query text is deliberately not sent: it can contain complaint details (docs/SECURITY_PRIVACY.md).
+    track("search_run", {
+      trigger,
+      kind: nextFilters.kind,
+      query_length: nextQuery.trim().length,
+      query_words: nextQuery.trim().split(/\s+/).filter(Boolean).length,
+      result_count: response.matches.length,
+      has_results: response.matches.length > 0,
+      locale
+    });
     setMatches(response.matches);
     setActiveId(response.matches[0]?.record.id);
     setSubmittedQuery(nextQuery);
@@ -157,7 +168,10 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
               <button
                 className={locale === item ? "language-switch__button language-switch__button--active" : "language-switch__button"}
                 key={item}
-                onClick={() => setLocale(item)}
+                onClick={() => {
+                  if (item !== locale) track("language_switched", { from: locale, to: item });
+                  setLocale(item);
+                }}
                 type="button"
               >
                 {item.toUpperCase()}
@@ -194,7 +208,7 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
                   onClick={() => {
                     const nextFilters = { ...workspaceFilters, kind: item.value };
                     setWorkspaceFilters(nextFilters);
-                    applySearch(query, nextFilters);
+                    applySearch(query, nextFilters, "kind_filter");
                   }}
                   type="button"
                 >
@@ -304,10 +318,20 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
               </select>
             </label>
             <div className="export-actions" aria-label="Export filtered records">
-              <a href={`/api/export?${exportParams.toString()}&format=csv`}>
+              <a
+                href={`/api/export?${exportParams.toString()}&format=csv`}
+                onClick={() =>
+                  track("records_exported", { format: "csv", kind: workspaceFilters.kind, record_count: controlledMatches.length })
+                }
+              >
                 <Download aria-hidden="true" size={16} /> CSV
               </a>
-              <a href={`/api/export?${exportParams.toString()}&format=json`}>
+              <a
+                href={`/api/export?${exportParams.toString()}&format=json`}
+                onClick={() =>
+                  track("records_exported", { format: "json", kind: workspaceFilters.kind, record_count: controlledMatches.length })
+                }
+              >
                 <Download aria-hidden="true" size={16} /> JSON
               </a>
             </div>
@@ -381,7 +405,7 @@ export function SearchShell({ initialRecords, stats, sourceHealth }: SearchShell
                         const { record } = match;
                         const sourceHref = toSafeExternalHref(record.website, record.provenance.sourceUrl);
                         return (
-                          <tr className={activeRecord?.id === record.id ? "records-table__active" : ""} key={record.id}>
+                          <tr className={activeRecord?.id === record.id ? "records-table__active" : ""} data-record-id={record.id} key={record.id}>
                             <td>
                               <input
                                 aria-label={`Compare ${record.title}`}
